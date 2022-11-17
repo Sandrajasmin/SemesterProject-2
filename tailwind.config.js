@@ -7,7 +7,8 @@ module.exports = {
       'h2': ['Prompt', 'sans-serif'],
       'body': ['Fira Sans', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+    },
   },
   plugins: [],
 }

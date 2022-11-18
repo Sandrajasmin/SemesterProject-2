@@ -12,56 +12,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Vite App</title>
 	</head>
+
 	<body>
 		<script type="module" src="/main.js"></script>
-		<header>
-			<nav class="bg-gradient-to-b from-[#0511F2] to-[#030A8C]">
+		<header id="header">
+			<nav
+				class="bg-gradient-to-b from-[#0511F2] to-[#030A8C] fixed top-0 left-0 right-0"
+			>
 				<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 					<div class="relative flex h-16 items-center justify-between">
-						<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-							<!-- Mobile menu button-->
-							<button
-								id="mobile-menu-btn"
-								type="button"
-								class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white"
-								aria-controls="mobile-menu"
-								aria-expanded="false"
-							>
-								<span class="sr-only">Open main menu</span>
-								<!-- Icon when menu is closed. Menu open: "hidden", Menu closed: "block" -->
-								<svg
-									class="block h-6 w-6"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									aria-hidden="true"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-									/>
-								</svg>
-								<!-- Icon when menu is open. Menu open: "block", Menu closed: "hidden"-->
-								<svg
-									class="hidden h-6 w-6"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									aria-hidden="true"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M6 18L18 6M6 6l12 12"
-									/>
-								</svg>
-							</button>
-						</div>
 						<div
 							class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between"
 						>
@@ -77,265 +36,160 @@
 									alt="Your Company"
 								/>
 							</div>
-							<!-- SEARCH -->
-							<form class="hidden sm:block">
-								<label
-									for="default-search"
-									class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-									>Search</label
-								>
-								<div class="relative">
-									<div
-										class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-									>
-										<svg
-											aria-hidden="true"
-											class="w-5 h-5 text-gray-500 dark:text-gray-400"
-											fill="none"
-											stroke="currentColor"
-											viewBox="0 0 24 24"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
-												d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-											></path>
-										</svg>
-									</div>
-									<input
-										type="search"
-										id="default-search"
-										class="block w-full p-2 pl-10 text-sm rounded-lg bg-white"
-										placeholder="Search for item..."
-										required
-									/>
-								</div>
-							</form>
-							<div
-								class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-							>
-								<div class="flex">
-									<p class="text-white">100</p>
-									<p class="text-[#F2AE2E] font-medium">CR</p>
-								</div>
-								<!-- Profile dropdown -->
-								<div class="relative ml-3">
-									<div>
-										<button
-											type="button"
-											class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-											id="user-menu-button"
-											aria-expanded="false"
-											aria-haspopup="true"
-										>
-											<span class="sr-only">Open user menu</span>
-											<img
-												class="h-8 w-8 rounded-full"
-												src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-												alt=""
-											/>
-										</button>
-									</div>
-									<!-- Dropdown menu, show/hide based on menu state.-->
-									<div
-										id="settings-menu"
-										class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-										role="menu"
-										aria-orientation="vertical"
-										aria-labelledby="user-menu-button"
-										tabindex="-1"
-									>
-										<a
-											href="#"
-											class="block px-4 py-2 text-sm text-gray-700"
-											role="menuitem"
-											tabindex="-1"
-											id="user-menu-item-0"
-											>Your Profile</a
-										>
-										<a
-											href="#"
-											class="block px-4 py-2 text-sm text-gray-700"
-											role="menuitem"
-											tabindex="-1"
-											id="user-menu-item-1"
-											>Settings</a
-										>
-										<a
-											href="#"
-											class="block px-4 py-2 text-sm text-gray-700"
-											role="menuitem"
-											tabindex="-1"
-											id="user-menu-item-2"
-											>Sign out</a
-										>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Mobile menu, show/hide based on menu state. -->
-					<div class="sm:hidden" id="mobile-menu">
-						<div class="space-y-1 px-2 pt-2 pb-3">
-							<a
-								href="#"
-								class="text-gray-300 font-body hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								aria-current="page"
-								>Home</a
-							>
-
-							<a
-								href="#"
-								class="text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>Auctions</a
-							>
-
-							<a
-								href="#"
-								class="text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>Active Auctions</a
-							>
-
-							<a
-								href="#"
-								class="text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>Profile</a
-							>
-						</div>
-						<!-- SEARCH -->
-						<form class="pb-3">
-							<label
-								for="default-search"
-								class="mb-4 text-sm font-medium text-gray-900 sr-only dark:text-white"
-								>Search</label
-							>
-							<div class="relative sm:hidden">
-								<div
-									class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-								>
-									<svg
-										aria-hidden="true"
-										class="w-5 h-5 text-gray-500 dark:text-gray-400"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-										></path>
-									</svg>
-								</div>
-								<input
-									type="search"
-									id="default-search-mobile"
-									class="block w-full p-2 pl-10 text-sm rounded-lg bg-white"
-									placeholder="Search for item..."
-									required
-								/>
-							</div>
-						</form>
-					</div>
-					<div class="hidden sm:ml-6 sm:block">
-						<div class="flex space-x-4">
-							<a
-								href="#"
-								class="text-white px-3 py-2 rounded-md text-sm font-medium"
-								aria-current="page"
-								>Home</a
-							>
-
-							<a
-								href="#"
-								class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-								>Auctions</a
-							>
-
-							<a
-								href="#"
-								class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-								>Active Auctions</a
-							>
-
-							<a
-								href="#"
-								class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-								>Profile</a
-							>
 						</div>
 					</div>
 				</div>
 			</nav>
 		</header>
-		<main></main>
+		<main>
+			<section
+				id="sign-in"
+				class="bg-gray-50 dark:bg-gray-900 pt-20 sm:pt-10 pb-5 sm:pb-0"
+			>
+				<div
+					class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
+				>
+					<div
+						class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700"
+					>
+						<div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+							<h1
+								class="text-xl font-h1 leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"
+							>
+								Create an account
+							</h1>
+							<form class="space-y-4 md:space-y-6" action="/index.html">
+								<div class="input-name">
+									<label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your name</label>
+									<input type="text" name="name" id="name"
+										class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+										placeholder="John" required="" />
+								</div>
+								<div class="input-email">
+									<label
+										for="email"
+										class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+										>Your email</label
+									>
+									<input
+										type="email"
+										name="email"
+										id="email"
+										class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+										placeholder="name@company.com"
+										required=""
+									/>
+								</div>
+								<div class="input-password">
+									<label
+										for="password"
+										class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+										>Password</label
+									>
+									<input
+										type="password"
+										name="password"
+										id="password"
+										placeholder="••••••••"
+										class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+										required=""
+									/>
+								</div>
+								<div class="input-confirmPassword">
+									<label
+										for="confirm-password"
+										class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+										>Confirm password</label
+									>
+									<input
+										type="password"
+										name="confirm-password"
+										id="confirm-password"
+										placeholder="••••••••"
+										class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+										required=""
+									/>
+								</div>
+								<div class="Conditions flex items-start">
+									<div class="flex items-center h-5">
+										<input
+											id="terms"
+											aria-describedby="terms"
+											type="checkbox"
+											class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
+											required=""
+										/>
+									</div>
+									<div class="ml-3 text-sm">
+										<label
+											for="terms"
+											class="font-light text-gray-500 dark:text-gray-300"
+											>I accept the
+											<a
+												class="font-medium text-primary-600 hover:underline dark:text-primary-500"
+												href="#"
+												>Terms and Conditions</a
+											></label
+										>
+									</div>
+								</div>
+								<button
+									type="submit"
+									class="w-full bg-[#0511F2] text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+								>
+									Create an account
+								</button>
+								<p class="text-sm font-light text-gray-500 dark:text-gray-400">
+									Already have an account?
+									<a href="#" class="font-h2 text-[#F2AE2E] hover:underline"
+										>Login here</a
+									>
+								</p>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 		<footer class="p-4 sm:p-6" style="background-image: url(/img/footer.png)">
 			<div class="md:flex md:justify-between">
 				<div class="mb-6 md:mb-0">
 					<a href="/index.html" class="flex items-center">
-						<img
-							src="/img/logoSmall.png"
-							class="mr-3 "
-							alt="FlowBite Logo"
-						/>
+						<img src="/img/logoSmall.png" class="mr-3" alt="FlowBite Logo" />
 					</a>
 				</div>
 				<div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
 					<div>
-						<h2
-							class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase"
-						>
+						<h2 class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase">
 							help center
 						</h2>
 						<ul class="text-white font-body text-sm">
 							<li class="mb-4">
-								<a href="/" class="hover:underline"
-									>Twitter</a
-								>
+								<a href="/" class="hover:underline">Twitter</a>
 							</li>
 							<li class="mb-4">
-								<a href="/" class="hover:underline"
-									>Facebook</a
-								>
+								<a href="/" class="hover:underline">Facebook</a>
 							</li>
-              <li>
-								<a href="/" class="hover:underline"
-									>Contact us</a
-								>
+							<li>
+								<a href="/" class="hover:underline">Contact us</a>
 							</li>
 						</ul>
 					</div>
 					<div>
-						<h2
-							class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase"
-						>
+						<h2 class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase">
 							download
 						</h2>
 						<ul class="text-white font-body text-sm">
 							<li class="mb-4">
-								<a
-									href="/"
-									class="hover:underline"
-									>Ios</a
-								>
+								<a href="/" class="hover:underline">Ios</a>
 							</li>
 							<li>
-								<a href="/" class="hover:underline"
-									>Android</a
-								>
+								<a href="/" class="hover:underline">Android</a>
 							</li>
 						</ul>
 					</div>
 					<div>
-						<h2
-							class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase"
-						>
-							Legal
-						</h2>
+						<h2 class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase">Legal</h2>
 						<ul class="text-white font-body text-sm">
 							<li class="mb-4">
 								<a href="#" class="hover:underline">Privacy Policy</a>
@@ -347,9 +201,7 @@
 					</div>
 				</div>
 			</div>
-			<hr
-				class="my-6 border-white sm:mx-auto lg:my-8"
-			/>
+			<hr class="my-6 border-white sm:mx-auto lg:my-8" />
 			<div class="sm:flex sm:items-center sm:justify-between">
 				<span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
 					>© 2022
@@ -357,10 +209,7 @@
 					All Rights Reserved.
 				</span>
 				<div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-					<a
-						href="#"
-						class="text-white dark:hover:text-gray-500"
-					>
+					<a href="#" class="text-white dark:hover:text-gray-500">
 						<svg
 							class="w-5 h-5"
 							fill="currentColor"
@@ -375,10 +224,7 @@
 						</svg>
 						<span class="sr-only">Facebook page</span>
 					</a>
-					<a
-						href="#"
-						class="text-white dark:hover:text-gray-500"
-					>
+					<a href="#" class="text-white dark:hover:text-gray-500">
 						<svg
 							class="w-5 h-5"
 							fill="currentColor"
@@ -393,10 +239,7 @@
 						</svg>
 						<span class="sr-only">Instagram page</span>
 					</a>
-					<a
-						href="#"
-						class="text-white dark:hover:text-gray-500"
-					>
+					<a href="#" class="text-white dark:hover:text-gray-500">
 						<svg
 							class="w-5 h-5"
 							fill="currentColor"
@@ -409,10 +252,7 @@
 						</svg>
 						<span class="sr-only">Twitter page</span>
 					</a>
-					<a
-						href="#"
-						class="text-white dark:hover:text-gray-500"
-					>
+					<a href="#" class="text-white dark:hover:text-gray-500">
 						<svg
 							class="w-5 h-5"
 							fill="currentColor"
@@ -427,10 +267,7 @@
 						</svg>
 						<span class="sr-only">GitHub account</span>
 					</a>
-					<a
-						href="#"
-						class="text-white dark:hover:text-gray-500"
-					>
+					<a href="#" class="text-white dark:hover:text-gray-500">
 						<svg
 							class="w-5 h-5"
 							fill="currentColor"

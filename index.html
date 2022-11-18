@@ -9,13 +9,14 @@
 			href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Hind+Guntur&family=Prompt&display=swap"
 			rel="stylesheet"
 		/>
+    <meta name="description" content="Buy and sell items. Get 1000,- in credit when registering">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Vite App</title>
+		<title>Biddify | Number on auction site</title>
 	</head>
-	<body>
+	<body class="bg-[#E3E4EF]">
 		<script type="module" src="/main.js"></script>
-		<header>
-			<nav class="bg-gradient-to-b from-[#0511F2] to-[#030A8C]">
+		<header id="header">
+			<nav class="bg-gradient-to-b from-[#0511F2] to-[#030A8C] fixed top-0 left-0 right-0 z-index-50">
 				<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 					<div class="relative flex h-16 items-center justify-between">
 						<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -272,70 +273,250 @@
 				</div>
 			</nav>
 		</header>
-		<main></main>
-		<footer class="p-4 sm:p-6" style="background-image: url(/img/footer.png)">
-			<div class="md:flex md:justify-between">
+		<main>
+			<section id="hero">
+				<div
+					class="max-w-screen-lg md:bg-contain lg:bg-cover md:max-h-screen mt-20 md:mt-36  my-10 px-4 py-7 mx-auto lg:gap-8 xl:gap-0 lg:py-16"
+					style="background-image: url(/img/heroimg.png)"
+				>
+					<div class="mr-auto place-self-center">
+						<h1 class="max-w-2xl text-3xl font-h1 leading-none text-white">
+							Auction up your items today!
+						</h1>
+						<p class="mb-6 leading-normal text-white">
+							over <span class="text-[#F2AE2E]">3 millions</span> used,wholesale
+							and reperiable items sold pr year
+						</p>
+
+						<div class="flex flex-col sm:flex-row mb-10">
+							<div
+								class="bg-[#0511F2] px-5 py-3 sm:mr-3 text-base font-medium text-white rounded-lg"
+							>
+								<h2>1. <span class="text-[#F2AE2E]"> Register</span></h2>
+								<p class="font-body text-xs">
+									Get 1000,- in credits when <br />
+									registering an account
+								</p>
+							</div>
+
+							<div
+								class="bg-[#0511F2] mt-2 sm:mt-0 px-5 py-3 sm:mr-3 text-base font-medium text-white rounded-lg"
+							>
+								<h2>2. <span class="text-[#F2AE2E]"> Find</span></h2>
+								<p class="font-body text-xs">
+									Search our libary for more <br />
+									than 100.330 items
+								</p>
+							</div>
+
+							<div
+								class="bg-[#0511F2] mt-2 sm:mt-0 px-5 py-3 sm:mr-3 text-base font-medium text-white rounded-lg"
+							>
+								<h2>3. <span class="text-[#F2AE2E]">Bid</span></h2>
+								<p class="font-body text-xs">
+									Bid on daily auto auctions <br />
+									Monday–Friday.
+								</p>
+							</div>
+						</div>
+
+						<a
+							href="/signup.html"
+							class="bg-[#F2AE2E] px-4 sm:min-w-4xl py-4 text-base font-medium text-center rounded-lg hover:bg-[#F1BB56]"
+						>
+							Register today to start bidding > >
+						</a>
+					</div>
+				</div>
+			</section>
+			<section id="auction">
+				<div class="bg-gradient-to-b from-[#F2AE2E] to-[#A77619]">
+					<div
+						class="max-w-screen-xl md:max-h-screen mx-auto p-10 flex justify-between"
+					>
+						<div>
+							<h2 class="text-4xl font-h1 leading-none text-white">
+								On going acutions
+							</h2>
+							<p class="text-lg font-h2 text-white">
+								Check out the newst listings
+							</p>
+						</div>
+						<div>
+							<h2 class="text-8xl font-h1 text-white hidden lg:block">
+								TRUST IN US
+							</h2>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div id="list-items" class="px-10 py-20 grid grid-flow-col grid-cols-1 grid-rows-3 gap-5 lg:grid-cols-3 lg:grid-rows-2 max-w-screen-lg mx-auto">
+            <a href="/detail.html">
+							<div class="max-w-xs rounded-md shadow-lg hover:scale-105 transition duration-500 cursor-pointer">
+								<div>
+									<img src="https://media.ldlc.com/r1600/ld/products/00/05/82/02/LD0005820208_1.jpg" alt=""/>
+								</div>
+								<div class="py-4 px-4 bg-white">
+									<h3 class="text-lg font-semibold text-gray-600">
+										2020 BMW 3 SERIES
+									</h3>
+									<div class="flex">
+										<p class="mt-4 mr-3 text-lg font-thin">Current bid</p>
+										<p class="mt-4 text-lg text-green-500">$ 2400</p>
+									</div>
+									<div class="flex">
+										<p class="mt-4 mr-3 text-lg font-thin">Time remaining</p>
+										<p class="mt-4 text-lg text-red-700">4h 38m</p>
+									</div>
+								</div>
+							</div>
+						</a>
+            <a href="/detail.html">
+							<div class="max-w-xs rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer">
+								<div>
+									<img src="https://media.ldlc.com/r1600/ld/products/00/05/82/02/LD0005820208_1.jpg" alt=""/>
+								</div>
+								<div class="py-4 px-4 bg-white">
+									<h3 class="text-lg font-semibold text-gray-600">
+										2020 BMW 3 SERIES
+									</h3>
+									<div class="flex">
+										<p class="mt-4 mr-3 text-lg font-thin">Current bid</p>
+										<p class="mt-4 text-lg text-green-500">$ 2400</p>
+									</div>
+									<div class="flex">
+										<p class="mt-4 mr-3 text-lg font-thin">Time remaining</p>
+										<p class="mt-4 text-lg text-red-700">4h 38m</p>
+									</div>
+								</div>
+							</div>
+						</a>
+            <a href="/detail.html">
+							<div class="max-w-xs rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer">
+								<div>
+									<img src="https://media.ldlc.com/r1600/ld/products/00/05/82/02/LD0005820208_1.jpg" alt=""/>
+								</div>
+								<div class="py-4 px-4 bg-white">
+									<h3 class="text-lg font-semibold text-gray-600">
+										2020 BMW 3 SERIES
+									</h3>
+									<div class="flex">
+										<p class="mt-4 mr-3 text-lg font-thin">Current bid</p>
+										<p class="mt-4 text-lg text-green-500">$ 2400</p>
+									</div>
+									<div class="flex">
+										<p class="mt-4 mr-3 text-lg font-thin">Time remaining</p>
+										<p class="mt-4 text-lg text-red-700">4h 38m</p>
+									</div>
+								</div>
+							</div>
+						</a>
+            <a href="/detail.html">
+							<div class="max-w-xs rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer">
+								<div>
+									<img src="https://media.ldlc.com/r1600/ld/products/00/05/82/02/LD0005820208_1.jpg" alt=""/>
+								</div>
+								<div class="py-4 px-4 bg-white">
+									<h3 class="text-lg font-semibold text-gray-600">
+										2020 BMW 3 SERIES
+									</h3>
+									<div class="flex">
+										<p class="mt-4 mr-3 text-lg font-thin">Current bid</p>
+										<p class="mt-4 text-lg text-green-500">$ 2400</p>
+									</div>
+									<div class="flex">
+										<p class="mt-4 mr-3 text-lg font-thin">Time remaining</p>
+										<p class="mt-4 text-lg text-red-700">4h 38m</p>
+									</div>
+								</div>
+							</div>
+						</a>
+            <a href="/detail.html">
+							<div class="max-w-xs rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer">
+								<div>
+									<img src="https://media.ldlc.com/r1600/ld/products/00/05/82/02/LD0005820208_1.jpg" alt=""/>
+								</div>
+								<div class="py-4 px-4 bg-white">
+									<h3 class="text-lg font-semibold text-gray-600">
+										2020 BMW 3 SERIES
+									</h3>
+									<div class="flex">
+										<p class="mt-4 mr-3 text-lg font-thin">Current bid</p>
+										<p class="mt-4 text-lg text-green-500">$ 2400</p>
+									</div>
+									<div class="flex">
+										<p class="mt-4 mr-3 text-lg font-thin">Time remaining</p>
+										<p class="mt-4 text-lg text-red-700">4h 38m</p>
+									</div>
+								</div>
+							</div>
+						</a>
+            <a href="/detail.html">
+							<div class="max-w-xs rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer">
+								<div>
+									<img src="https://media.ldlc.com/r1600/ld/products/00/05/82/02/LD0005820208_1.jpg" alt=""/>
+								</div>
+								<div class="py-4 px-4 bg-white">
+									<h3 class="text-lg font-semibold text-gray-600">
+										2020 BMW 3 SERIES
+									</h3>
+									<div class="flex">
+										<p class="mt-4 mr-3 text-lg font-thin">Current bid</p>
+										<p class="mt-4 text-lg text-green-500">$ 2400</p>
+									</div>
+									<div class="flex">
+										<p class="mt-4 mr-3 text-lg font-thin">Time remaining</p>
+										<p class="mt-4 text-lg text-red-700">4h 38m</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer id="footer"
+			class="p-4 mt-10 sm:p-6"
+			style="background-image: url(/img/footer.png)"
+		>
+			<div class="max-w-screen-lg mx-auto md:flex md:justify-between">
 				<div class="mb-6 md:mb-0">
 					<a href="/index.html" class="flex items-center">
-						<img
-							src="/img/logoSmall.png"
-							class="mr-3 "
-							alt="FlowBite Logo"
-						/>
+						<img src="/img/logoSmall.png" class="mr-3" alt="FlowBite Logo" />
 					</a>
 				</div>
 				<div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
 					<div>
-						<h2
-							class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase"
-						>
+						<h2 class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase">
 							help center
 						</h2>
 						<ul class="text-white font-body text-sm">
 							<li class="mb-4">
-								<a href="/" class="hover:underline"
-									>Twitter</a
-								>
+								<a href="/" class="hover:underline">Twitter</a>
 							</li>
 							<li class="mb-4">
-								<a href="/" class="hover:underline"
-									>Facebook</a
-								>
+								<a href="/" class="hover:underline">Facebook</a>
 							</li>
-              <li>
-								<a href="/" class="hover:underline"
-									>Contact us</a
-								>
+							<li>
+								<a href="/" class="hover:underline">Contact us</a>
 							</li>
 						</ul>
 					</div>
 					<div>
-						<h2
-							class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase"
-						>
+						<h2 class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase">
 							download
 						</h2>
 						<ul class="text-white font-body text-sm">
 							<li class="mb-4">
-								<a
-									href="/"
-									class="hover:underline"
-									>Ios</a
-								>
+								<a href="/" class="hover:underline">Ios</a>
 							</li>
 							<li>
-								<a href="/" class="hover:underline"
-									>Android</a
-								>
+								<a href="/" class="hover:underline">Android</a>
 							</li>
 						</ul>
 					</div>
 					<div>
-						<h2
-							class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase"
-						>
-							Legal
-						</h2>
+						<h2 class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase">Legal</h2>
 						<ul class="text-white font-body text-sm">
 							<li class="mb-4">
 								<a href="#" class="hover:underline">Privacy Policy</a>
@@ -348,19 +529,18 @@
 				</div>
 			</div>
 			<hr
-				class="my-6 border-white sm:mx-auto lg:my-8"
+				class="max-w-screen-lg mx-auto my-6 border-white sm:mx-auto lg:my-8"
 			/>
-			<div class="sm:flex sm:items-center sm:justify-between">
+			<div
+				class="max-w-screen-lg mx-auto sm:flex sm:items-center sm:justify-between"
+			>
 				<span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
 					>© 2022
 					<a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>.
 					All Rights Reserved.
 				</span>
 				<div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-					<a
-						href="#"
-						class="text-white dark:hover:text-gray-500"
-					>
+					<a href="#" class="text-white dark:hover:text-gray-500">
 						<svg
 							class="w-5 h-5"
 							fill="currentColor"
@@ -375,10 +555,7 @@
 						</svg>
 						<span class="sr-only">Facebook page</span>
 					</a>
-					<a
-						href="#"
-						class="text-white dark:hover:text-gray-500"
-					>
+					<a href="#" class="text-white dark:hover:text-gray-500">
 						<svg
 							class="w-5 h-5"
 							fill="currentColor"
@@ -393,10 +570,7 @@
 						</svg>
 						<span class="sr-only">Instagram page</span>
 					</a>
-					<a
-						href="#"
-						class="text-white dark:hover:text-gray-500"
-					>
+					<a href="#" class="text-white dark:hover:text-gray-500">
 						<svg
 							class="w-5 h-5"
 							fill="currentColor"
@@ -409,10 +583,7 @@
 						</svg>
 						<span class="sr-only">Twitter page</span>
 					</a>
-					<a
-						href="#"
-						class="text-white dark:hover:text-gray-500"
-					>
+					<a href="#" class="text-white dark:hover:text-gray-500">
 						<svg
 							class="w-5 h-5"
 							fill="currentColor"
@@ -427,10 +598,7 @@
 						</svg>
 						<span class="sr-only">GitHub account</span>
 					</a>
-					<a
-						href="#"
-						class="text-white dark:hover:text-gray-500"
-					>
+					<a href="#" class="text-white dark:hover:text-gray-500">
 						<svg
 							class="w-5 h-5"
 							fill="currentColor"

@@ -14,8 +14,10 @@
 	</head>
 	<body>
 		<script type="module" src="/main.js"></script>
-		<header>
-			<nav class="bg-gradient-to-b from-[#0511F2] to-[#030A8C]">
+		<header id="header">
+			<nav
+				class="bg-gradient-to-b from-[#33333F] to-[#010101] fixed top-0 left-0 right-0 z-10"
+			>
 				<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 					<div class="relative flex h-16 items-center justify-between">
 						<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -66,16 +68,20 @@
 							class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between"
 						>
 							<div class="flex flex-shrink-0 items-center">
-								<img
+								<a href="/index.html">
+									<img
 									class="block w-auto lg:hidden"
 									src="/img/logoSmall.png"
 									alt="Your Company"
 								/>
-								<img
+								</a>
+								<a href="/index.html">
+									<img
 									class="hidden w-auto lg:block"
 									src="/img/logoSmall.png"
 									alt="Your Company"
 								/>
+								</a>
 							</div>
 							<!-- SEARCH -->
 							<form class="hidden sm:block">
@@ -148,7 +154,7 @@
 										tabindex="-1"
 									>
 										<a
-											href="#"
+											href="/profile.html"
 											class="block px-4 py-2 text-sm text-gray-700"
 											role="menuitem"
 											tabindex="-1"
@@ -180,14 +186,14 @@
 					<div class="sm:hidden" id="mobile-menu">
 						<div class="space-y-1 px-2 pt-2 pb-3">
 							<a
-								href="#"
+								href="/index.html"
 								class="text-gray-300 font-body hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
 								aria-current="page"
 								>Home</a
 							>
 
 							<a
-								href="#"
+								href="/listings.html"
 								class="text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
 								>Auctions</a
 							>
@@ -199,7 +205,7 @@
 							>
 
 							<a
-								href="#"
+								href="/profile.html"
 								class="text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
 								>Profile</a
 							>
@@ -241,101 +247,81 @@
 							</div>
 						</form>
 					</div>
-					<div class="hidden sm:ml-6 sm:block">
-						<div class="flex space-x-4">
-							<a
-								href="#"
-								class="text-white px-3 py-2 rounded-md text-sm font-medium"
-								aria-current="page"
-								>Home</a
-							>
+				</div>
+				<div class="hidden sm:pl-6 sm:block bg-[#A77619]">
+					<div class="flex space-x-4">
+						<a
+							href="/index.html"
+							class="text-white px-3 py-2 rounded-md text-sm font-medium"
+							aria-current="page"
+							>Home</a
+						>
 
-							<a
-								href="#"
-								class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-								>Auctions</a
-							>
+						<a
+							href="/listings.html"
+							class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+							>Auctions</a
+						>
 
-							<a
-								href="#"
-								class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-								>Active Auctions</a
-							>
+						<a
+							href="/listings.html"
+							class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+							>Active Auctions</a
+						>
 
-							<a
-								href="#"
-								class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-								>Profile</a
-							>
-						</div>
+						<a
+							href="/profile.html"
+							class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+							>Profile</a
+						>
 					</div>
 				</div>
 			</nav>
 		</header>
 		<main></main>
-		<footer class="p-4 sm:p-6" style="background-image: url(/img/footer.png)">
-			<div class="md:flex md:justify-between">
+		<footer
+			id="footer"
+			class="p-4 pt-10 sm:pt-14 mt-10 sm:p-6"
+			style="background-image: url(/img/footer.png)"
+		>
+			<div class="max-w-screen-lg mx-auto md:flex md:justify-between">
 				<div class="mb-6 md:mb-0">
 					<a href="/index.html" class="flex items-center">
-						<img
-							src="/img/logoSmall.png"
-							class="mr-3 "
-							alt="FlowBite Logo"
-						/>
+						<img src="/img/logoSmall.png" class="mr-3" alt="FlowBite Logo" />
 					</a>
 				</div>
 				<div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
 					<div>
-						<h2
-							class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase"
-						>
+						<h2 class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase">
 							help center
 						</h2>
 						<ul class="text-white font-body text-sm">
 							<li class="mb-4">
-								<a href="/" class="hover:underline"
-									>Twitter</a
-								>
+								<a href="/" class="hover:underline">Twitter</a>
 							</li>
 							<li class="mb-4">
-								<a href="/" class="hover:underline"
-									>Facebook</a
-								>
+								<a href="/" class="hover:underline">Facebook</a>
 							</li>
-              <li>
-								<a href="/" class="hover:underline"
-									>Contact us</a
-								>
+							<li>
+								<a href="/" class="hover:underline">Contact us</a>
 							</li>
 						</ul>
 					</div>
 					<div>
-						<h2
-							class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase"
-						>
+						<h2 class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase">
 							download
 						</h2>
 						<ul class="text-white font-body text-sm">
 							<li class="mb-4">
-								<a
-									href="/"
-									class="hover:underline"
-									>Ios</a
-								>
+								<a href="/" class="hover:underline">Ios</a>
 							</li>
 							<li>
-								<a href="/" class="hover:underline"
-									>Android</a
-								>
+								<a href="/" class="hover:underline">Android</a>
 							</li>
 						</ul>
 					</div>
 					<div>
-						<h2
-							class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase"
-						>
-							Legal
-						</h2>
+						<h2 class="mb-6 text-sm font-h2 text-[#F2AE2E] uppercase">Legal</h2>
 						<ul class="text-white font-body text-sm">
 							<li class="mb-4">
 								<a href="#" class="hover:underline">Privacy Policy</a>
@@ -348,19 +334,18 @@
 				</div>
 			</div>
 			<hr
-				class="my-6 border-white sm:mx-auto lg:my-8"
+				class="max-w-screen-lg mx-auto my-6 border-white sm:mx-auto lg:my-8"
 			/>
-			<div class="sm:flex sm:items-center sm:justify-between">
+			<div
+				class="max-w-screen-lg mx-auto sm:flex sm:items-center sm:justify-between"
+			>
 				<span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
 					>© 2022
 					<a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>.
 					All Rights Reserved.
 				</span>
 				<div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-					<a
-						href="#"
-						class="text-white dark:hover:text-gray-500"
-					>
+					<a href="#" class="text-white dark:hover:text-gray-500">
 						<svg
 							class="w-5 h-5"
 							fill="currentColor"
@@ -375,10 +360,7 @@
 						</svg>
 						<span class="sr-only">Facebook page</span>
 					</a>
-					<a
-						href="#"
-						class="text-white dark:hover:text-gray-500"
-					>
+					<a href="#" class="text-white dark:hover:text-gray-500">
 						<svg
 							class="w-5 h-5"
 							fill="currentColor"
@@ -393,10 +375,7 @@
 						</svg>
 						<span class="sr-only">Instagram page</span>
 					</a>
-					<a
-						href="#"
-						class="text-white dark:hover:text-gray-500"
-					>
+					<a href="#" class="text-white dark:hover:text-gray-500">
 						<svg
 							class="w-5 h-5"
 							fill="currentColor"
@@ -409,10 +388,7 @@
 						</svg>
 						<span class="sr-only">Twitter page</span>
 					</a>
-					<a
-						href="#"
-						class="text-white dark:hover:text-gray-500"
-					>
+					<a href="#" class="text-white dark:hover:text-gray-500">
 						<svg
 							class="w-5 h-5"
 							fill="currentColor"
@@ -427,10 +403,7 @@
 						</svg>
 						<span class="sr-only">GitHub account</span>
 					</a>
-					<a
-						href="#"
-						class="text-white dark:hover:text-gray-500"
-					>
+					<a href="#" class="text-white dark:hover:text-gray-500">
 						<svg
 							class="w-5 h-5"
 							fill="currentColor"

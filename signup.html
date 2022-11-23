@@ -11,12 +11,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Biddify | Sing up </title>
 	</head>
-
-	<body>
+	<body class="dark:bg-gray-900">
 		<script type="module" src="/main.js"></script>
-		<header id="header">
+		<header>
 			<nav
-				class="bg-gradient-to-b from-[#0511F2] to-[#030A8C] fixed top-0 left-0 right-0"
+				class="bg-gradient-to-b from-[#33333F] to-[#010101] fixed top-0 left-0 right-0 z-10"
 			>
 				<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 					<div class="relative flex h-16 items-center justify-between">
@@ -59,22 +58,22 @@
 							</h1>
 							<form class="space-y-4 md:space-y-6" action="/index.html">
 								<div class="input-name">
-									<label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your name</label>
+									<label for="name" class="block mb-2 text-sm font-h2 text-gray-900 dark:text-white">Your name</label>
 									<input type="text" name="name" id="name"
-										class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+										class="bg-gray-50 font-body border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 										placeholder="John" required="" />
 								</div>
 								<div class="input-email">
 									<label
 										for="email"
-										class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+										class="block mb-2 text-sm font-h2 text-gray-900 dark:text-white"
 										>Your email</label
 									>
 									<input
 										type="email"
 										name="email"
 										id="email"
-										class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+										class="bg-gray-50 font-body border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 										placeholder="name@company.com"
 										required=""
 									/>
@@ -82,7 +81,7 @@
 								<div class="input-password">
 									<label
 										for="password"
-										class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+										class="block mb-2 text-sm font-h2 text-gray-900 dark:text-white"
 										>Password</label
 									>
 									<input
@@ -90,14 +89,14 @@
 										name="password"
 										id="password"
 										placeholder="••••••••"
-										class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+										class="bg-gray-50 font-body border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 										required=""
 									/>
 								</div>
 								<div class="input-confirmPassword">
 									<label
 										for="confirm-password"
-										class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+										class="block mb-2 text-sm font-h2 text-gray-900 dark:text-white"
 										>Confirm password</label
 									>
 									<input
@@ -105,7 +104,7 @@
 										name="confirm-password"
 										id="confirm-password"
 										placeholder="••••••••"
-										class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+										class="bg-gray-50 font-body border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 										required=""
 									/>
 								</div>
@@ -122,10 +121,10 @@
 									<div class="ml-3 text-sm">
 										<label
 											for="terms"
-											class="font-light text-gray-500 dark:text-gray-300"
+											class="font-body text-gray-500 dark:text-gray-300"
 											>I accept the
 											<a
-												class="font-medium text-primary-600 hover:underline dark:text-primary-500"
+												class="font-body text-primary-600 hover:underline dark:text-primary-500"
 												href="#"
 												>Terms and Conditions</a
 											></label
@@ -134,13 +133,13 @@
 								</div>
 								<button
 									type="submit"
-									class="w-full bg-[#0511F2] text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+									class="w-full bg-gradient-to-b from-[#F2AE2E] to-[#A77619] font-body text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
 								>
 									Create an account
 								</button>
-								<p class="text-sm font-light text-gray-500 dark:text-gray-400">
+								<p class="text-sm font-body text-gray-500 dark:text-gray-400">
 									Already have an account?
-									<a href="#" class="font-h2 text-[#F2AE2E] hover:underline"
+									<a href="/signin.html" class="font-h2 text-[#F2AE2E] hover:underline"
 										>Login here</a
 									>
 								</p>
@@ -150,8 +149,12 @@
 				</div>
 			</section>
 		</main>
-		<footer class="p-4 sm:p-6" style="background-image: url(/img/footer.png)">
-			<div class="md:flex md:justify-between">
+		<footer
+			id="footer"
+			class="p-4 pt-10 sm:pt-14 mt-10 sm:p-6"
+			style="background-image: url(/img/footer.png)"
+		>
+			<div class="max-w-screen-lg mx-auto md:flex md:justify-between">
 				<div class="mb-6 md:mb-0">
 					<a href="/index.html" class="flex items-center">
 						<img src="/img/logoSmall.png" class="mr-3" alt="FlowBite Logo" />
@@ -200,8 +203,12 @@
 					</div>
 				</div>
 			</div>
-			<hr class="my-6 border-white sm:mx-auto lg:my-8" />
-			<div class="sm:flex sm:items-center sm:justify-between">
+			<hr
+				class="max-w-screen-lg mx-auto my-6 border-white sm:mx-auto lg:my-8"
+			/>
+			<div
+				class="max-w-screen-lg mx-auto sm:flex sm:items-center sm:justify-between"
+			>
 				<span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
 					>© 2022
 					<a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>.

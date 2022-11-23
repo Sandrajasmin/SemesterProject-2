@@ -20,7 +20,7 @@
 		<script type="module" src="/main.js"></script>
 		<header id="header">
 			<nav
-				class="bg-gradient-to-b from-[#0511F2] to-[#030A8C] fixed top-0 left-0 right-0"
+				class="bg-gradient-to-b from-[#33333F] to-[#010101] fixed top-0 left-0 right-0 z-10"
 			>
 				<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 					<div class="relative flex h-16 items-center justify-between">
@@ -72,16 +72,20 @@
 							class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between"
 						>
 							<div class="flex flex-shrink-0 items-center">
-								<img
+								<a href="/index.html">
+									<img
 									class="block w-auto lg:hidden"
 									src="/img/logoSmall.png"
 									alt="Your Company"
 								/>
-								<img
+								</a>
+								<a href="/index.html">
+									<img
 									class="hidden w-auto lg:block"
 									src="/img/logoSmall.png"
 									alt="Your Company"
 								/>
+								</a>
 							</div>
 							<!-- SEARCH -->
 							<form class="hidden sm:block">
@@ -154,7 +158,7 @@
 										tabindex="-1"
 									>
 										<a
-											href="#"
+											href="/profile.html"
 											class="block px-4 py-2 text-sm text-gray-700"
 											role="menuitem"
 											tabindex="-1"
@@ -186,14 +190,14 @@
 					<div class="sm:hidden" id="mobile-menu">
 						<div class="space-y-1 px-2 pt-2 pb-3">
 							<a
-								href="#"
+								href="/index.html"
 								class="text-gray-300 font-body hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
 								aria-current="page"
 								>Home</a
 							>
 
 							<a
-								href="#"
+								href="/listings.html"
 								class="text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
 								>Auctions</a
 							>
@@ -205,7 +209,7 @@
 							>
 
 							<a
-								href="#"
+								href="/profile.html"
 								class="text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
 								>Profile</a
 							>
@@ -247,33 +251,33 @@
 							</div>
 						</form>
 					</div>
-					<div class="hidden sm:ml-6 sm:block">
-						<div class="flex space-x-4">
-							<a
-								href="#"
-								class="text-white px-3 py-2 rounded-md text-sm font-medium"
-								aria-current="page"
-								>Home</a
-							>
+				</div>
+				<div class="hidden sm:pl-6 sm:block bg-[#A77619]">
+					<div class="flex space-x-4">
+						<a
+							href="/index.html"
+							class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+							>Home</a
+						>
 
-							<a
-								href="#"
-								class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-								>Auctions</a
-							>
+						<a
+							href="/listings.html"
+							class="text-white px-3 py-2 rounded-md text-sm font-medium"
+							aria-current="page"
+							>Auctions</a
+						>
 
-							<a
-								href="#"
-								class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-								>Active Auctions</a
-							>
+						<a
+							href="/listings.html"
+							class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+							>Active Auctions</a
+						>
 
-							<a
-								href="#"
-								class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-								>Profile</a
-							>
-						</div>
+						<a
+							href="/profile.html"
+							class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+							>Profile</a
+						>
 					</div>
 				</div>
 			</nav>
@@ -284,7 +288,7 @@
 					<h1 class="mt-36 px-10 text-4xl font-h1 text-black max-w-screen-lg mx-auto">Active listings</h1>
 					<div
 						id="list-items"
-						class="px-10 py-10 grid gap-5 sm:grid-flow-col sm:grid-rows-4 md:grid-rows-2 max-w-screen-lg mx-auto"
+						class="px-10 py-10 grid gap-5 sm:grid-flow-col sm:grid-rows-4 md:grid-rows-2 max-w-screen-lg mx-auto z-0"
 					>
 					<!--grid-flow-col grid-cols-1 grid-rows-3 gap-5 lg:grid-cols-3 lg:grid-rows-2 max-w-screen-lg mx-auto -->
 						<a href="/detail.html">
@@ -441,8 +445,9 @@
 				</div>
 			</section>
 		</main>
-		<footer id="footer"
-			class="p-4 mt-10 sm:p-6"
+		<footer
+			id="footer"
+			class="p-4 pt-10 sm:pt-14 mt-10 sm:p-6"
 			style="background-image: url(/img/footer.png)"
 		>
 			<div class="max-w-screen-lg mx-auto md:flex md:justify-between">

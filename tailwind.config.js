@@ -4,11 +4,22 @@ module.exports = {
   theme: {
     fontFamily: {
       'h1': ['Hind Guntur', 'sans-serif'],
-      'h2': ['Prompt', 'sans-serif'],
-      'body': ['Fira Sans', 'sans-serif'],
+      'h2': ['Fira Sans', 'sans-serif'],
+      'body': ['Hind', 'sans-serif'],
     },
+    
     extend: {
+      animation: {
+        shine: "shine 1s",
+      },
+      keyframes: {
+        shine: {
+          "100%": { left: "125%" },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 }

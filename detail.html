@@ -9,11 +9,16 @@
 			href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Hind+Guntur&family=Prompt&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+      		rel="stylesheet"
+      		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    	/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Vite App</title>
 	</head>
 	<body>
 		<script type="module" src="/main.js"></script>
+		<script type="module" src="./js/getPostId.js"></script>
 		<header id="header">
 			<nav
 				class="bg-gradient-to-b from-[#33333F] to-[#010101] fixed top-0 left-0 right-0 z-10"
@@ -278,7 +283,246 @@
 				</div>
 			</nav>
 		</header>
-		<main></main>
+		<main class="mt-20 md:mt-36 flex-auto ">
+			<div class="mx-auto mt-6 max-w-2xl sm:px-6 md:max-w-7xl ">
+				<div class="aspect-w-4 aspect-h-5 sm:overflow-hidden sm:rounded-lg lg:aspect-w-3 lg:aspect-h-4">
+					<img src="/img/product-img.jpeg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center">
+				</div>
+			</div>
+			<!-- Product info -->
+			<div class="mx-auto max-w-7xl px-4 pt-10 pb-16 ">
+				<div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+					<h1 class="text-2xl font-h1 tracking-tight text-gray-900 sm:text-3xl md:px-5">2020 BMW 3 SERIES</h1>
+				</div>
+				<!-- Options -->
+				<div class="mt-4 lg:row-span-3 lg:mt-0 sm:flex md:justify-between">
+					<div class="flexbox md:px-5 sm:basis-1/2">
+						<div id="auction-details" class="sm:flex sm:justify-between md:px-2">
+							<!-- User details -->
+							<div class="mt-6 flex">
+								<div id="user-image">
+									<h3 class="sr-only">Seller</h3>
+									<img
+										class="h-16 w-16 rounded-full mr-5"
+										src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+										alt=""
+									/>
+								</div>
+								<div id="user-details">
+									<a href="#" class=" text-sm font-body text-indigo-600 hover:text-indigo-500">Sandra Jasmin</a>
+									<div class="flex items-center">
+										
+										<h3 class="sr-only">Reviews</h3>
+										
+									<!--
+										Heroicon name: mini/star
+
+										Active: "text-gray-900", Default: "text-gray-200"
+									-->
+									<svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+										<path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+									</svg>
+
+									<!-- Heroicon name: mini/star -->
+									<svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+										<path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+									</svg>
+
+									<!-- Heroicon name: mini/star -->
+									<svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+										<path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+									</svg>
+
+									<!-- Heroicon name: mini/star -->
+									<svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+										<path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+									</svg>
+
+									<!-- Heroicon name: mini/star -->
+									<svg class="text-gray-200 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+										<path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+									</svg>
+									</div>
+									<p class="sr-only">4 out of 5 stars</p>
+									<div>
+										<a href="#" class="text-sm font-body text-indigo-600 hover:text-indigo-500">117 reviews</a>
+									</div>
+								</div>
+							</div>
+							<!-- current bid-->
+							<div class="flex items-baseline mt-10 mb-10 sm:inline-block sm:mt-10">
+								<h2 class="font-body mr-10">Current bid:</h2>
+								<p class="text-3xl font-body tracking-tight text-green-700">$192</p>
+							</div>
+						</div>
+						<!-- Bid-->
+						<div id="bid-info ">
+							<div id="highest-bid" class="flex items-center w-full max-w-full ">
+								<div class="w-full py-0 px-0 group block relative break-words last-child:mb-0 p-16 rounded-8 ">
+									<button id="button" type="button" aria-expanded="true" class="bg-gradient-to-b from-[#33333F] to-[#010101] appearance-none cursor-pointer bg-transparent border-0 m-0 hover:underline focus:underline w-full text-left relative group block break-words last-child:mb-0 p-10 rounded-8 ">
+										<div class="flex justify-between align-center">
+											<div class="flex space-x-8 text-16 items-center">
+											<i class="fa fa-dollar stroke-1" style="font-size:18px; color:#F2AE2E"></i>
+											<p class="m-0 text-[#F2AE2E] font-h2" style="font-weight: 300;">RECENT BIDS</p>
+											</div>
+											<div class="self-center transform transition-transform -rotate-180  box-chevron">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+													<path stroke="#F2AE2E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.5 5.5L8 11l5.5-5.5"></path>
+												</svg>
+											</div>
+										</div>
+										<div class="hover-shine absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine">
+
+										</div>
+									</button>
+									<div id="subtext" class="overflow-hidden h-0" style="height: auto; transition: height var(--f-expansion-duration, 0.3s); backface-visibility: hidden;">
+										<div class=" group block relative break-words last-child:mb-0 rounded-8 pt-0">
+											<div class=" md:my-0">
+												<ul>
+													<li class="text-14 text-gray-700 my-8 flex items-center space-x-12 ">
+														<div id="user-image">
+															<h3 class="sr-only">Seller</h3>
+															<img
+																class="h-16 w-16 rounded-full mr-5"
+																src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+																alt=""
+															/>
+														</div>
+														<div id="user-details">
+															<a href="#" class=" text-sm font-body text-indigo-600 hover:text-indigo-500">Sandra Jasmin</a>
+															<div class="flex items-center">
+																
+																<h3 class="sr-only">Reviews</h3>
+															<div>
+																<h3 class="font-body text-green-700">$200</h3>
+															</div>
+														</div>
+													</li>
+													<li class="text-14 text-gray-700 my-8 flex items-center space-x-12 ">
+														<div id="user-image">
+															<h3 class="sr-only">Seller</h3>
+															<img
+																class="h-16 w-16 rounded-full mr-5"
+																src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+																alt=""
+															/>
+														</div>
+														<div id="user-details">
+															<a href="#" class=" text-sm font-body text-indigo-600 hover:text-indigo-500">Sandra Jasmin</a>
+															<div class="flex items-center">
+																
+																<h3 class="sr-only">Reviews</h3>
+															<div>
+																<h3 class="font-body text-green-700">$100</h3>
+															</div>
+														</div>
+													</li>
+													<li class="text-14 text-gray-700 my-8 flex items-center space-x-12 ">
+														<div id="user-image">
+															<h3 class="sr-only">Seller</h3>
+															<img
+																class="h-16 w-16 rounded-full mr-5"
+																src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+																alt=""
+															/>
+														</div>
+														<div id="user-details">
+															<a href="#" class=" text-sm font-body text-indigo-600 hover:text-indigo-500">Sandra Jasmin</a>
+															<div class="flex items-center">
+																
+																<h3 class="sr-only">Reviews</h3>
+															<div>
+																<h3 class="font-body text-green-700">$50</h3>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="make-bid" class="flex items-center w-full max-w-full ">
+								<div class="w-full py-0 px-0 group block relative break-words last-child:mb-0 p-16 rounded-8 ">
+									<button id="make-bid-btn" type="button" aria-expanded="true" class=" bg-gradient-to-b from-[#33333F] to-[#010101] appearance-none cursor-pointer bg-transparent border-0 m-0 hover:underline focus:underline w-full text-left relative group block break-words last-child:mb-0 p-10 rounded-8 overflow-hidde ">
+										<div class="flex justify-between align-center">
+											<div class="flex space-x-8 text-16 items-center">
+											<i class="fa fa-credit-card stroke-1" style="font-size:18px; color:#F2AE2E"></i>
+											<p class="m-0 text-[#F2AE2E] font-h2" style="font-weight: 300;">MAKE BID</p>
+											</div>
+											<div class="self-center transform transition-transform -rotate-180  box-chevron">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+													<path stroke="#F2AE2E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.5 5.5L8 11l5.5-5.5"></path>
+												</svg>
+											</div>
+										</div>
+										<div class="hover-shine absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine">
+
+										</div>
+									</button>
+									<div id="make-bid-subtext" class="overflow-hidden h-0" style="height: auto; transition: height var(--f-expansion-duration, 0.3s); backface-visibility: hidden;">
+										<div class=" group block relative break-words last-child:mb-0 rounded-8 pt-0 sm:mt-10">
+											<div class=" md:my-0 flex justify-evenly">
+												<div class="box">
+													<button class="bg-[#932f2f] hover:bg-gradient-to-b from-[#F2AE2E] to-[#A77619] p-4 lg:px-10 rounded-lg text-white">
+														<p>-500CR</p>
+													</button>
+												</div>
+												<div class="box p-4 rounded-lg border sm:px-2 md:px-10">
+													<p>500</p>
+												</div>
+												<div class="box">
+													<button class="bg-[#2f9340] hover:bg-gradient-to-b from-[#F2AE2E] to-[#A77619] p-4 lg:px-10 rounded-lg text-white">
+														<p>+500CR</p>
+													</button>
+												</div>
+												
+											</div>
+											<button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent py-3 px-8 text-base font-body text-[#F2AE2E] bg-[#33333F] hover:bg-gradient-to-b from-[#F2AE2E] to-[#A77619] hover:text-white ">
+												Make bid
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+					<!-- Description-->
+					<div id="descripton" class=" sm:basis-1/2 py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pb-16 lg:pr-8">
+						<!-- Description and details -->
+						<div>
+							<h3 class="sr-only">Description</h3>
+							<div class="space-y-6">
+								<p class="font-body text-gray-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sin Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+							</div>
+						</div>
+						<div class="mt-10">
+							<h3 class="text-sm font-h2 text-gray-900">Conditions</h3>
+							<div class="mt-4">
+								<ul role="list" class="list-disc space-y-2 pl-4 text-sm">
+									<li class="text-gray-400">
+										<span class="text-gray-600 font-body">
+											Used
+										</span>
+									</li>
+									<li class="text-gray-400">
+										<span class="text-gray-600 font-body">
+											Repairable
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="mt-10">
+							<h2 class="text-sm font-h2 text-gray-900">Details</h2>
+							<div class="mt-4 space-y-6">
+								<p class="text-sm text-gray-600 font-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sin Letraset sheets containing Lorem Ipsum passages</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
 		<footer
 			id="footer"
 			class="p-4 pt-10 sm:pt-14 mt-10 sm:p-6"

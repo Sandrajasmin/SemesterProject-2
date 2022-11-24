@@ -8,6 +8,7 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
+		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"autoprefixer": "^10.4.13",
 		"husky": "^3.1.0",
 		"postcss": "^8.4.19",

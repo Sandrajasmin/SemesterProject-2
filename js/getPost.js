@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { GET_POST_URL } from './settings/api';
+import { GET_LISTINGS_URL } from './settings/api';
 import { getToken } from './utils/storage';
 
 const listing = document.querySelector('#list-items');
@@ -12,7 +12,7 @@ if (!accessToken) {
 };
 
 (async function getAllPosts() {
-    const response = await fetch(GET_POST_URL, {
+    const response = await fetch(GET_LISTINGS_URL, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
@@ -37,12 +37,13 @@ if (!accessToken) {
 
                 const daysSinceCreated = now.diff(endsAt, 'minutes');
                 return (`
-                <a href="/detail.html?post_id=${id}">
+                        <a href="/detail.html?post_id=${id}">
 							<div id="listing-detail" class="max-w-xs rounded-md shadow-lg hover:scale-105 transition duration-500 cursor-pointer z-0">
-								<div class="max-h-50 max-w-60">
+								<div class="h-48">
 									<img
 										src="${media}"
 										alt=""
+                                        class="object-cover h-full w-full"
 									/>
 								</div>
 								<div class="py-4 px-4 bg-white">
@@ -64,9 +65,7 @@ if (!accessToken) {
 									</div>
 								</div>
 							</div>
-						</a>
-
-                    
+						</a>                    
             `)
             }).join('');
             // Add Posts to the page

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.{html,js}"],
+  content: ["./*.{html,js}", "./js/components/createHeader.js"],
   theme: {
     fontFamily: {
       'h1': ['Hind Guntur', 'sans-serif'],
@@ -20,6 +20,7 @@ module.exports = {
     },
   },
   plugins: [
-    
+    require('@tailwindcss/forms'),
+    // ...
   ],
 }

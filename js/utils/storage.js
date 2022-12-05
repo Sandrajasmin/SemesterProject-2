@@ -25,6 +25,14 @@ function getUserName() {
     }
 }
 
+const getUserAvatar = () => {
+    const user = getFromStorage(userKey);
+    if (userKey) {
+        return user.avatar;
+    }
+    return null;
+};
+
 // function which save data to the local storage
 function saveToStorage(key, value) {
     console.log(key);
@@ -46,4 +54,4 @@ function clearStorage() {
     localStorage.clear();
 }
 
-export { getToken, saveToken, saveUser, getUserName, clearStorage };
+export { getToken, saveToken, saveUser, getUserName, clearStorage, getUserAvatar };

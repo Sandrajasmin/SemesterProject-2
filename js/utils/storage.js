@@ -16,6 +16,7 @@ function saveUser(user) {
     saveToStorage(userKey, user);
 }
 
+// get user name
 function getUserName() {
     const user = getFromStorage(userKey);
     if (userKey) {
@@ -25,6 +26,16 @@ function getUserName() {
     }
 }
 
+function getUserCredit() {
+    const user = getFromStorage(userKey);
+    if (userKey) {
+        return user.credits;
+    } else {
+        return null;
+    }
+}
+
+// get avatar
 const getUserAvatar = () => {
     const user = getFromStorage(userKey);
     if (userKey) {
@@ -54,4 +65,4 @@ function clearStorage() {
     localStorage.clear();
 }
 
-export { getToken, saveToken, saveUser, getUserName, clearStorage, getUserAvatar };
+export { getToken, saveToken, saveUser, getUserName, clearStorage, getUserAvatar, getUserCredit };

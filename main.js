@@ -1,9 +1,11 @@
 import './style.css';
 
 import { clearStorage } from './js/utils/storage';
+import { getUserInfo } from './js/components/getAvatar';
 import { navBar } from './js/components/nav';
 
 navBar();
+getUserInfo();
 
 const mobileMenuBtn = document.querySelector('#mobile-menu-btn');
 const mobileMenu = document.querySelector('#mobile-menu');

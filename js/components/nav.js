@@ -12,7 +12,7 @@ const navBar = () => {
         const userName = getUserName();
         const credits = getUserCredit();
         const avatar = getUserAvatar();
-
+        console.log(avatar);
         let navLinksMobile;
         let userDetails;
         navLinksMobile = 
@@ -93,7 +93,7 @@ const navBar = () => {
                              <span class="sr-only">Open user menu</span>	
                                  <img
                                      class="h-8 w-8 rounded-full"
-                                     src="/img/default-thumbnail.jpeg"
+                                     src="${avatar}"
                                      alt="Avatar"
                                  />
                          </button>
@@ -183,7 +183,7 @@ const navBar = () => {
                          <span class="sr-only">Open user menu</span>	
                              <img
                                  class="h-8 w-8 rounded-full"
-                                 src="/img/default-thumbnail.jpeg"
+                                 src="${avatar}"
                                  alt="Avatar"
                              />
                      </button>

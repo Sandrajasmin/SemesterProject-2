@@ -1,7 +1,7 @@
 import '/style.css';
 
 import { SIGN_UP_URL } from './settings/api';
-import { passwordValidator, validEmail } from './utils/validation';
+import { passwordValidator, validEmail, validImg } from './utils/validation';
 
 const form = document.querySelector('#signup-form');
 
@@ -15,18 +15,23 @@ const email = document.querySelector('#email');
 const emailError = document.querySelector('#emailError');
 const emailNotValid = document.querySelector('#emailError2');
 
+// avatar error
+const avatar = document.getElementById('avatar');
+const avatarError = document.getElementById('avatarError');
+
 // Password Error
 const password = document.querySelector('#password');
 const passwordError = document.querySelector('#passwordError');
 
-console.log(password);
-console.log(passwordError);
 
 //confirm password
 const confirmPassword = document.querySelector('#confirm-password');
 const passwordError1 = document.querySelector('#confirmPasswordError');
 const passwordDontMatch = document.querySelector('#passwordDontNotMatch');
 
+console.log(firstName);
+console.log(email);
+console.log(avatar);
 console.log(confirmPassword);
 console.log(passwordError1);
 console.log(passwordDontMatch);
@@ -34,7 +39,7 @@ console.log(passwordDontMatch);
 // General error
 const generalError = document.querySelector('#general-error');
 
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     // Firstname Validation
@@ -64,6 +69,14 @@ form.addEventListener('submit', function (event) {
         validEmail(email.value) !== true
     ) {
         emailNotValid.classList.remove('hidden');
+    }
+
+    let isAvatarValid = false;
+    isAvatarValid = validImg(avatar.value) || avatar.value === '';
+    if (isAvatarValid) {
+        avatarError.classList.add('hidden');
+    } else {
+        avatarError.classList.remove('hidden');
     }
 
     // Password validation
@@ -101,6 +114,7 @@ form.addEventListener('submit', function (event) {
         isFirstName &&
         isEmail &&
         isValidEmail &&
+        isAvatarValid &&
         isPassword &&
         isConfirmPassword &&
         isValidPasswordMatch;
@@ -112,6 +126,7 @@ form.addEventListener('submit', function (event) {
             name: firstName.value,
             email: email.value,
             password: password.value,
+            avatar: avatar.value,
         };
 
 

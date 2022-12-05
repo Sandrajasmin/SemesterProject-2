@@ -15,7 +15,7 @@
 		<script type="module" src="./js/signUp.js"></script>
 		<header>
 			<nav
-				class="bg-gradient-to-b from-[#33333F] to-[#010101] fixed top-0 left-0 right-0 z-10"
+				class="bg-gradient-to-b from-[#33333F] to-[#010101]"
 			>
 				<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 					<div class="relative flex h-16 items-center justify-between">
@@ -77,6 +77,25 @@
 									</span>
 									<span id="emailError2" class="hidden font-body text-sm ml-2 text-red-700">
 										Please use stud.noroff.no or noroff.no email address
+									</span>
+								</div>
+								<div class="input-Avatar">
+									<label
+										for="avatar"
+										class="block mb-2 text-sm font-h2 text-gray-900 dark:text-white"
+										>Avatar</label
+									>
+									<input
+										id="avatar"
+										type="text"
+										class="bg-gray-50 font-body border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+										placeholder="Enter your url for"
+									/>
+									<span id="avatarError" class="hidden font-body text-sm ml-2 text-red-700">
+										Please select an avatar
+									</span>
+									<span id="avatarError2" class="hidden font-body text-sm ml-2 text-red-700">
+										Invalid url
 									</span>
 								</div>
 								<div class="input-password">

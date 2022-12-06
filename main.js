@@ -16,14 +16,14 @@ mobileMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
 });
 
-const settingsMenuBtn = document.querySelector('#user-menu-btn');
-const settingsMenu = document.querySelector('#settings-menu');
+// const settingsMenuBtn = document.querySelector('#user-menu-btn');
+// const settingsMenu = document.querySelector('#settings-menu');
 
-settingsMenu.classList = 'hidden';
+// settingsMenu.classList = 'hidden';
 
-settingsMenuBtn.addEventListener('click', () => {
-      settingsMenu.classList.toggle('hidden');
-});
+// settingsMenuBtn.addEventListener('click', () => {
+//       settingsMenu.classList.toggle('hidden');
+// });
 
 const logOutBtn = document.getElementById('logout-btn');
 if (logOutBtn) {

@@ -1,5 +1,6 @@
 import { getToken } from "./utils/storage";
-import { GET_PROFILE_LISTINGS } from "./settings/api";
+import { validImg } from "./utils/validation";
+import { GET_PROFILE_LISTINGS, UPDATE_AVATAR_URL } from "./settings/api";
 import { formatDate } from './utils/dateformat'
 
 const activeListings = document.getElementById('active-listings');
@@ -29,7 +30,6 @@ const accessToken = getToken();
 
                     return `
                             <div class="flex" group pt-0">
-                            <div id="genreral-error"></div>
                                 <div id="list-items" class="p-2 mx-auto z-0  md:p-2">	
                                         <a href="/detail.html" class="p-5 md:p-2 max-h-48">
                                             <div class="max-w-xs rounded-md shadow-lg hover:scale-105 transition duration-500 cursor-pointer">
@@ -76,4 +76,68 @@ const accessToken = getToken();
     console.log('Get listing failed ! ');
     console.log(err);
     generalError.innerHTML = err;
+});
+
+// modal and avatar 
+
+const updateBtn = document.getElementById('updateAvatar');
+const form = document.getElementById('updateAvatarForm');
+const modalBg = document.getElementById('modal-bg');
+const updateAvatar = document.getElementById('avatar-img-url');
+const avatarError = document.getElementById('imageError');
+const avatarError2 = document.getElementById('imageError2');
+const exitModal = document.getElementById('exit-modal');
+
+updateBtn.addEventListener('click', (e) => {
+    modalBg.classList.remove('hidden');
+});
+
+exitModal.onclick = () => {
+    modalBg.classList.add('hidden');
+};
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    let isAvatarValid = false;
+    isAvatarValid = validImg(updateAvatar.value);
+    if (isAvatarValid) {
+        avatarError.classList.add('hidden');
+    } else {
+        avatarError.classList.remove('hidden');
+    }
+
+    let isNotEmpty = false;
+    if (updateAvatar.value !== '') {
+        avatarError2.classList.add('hidden');
+        isNotEmpty = true;
+    } else {
+        avatarError2.classList.remove('hidden');
+    }
+
+    let avatarFormIsValid = isAvatarValid && isNotEmpty;
+
+    if (avatarFormIsValid) {
+        const avatarData = {
+            avatar: updateAvatar.value,
+        };
+
+        console.log(avatarData);
+        (async function updateAvatar() {
+            const response = await fetch(UPDATE_AVATAR_URL, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${accessToken}`,
+                },
+                body: JSON.stringify(avatarData),
+            });
+            if (response.ok) {
+                location.reload();
+            } else {
+                const error = await response.json();
+                console.log(error);
+            }
+        })();
+    }
 });

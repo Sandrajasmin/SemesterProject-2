@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.{html,js}", "./js/components/nav.js"],
+  content: [
+    './*.{html,js}',
+    './js/*.js',
+    './js/components/nav.js',
+    './js/components/main.js',
+  ],
   theme: {
     fontFamily: {
       'h1': ['Hind Guntur', 'sans-serif'],

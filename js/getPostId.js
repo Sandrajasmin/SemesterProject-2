@@ -1,10 +1,10 @@
 import { getToken } from './utils/storage';
 import { formatDate } from './utils/dateformat';
-import { GET_LISTING_BY_ID, BIDDER_SELLER_DET} from './settings/api';
+import { GET_LISTING_BY_ID } from './settings/api';
 
 const paramString = window.location.search;
 const searchParam = new URLSearchParams(paramString);
-const listingId = searchParam.get('post_id');
+const listingId = searchParam.get('id');
 const accessToken = getToken();
 
 const pageTitle = document.getElementById('page-title')
@@ -22,30 +22,32 @@ const userAvatar = document.getElementById('user-image');
 const currentBid = document.getElementById('current-bid');
 const biddersDetail = document.getElementById('subtext');
 
-
+const SINGLE_LISTING_INFO = `${GET_LISTING_BY_ID}/${listingId}/?_seller=true&_bids=true`
 const getListingById = async () => {
-    const response = await fetch(`${GET_LISTING_BY_ID}/${listingId}${BIDDER_SELLER_DET}`, {
+    const response = await fetch(`${SINGLE_LISTING_INFO}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         },
-    });
+    }); console.log(response);
 
-    const data = await response.json();
-    console.log(data);
+    if (response.ok) {
+        const data = await response.json();
 
-    //listing
-    const title = data.title;
-    const description = data.description;
-    const endsAt = formatDate(data.endsAt);
-    //const currentBid = data._count; 
+        //listing
+        const title = data.title;
+        const description = data.description;
+        const endsAt = formatDate(data.endsAt);
+        //const currentBid = data._count; 
     
-    //Seller
-    const sellerName = data.seller.name
-    //const sellerAvatar = data.seller.avatar
+        //Seller
+        const sellerName = data.seller.name
+        const sellerAvatar = data.seller.avatar
     
-    //bidders
-    //const bidName = data.bids.bidderName
+        //bidders
+        const bidName = data.bids.bidderName
+    }
+    
     
     let listingMedia = 
     `
@@ -183,20 +185,20 @@ const getListingById = async () => {
 
 getListingById();
 
-const buttonBTN = document.querySelector('#button');
-const buttonMenu = document.querySelector('#subtext');
+// const buttonBTN = document.querySelector('#button');
+// const buttonMenu = document.querySelector('#subtext');
 
-buttonMenu.classList = 'hidden';
+// buttonMenu.classList = 'hidden';
 
-buttonBTN.addEventListener('click', () => {
-    buttonMenu.classList.toggle('hidden');
-});
+// buttonBTN.addEventListener('click', () => {
+//     buttonMenu.classList.toggle('hidden');
+// });
 
-const buttonBTN2 = document.querySelector('#make-bid-btn');
-const buttonMenu2 = document.querySelector('#make-bid-subtext');
+// const buttonBTN2 = document.querySelector('#make-bid-btn');
+// const buttonMenu2 = document.querySelector('#make-bid-subtext');
 
-buttonMenu2.classList = 'hidden';
+// buttonMenu2.classList = 'hidden';
 
-buttonBTN2.addEventListener('click', () => {
-    buttonMenu2.classList.toggle('hidden');
-});
+// buttonBTN2.addEventListener('click', () => {
+//     buttonMenu2.classList.toggle('hidden');
+// });

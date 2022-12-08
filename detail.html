@@ -15,15 +15,13 @@
     	/>
 		<meta name="description" content="Live Auctions! New listings everyday. Buy or auction up your items ">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title id="page-title"></title>
+		<title id="page-title">Bidddify | </title>
 	</head>
 	<body>
 		<script type="module" src="/main.js"></script>
 		<script type="module" src="./js/getPostId.js"></script>
 		<header id="header">
-			<nav
-				class="bg-gradient-to-b from-[#33333F] to-[#010101] fixed top-0 left-0 right-0 z-10"
-			>
+			<nav class="bg-gradient-to-b from-[#33333F] to-[#010101] fixed top-0 left-0 right-0 z-10">
 				<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 					<div class="relative flex h-16 items-center justify-between">
 						<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -70,9 +68,7 @@
 								</svg>
 							</button>
 						</div>
-						<div
-							class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between"
-						>
+						<div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
 							<div class="flex flex-shrink-0 items-center">
 								<a href="/index.html">
 									<img
@@ -125,145 +121,42 @@
 									/>
 								</div>
 							</form>
-							<div
-								class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-							>
-								<div class="flex">
-									<p class="text-white">100</p>
-									<p class="text-[#F2AE2E] font-medium">CR</p>
-								</div>
-								<!-- Profile dropdown -->
-								<div class="relative ml-3">
-									<div>
-										<button
-											type="button"
-											class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-											id="user-menu-button"
-											aria-expanded="false"
-											aria-haspopup="true"
-										>
-											<span class="sr-only">Open user menu</span>
-											<img
-												class="h-8 w-8 rounded-full"
-												src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-												alt=""
-											/>
-										</button>
+							<div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+									<div id="user-details" class="flex items-center">
+										
 									</div>
 									<!-- Dropdown menu, show/hide based on menu state.-->
-									<div
-										id="settings-menu"
-										class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-										role="menu"
-										aria-orientation="vertical"
-										aria-labelledby="user-menu-button"
-										tabindex="-1"
-									>
-										<a
-											href="/profile.html"
-											class="block px-4 py-2 text-sm text-gray-700"
-											role="menuitem"
-											tabindex="-1"
-											id="user-menu-item-0"
-											>Your Profile</a
-										>
-										<a
-											href="#"
-											class="block px-4 py-2 text-sm text-gray-700"
-											role="menuitem"
-											tabindex="-1"
-											id="user-menu-item-1"
-											>Settings</a
-										>
-										<a
-											href="#"
-											class="block px-4 py-2 text-sm text-gray-700"
-											role="menuitem"
-											tabindex="-1"
-											id="user-menu-item-2"
-											>Sign out</a
-										>
+									<div class="absolute bg-white ml-3 rounded-md mt-48 overflow-hidden z-10 py-1 shadow-lg origin-top-right focus:outline-none">
+										<div id="settings-menu" class="hidden right-0 mt-2 px-30 " role="menu" aria-orientation="vertical" aria-labelledby="settings-menu" tabindex="-1">
+											<a
+												href="/profile.html"
+												class="block px-8 py-2 text-sm text-gray-700"
+												role="menuitem"
+												tabindex="-1"
+												id="user-menu-item-0"
+												>Profile</a
+											>
+											<a
+												href="#"
+												class="block px-8 py-2 text-sm text-gray-700"
+												role="menuitem"
+												tabindex="-1"
+												id="logout-btn"
+												>Sign out</a
+											>
+										</div>
 									</div>
 								</div>
 							</div>
+							</div>
 						</div>
-					</div>
 					<!-- Mobile menu, show/hide based on menu state. -->
 					<div class="sm:hidden" id="mobile-menu">
-						<div class="space-y-1 px-2 pt-2 pb-3">
-							<a
-								href="/index.html"
-								class="text-gray-300 font-body hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>Home</a
-							>
-							<a
-								href="/listings.html"
-								class="text-gray-300 font-body hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>Auctions</a
-							>
-							<a
-								href="/profile.html"
-								class="text-gray-300 font-body hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>Profile</a
-							>
-						</div>
-						<!-- SEARCH -->
-						<form class="pb-3">
-							<label
-								for="default-search"
-								class="mb-4 text-sm font-medium text-gray-900 sr-only dark:text-white"
-								>Search</label
-							>
-							<div class="relative sm:hidden">
-								<div
-									class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-								>
-									<svg
-										aria-hidden="true"
-										class="w-5 h-5 text-gray-500 dark:text-gray-400"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-										></path>
-									</svg>
-								</div>
-								<input
-									type="search"
-									id="default-search-mobile"
-									class="block w-full p-2 pl-10 text-sm rounded-lg bg-white"
-									placeholder="Search for item..."
-									required
-								/>
-							</div>
-						</form>
+						
 					</div>
-				</div>
-				<div class="hidden sm:pl-6 sm:block  bg-[#A77619]">
-					<div class="flex space-x-4 mx-auto max-w-7xl">
-						<a
-							href="/index.html"
-							class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-body"
-							>Home</a
-						>
-						<a
-							href="/listings.html"
-							class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-body"
-							>Auctions</a
-						>
-						<a
-							href="/profile.html"
-							class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-body"
-							>Profile</a
-						>
+					<div id="nav-links-desktop" class="hidden sm:pl-6 sm:block bg-[#A77619]">
+						
 					</div>
-				</div>
 			</nav>
 		</header>
 		<main id="main" class="mt-20 md:mt-36 flex-auto ">
@@ -280,21 +173,23 @@
 				<!-- Options -->
 				<div class="mt-4 lg:row-span-3 lg:mt-0 sm:flex md:justify-between">
 					<div class="flexbox md:px-5 sm:basis-1/2">
-						<div id="auction-details" class="sm:flex sm:justify-between md:px-2">
+
+
+
+						<div id="auction-details" class="sm:flex sm:justify-between md:flex-col md:px-2">
 							<div class="mt-6 flex">
 								<div id="user-image">
 									
 								</div>
-								<div id="user-details">
+								<div id="seller-details">
 									<!-- script -->
 								</div>
 							</div>
-
 							<div id="current-bid" class="flex flex-col items-baseline mt-10 mb-10 sm:inline-block sm:mt-10">
 								<!-- script -->
 							</div>
 						</div>
-						<div id="bid-info ">
+						<div id="bid-info">
 							<div id="highest-bid" class="flex items-center w-full max-w-full ">
 								<div class="w-full py-0 px-0 group block relative break-words last-child:mb-0 p-16 rounded-8 ">
 									<button id="button" type="button" aria-expanded="true" class="bg-gradient-to-b from-[#33333F] to-[#010101] appearance-none cursor-pointer bg-transparent border-0 m-0 hover:underline focus:underline w-full text-left relative group block break-words last-child:mb-0 p-10 rounded-8 ">
@@ -318,7 +213,7 @@
 											<div class=" md:my-0">
 												<ul>
 													<li class="text-14 text-gray-700 my-4 flex items-center space-x-12">
-														<div id="user-details">
+														<div id="user-details2">
 															
 														</div>
 													</li>
@@ -349,7 +244,7 @@
 									<div id="make-bid-subtext" class="overflow-hidden h-0" style="height: auto; transition: height var(--f-expansion-duration, 0.3s); backface-visibility: hidden;">
 										<div class=" group block relative break-words last-child:mb-0 rounded-8 pt-0 sm:mt-10">
 											<div class=" md:my-0 flex justify-evenly">
-												<div class="box">
+												<!-- <div class="box">
 													<button class="bg-[#932f2f] hover:bg-gradient-to-b from-[#F2AE2E] to-[#A77619] p-4 lg:px-10 rounded-lg text-white">
 														<p>-500CR</p>
 													</button>
@@ -361,12 +256,29 @@
 													<button class="bg-[#2f9340] hover:bg-gradient-to-b from-[#F2AE2E] to-[#A77619] p-4 lg:px-10 rounded-lg text-white">
 														<p>+500CR</p>
 													</button>
-												</div>
-												
+												</div> -->
+												<form id="bid-form">
+													<div>
+														<label for="place-bid"></label>
+														<input type="text" name="place-bid" id="place-bid" class="font-body" placeholder="Enter wanted bid">
+													</div>
+													<div id="place-bid-error-toolow" class="hidden font-body text-xs text-red-800">
+														<span>Your bid is lower than standing bid</span>
+													</div>
+													<div id="place-bid-error" class="hidden">
+													
+													</div>
+													<div id="place-bid-success" class="hidden">
+													</div>
+													
+													<button id="place-bid-submit" type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent py-3 px-8 text-base font-body text-white bg-[#F2AE2E] ">
+														
+														Make bid
+													</button>
+													<!--   hover:bg-gradient-to-b from-[#F2AE2E] to-[#A77619] hover:text-white -->
+													
+												</form>
 											</div>
-											<button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent py-3 px-8 text-base font-body text-[#F2AE2E] bg-[#33333F] hover:bg-gradient-to-b from-[#F2AE2E] to-[#A77619] hover:text-white ">
-												Make bid
-											</button>
 										</div>
 									</div>
 								</div>
@@ -384,7 +296,7 @@
 						<div class="mt-10">
 							<h3 class="text-sm font-h2 text-gray-900">Conditions</h3>
 							<div class="mt-4">
-								<ul role="list" class="list-disc space-y-2 pl-4 text-sm">
+								<ul class="list-disc space-y-2 pl-4 text-sm">
 									<li class="text-gray-400">
 										<span class="text-gray-600 font-body">
 											Used

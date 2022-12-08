@@ -92,8 +92,8 @@ const displayListings = (data) => {
 									</div>
 								</div>
 							</div>
-						</a>                    
-            `
+						</a>                
+                `
         })
         .join('');
         // Add Posts to the page

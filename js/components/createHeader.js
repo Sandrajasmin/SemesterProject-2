@@ -1,33 +1,34 @@
 import { getUserName, getUserCredit , getUserAvatar } from "../utils/storage";
 
 function createHeaderBar () {
-	const {pathname} = document.location;	
+	const { pathname } = document.location;	
 	//const userCreditDetail = document.getElementById('user-credit');
 	const userAvatarDetail = document.getElementById('user-menu-btn');
 	const navLinksDesktop = document.getElementById('nav-links-desktop')
+	
 	if(userAvatarDetail) {
 		const userName = getUserName();
 		let avatar = getUserAvatar();
 		console.log(avatar);
 
-		let userAvatar =
-			`
-				<img
-					class="h-8 w-8 rounded-full"
-					src="${avatar}"
-					alt="Avatar"
-				/>
-			`
-		if (!avatar) {
-			userAvatar =
-				`
-			<img
-				class="h-8 w-8 rounded-full"
-				src="/img/default-thumbnail.jpeg"
-	 			alt=""
-			/>
+		// let userAvatar =
+		// 	`
+		// 		<img
+		// 			class="h-8 w-8 rounded-full"
+		// 			src="${avatar}"
+		// 			alt="Avatar"
+		// 		/>
+		// 	`
+		// if (!avatar) {
+		// 	userAvatar =
+		// 		`
+		// 	<img
+		// 		class="h-8 w-8 rounded-full"
+		// 		src="/img/default-thumbnail.jpeg"
+	 	// 		alt=""
+		// 	/>
 			
-			`
+		// 	`
 		}
 	}
 	
@@ -108,3 +109,9 @@ function createHeaderBar () {
 	// }
 };
 
+
+
+createHeader = () => {
+	const userAvatar = document.getElementById('user-menu-btn');
+	const userCredit = document.getElementById('credit');
+} 

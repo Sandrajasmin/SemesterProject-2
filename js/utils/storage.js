@@ -26,14 +26,14 @@ function getUserName() {
     }
 }
 
-function getUserCredit() {
+// get credit
+const getUserCredit = () => {
     const user = getFromStorage(userKey);
     if (userKey) {
         return user.credits;
-    } else {
-        return null;
     }
-}
+    return null;
+};
 
 // get avatar
 const getUserAvatar = () => {
@@ -52,14 +52,14 @@ function saveToStorage(key, value) {
 }
 
 // function which gets data from the local storage
-function getFromStorage(key) {
+const getFromStorage = (key) => {
     const value = localStorage.getItem(key);
     if (value) {
-        return JSON.parse(value); // convert to JS
-    } else {
-        return [];
+        return JSON.parse(value);
     }
-}
+    return [];
+};
+
 
 function clearStorage() {
     localStorage.clear();
@@ -88,7 +88,7 @@ const updateLocalStorageInfo = (url) => {
             saveUser(userToSave);
             location.reload();
         } else {
-            console.log('sorry user er ikke updatert i localStorage');
+            console.log('sorry user is not updated in localStorage');
         }
     };
     getUserData();
@@ -102,5 +102,5 @@ export {
     clearStorage, 
     getUserAvatar, 
     getUserCredit, 
-    updateLocalStorageInfo 
+    updateLocalStorageInfo, 
 };

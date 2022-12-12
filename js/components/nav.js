@@ -64,29 +64,13 @@ const navBar = () => {
 										>
 									</div>
 								`
-        //     activeUserAvatar =
-		// 	  					`
-		// 	  						<div class="relative ml-3">
-		// 	  							<div class="flex">
-		// 	  								<button id="user-menu-btn" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-haspopup="true" aria-expanded="false">
-		// 	  									<span class="sr-only">Open user menu</span>	
-		// 	  										<img
-		// 	  											class="h-8 w-8 rounded-full"
-		// 	  											src="${avatar}"
-		// 	  											alt="Avatar"
-		// 	  										/>
-		// 	  								</button>
-		// 	  							</div>
-		// 	  						</div>
-		// 	  					`
-		// userAvatar.innerHTML = `${activeUserAvatar}`
         }
 		
         if (navDesktop) {
 			let navLinksDesktop;
             navLinksDesktop =
 								`
-									<div class="flex space-x-4">
+									<div class="flex space-x-4 mx-auto max-w-7xl">
 													<a
 														href="/index.html"
 														class="${pathname === '/index.html' ? '' : ''}text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -107,11 +91,9 @@ const navBar = () => {
 									</div>
 								`;
         if (userName) {
-			// const avatar = getUserAvatar();
-			// let activeUserAvatar
                 navLinksDesktop =
                     			`
-									<div class="flex space-x-4">
+									<div class="flex space-x-4 mx-auto max-w-7xl">
 												<a
 													href="/index.html"
 													class="${pathname === '/index.html' ? '' : ''}text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -139,21 +121,6 @@ const navBar = () => {
 									</div>
 									
 								`
-            // activeUserAvatar =
-			//   					`<span class="sr-only">Open user menu</span>
-			//   						<div class="relative ml-3">
-			//   							<div class="flex">
-			//   								<button id="user-menu-btn" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-haspopup="true" aria-expanded="false">
-			//   									<span class="sr-only">Open user menu</span>	
-			//   										<img
-			//   											class="h-8 w-8 rounded-full"
-			//   											src="${avatar}"
-			//   											alt="Avatar"
-			//   										/>
-			//   								</button>
-			//   							</div>
-			//   						</div>
-			//   					`
             }
             navMobile.innerHTML = `${navLinksMobile}`
             navDesktop.innerHTML = `${navLinksDesktop}`

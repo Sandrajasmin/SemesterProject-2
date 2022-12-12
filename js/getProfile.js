@@ -22,6 +22,8 @@ async function getProfile () {
     const email = profile.email;
     const avatar = profile.avatar;
     const credits = profile.credits;
+    console.log(name);
+    console.log(credits);
     console.log(avatar);
     profileDetails.innerHTML =
                                 `

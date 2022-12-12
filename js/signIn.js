@@ -73,6 +73,8 @@ if (signInForm) {
                     const userToSave = {
                         name: data.name,
                         email: data.email,
+                        avatar: data.avatar,
+                        credits: data.credits,
                     };
                     saveUser(userToSave);
                     location.href = '/index.html';

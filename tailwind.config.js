@@ -4,7 +4,8 @@ module.exports = {
     './*.{html,js}',
     './js/*.js',
     './js/components/nav.js',
-    './js/components/main.js',
+    './main.js',
+    './js/getPost.js',
   ],
   theme: {
     fontFamily: {

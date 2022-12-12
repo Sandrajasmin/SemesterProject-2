@@ -34,6 +34,7 @@ const displayListings = (data) => {
         .map((data) => {
             const {id} = data;
             const {title} = data;
+            const firstTitle = data.title;
             const endsAt = formatDate(data.endsAt);
             const media = data.media[0];
             const bid = data.bids;
@@ -48,12 +49,21 @@ const displayListings = (data) => {
                 `${0}`
             }
 
+            function truncateString(string, limit) {
+                if(string.length > limit) {
+                    str = string.substring(0,limit)
+                } else {
+                    return firstTitle;
+                }
+                return str;
+            }
+
             let listingImg =
                 `
                 <img
 					src="${media}"
 					alt="listing image"
-                    class="object-cover h-full w-full"
+                    class="object-cover max-h-52"
 				/>
                 `
             if (!media) {
@@ -62,19 +72,19 @@ const displayListings = (data) => {
                     <img
 						src="./img/default-thumbnail.jpeg"
 						alt=""
-                        class="object-cover h-full w-full"
+                        class="object-cover max-h-52"
 					/>
                     `
             }
 
             return `
-                        <a href="/detail.html?id=${id}">
+                        <a href="/detail.html?id=${id}" class="">
 							<div id="listing-detail" class=" max-w-xs rounded-md shadow-lg hover:scale-105 transition duration-500 cursor-pointer z-0">
-								<div class=" w-52">
+								<div class="flex justify-center">
 									${listingImg}
 								</div>
 								<div class="py-4 px-4 bg-white">
-									<h3 class="text-lg font-semibold text-gray-600">
+									<h3 class="text-lg h-14 align-baseline font-semibold text-gray-600">
 										${title}
 									</h3>
 									<div class="flex">

@@ -25,10 +25,11 @@ async function getAllPosts() {
     }
 }
 ;
+
 const displayListings = (data) => {
     listing.innerHTML = '';
     if (!data.length) {
-        postsNotificationMessage.innerHTML = "Sorry no posts currently";
+        postsNotificationMessage.innerHTML = "No results found. Sorry!";
     } else {
         const listOfHtmlPosts = data
         .map((data) => {
@@ -49,21 +50,12 @@ const displayListings = (data) => {
                 `${0}`
             }
 
-            function truncateString(string, limit) {
-                if(string.length > limit) {
-                    str = string.substring(0,limit)
-                } else {
-                    return firstTitle;
-                }
-                return str;
-            }
-
             let listingImg =
                 `
                 <img
 					src="${media}"
 					alt="listing image"
-                    class="object-cover max-h-52"
+                    class="object-cover max-h-40"
 				/>
                 `
             if (!media) {
@@ -72,24 +64,24 @@ const displayListings = (data) => {
                     <img
 						src="./img/default-thumbnail.jpeg"
 						alt=""
-                        class="object-cover max-h-52"
+                        class="object-cover max-h-40"
 					/>
                     `
             }
 
             return `
-                        <a href="/detail.html?id=${id}" class="">
+                        <a href="/detail.html?id=${id}" aria-label="Check out listing" class="">
 							<div id="listing-detail" class=" max-w-xs rounded-md shadow-lg hover:scale-105 transition duration-500 cursor-pointer z-0">
 								<div class="flex justify-center">
 									${listingImg}
 								</div>
 								<div class="py-4 px-4 bg-white">
-									<h3 class="text-lg h-14 align-baseline font-semibold text-gray-600">
+									<h2 class="text-lg h-14 align-baseline font-semibold text-gray-600">
 										${title}
-									</h3>
+									</h2>
 									<div class="flex">
 										<p class="mt-4 mr-3 text-sm font-thin">Highest bid:</p>
-										<p class="mt-4 text-sm text-green-500">${bidValue}</p>
+										<p class="mt-4 text-sm text-green-800">${bidValue}</p>
 									</div>
 									<div class="flex">
 										<p class="mt-4 mr-3 text-sm font-thin">Time Ending</p>
@@ -115,3 +107,15 @@ getAllPosts().then(() => {
     displayListings(data);
 })
 
+const searchBar = document.getElementById('search');
+
+searchBar.addEventListener('keyup', (e) => {
+    e.preventDefault();
+    const searchString = e.target.value.toLowerCase();
+    const filteredPosts = data.filter((listing) => {
+        return(
+            listing.title.toLowerCase().includes(searchString)
+        );
+    });
+    displayListings(filteredPosts);
+});

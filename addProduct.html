@@ -18,31 +18,16 @@
 	</head>
 	<body class="bg-[#E3E4EF]">
 		<script type="module" src='/main.js'></script>
-		<script type="module" src='/js/createPost.js'></script>
+		<script type="module" src='/js/createListing.js'></script>
 		<header id="header">
 			<nav class="bg-gradient-to-b from-[#33333F] to-[#010101] fixed top-0 left-0 right-0 z-10">
 				<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 					<div class="relative flex h-16 items-center justify-between">
 						<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-							<!-- Mobile menu button-->
-							<button
-								id="mobile-menu-btn"
-								type="button"
-								class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white"
-								aria-controls="mobile-menu"
-								aria-expanded="false"
-							>
+							<button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
 								<span class="sr-only">Open main menu</span>
 								<!-- Icon when menu is closed. Menu open: "hidden", Menu closed: "block" -->
-								<svg
-									class="block h-6 w-6"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									aria-hidden="true"
-								>
+								<svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 									<path
 										stroke-linecap="round"
 										stroke-linejoin="round"
@@ -50,15 +35,7 @@
 									/>
 								</svg>
 								<!-- Icon when menu is open. Menu open: "block", Menu closed: "hidden"-->
-								<svg
-									class="hidden h-6 w-6"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									aria-hidden="true"
-								>
+								<svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 									<path
 										stroke-linecap="round"
 										stroke-linejoin="round"
@@ -67,9 +44,7 @@
 								</svg>
 							</button>
 						</div>
-						<div
-							class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between"
-						>
+						<div class="flex flex-1 items-center pl-24 sm:pl-0 justify-between sm:items-stretch sm:justify-between">
 							<div class="flex flex-shrink-0 items-center">
 								<a href="/index.html">
 									<img
@@ -80,245 +55,99 @@
 								</a>
 								<a href="/index.html">
 									<img
-									class="hidden w-auto lg:block"
-									src="/img/logoSmall.png"
-									alt="Your Company"
-								/>
+										class="hidden w-auto lg:block"
+										src="/img/logoSmall.png"
+										alt="Your Company"
+									/>
 								</a>
 							</div>
-							<!-- SEARCH -->
-							<form class="hidden sm:block">
-								<label
-									for="default-search"
-									class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-									>Search</label
-								>
-								<div class="relative">
-									<div
-										class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-									>
-										<svg
-											aria-hidden="true"
-											class="w-5 h-5 text-gray-500 dark:text-gray-400"
-											fill="none"
-											stroke="currentColor"
-											viewBox="0 0 24 24"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
-												d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-											></path>
-										</svg>
+							<div id="user-details" class="relative inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+									<div id="credit" class="flex">
 									</div>
-									<input
-										type="search"
-										id="default-search"
-										class="block w-full p-2 pl-10 text-sm rounded-lg bg-white"
-										placeholder="Search for item..."
-										required
-									/>
-								</div>
-							</form>
-							<div
-								class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-							>
-								<div class="flex">
-									<p class="text-white">100</p>
-									<p class="text-[#F2AE2E] font-medium">CR</p>
-								</div>
-								<!-- Profile dropdown -->
-								<div class="relative ml-3">
-									<div>
-										<button
-											type="button"
-											class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-											id="user-menu-button"
-											aria-expanded="false"
-											aria-haspopup="true"
-										>
-											<span class="sr-only">Open user menu</span>
-											<img
-												class="h-8 w-8 rounded-full"
-												src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-												alt=""
-											/>
-										</button>
+									<!-- Profile dropdown -->
+									<div class="relative ml-3">
+										<div class="flex">
+											<button id="user-menu-btn" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-controls="user-menu-btn" aria-haspopup="true" aria-expanded="false">
+											
+											</button>
+										</div>
 									</div>
 									<!-- Dropdown menu, show/hide based on menu state.-->
-									<div
-										id="settings-menu"
-										class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-										role="menu"
-										aria-orientation="vertical"
-										aria-labelledby="user-menu-button"
-										tabindex="-1"
-									>
-										<a
-											href="/profile.html"
-											class="block px-4 py-2 text-sm text-gray-700"
-											role="menuitem"
-											tabindex="-1"
-											id="user-menu-item-0"
-											>Your Profile</a
-										>
-										<a
-											href="#"
-											class="block px-4 py-2 text-sm text-gray-700"
-											role="menuitem"
-											tabindex="-1"
-											id="user-menu-item-1"
-											>Settings</a
-										>
-										<a
-											href="#"
-											class="block px-4 py-2 text-sm text-gray-700"
-											role="menuitem"
-											tabindex="-1"
-											id="user-menu-item-2"
-											>Sign out</a
-										>
+									<div class="absolute bg-white ml-3 rounded-md mt-48 overflow-hidden z-10 py-1 shadow-lg origin-top-right focus:outline-none">
+										<div id="settings-menu" class="hidden right-0 mt-2 px-40 " role="menu" aria-orientation="vertical" aria-labelledby="settings-menu" tabindex="-1">
+											<a
+												href="/profile.html"
+												class="block px-8 py-2 text-sm text-gray-700"
+												role="menuitem"
+												tabindex="-1"
+												id="user-menu-item-0"
+												>Profile</a
+											>
+
+											<a
+												href="#"
+												class="block px-8 py-2 text-sm text-gray-700"
+												role="menuitem"
+												tabindex="-1"
+												id="logout-btn"
+												>Sign out</a
+											>
+										</div>
 									</div>
-								</div>
 							</div>
 						</div>
-					</div>
-					<!-- Mobile menu, show/hide based on menu state. -->
-					<div class="sm:hidden" id="mobile-menu">
-						<div class="space-y-1 px-2 pt-2 pb-3">
-							<a
-								href="/index.html"
-								class="text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>Home</a
-							>
-
-							<a
-								href="/listings.html"
-								class="text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>Auctions</a
-							>
-
-							<a
-								href="/addProduct.html"
-								class="text-gray-300 font-body hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								aria-current="page"
-								>Add listing</a
-							>
-
-							<a
-								href="/profile.html"
-								class="text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>Profile</a
-							>
-						</div>
-						<!-- SEARCH -->
-						<form class="pb-3">
-							<label
-								for="default-search"
-								class="mb-4 text-sm font-medium text-gray-900 sr-only dark:text-white"
-								>Search</label
-							>
-							<div class="relative sm:hidden">
-								<div
-									class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-								>
-									<svg
-										aria-hidden="true"
-										class="w-5 h-5 text-gray-500 dark:text-gray-400"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-										></path>
-									</svg>
-								</div>
-								<input
-									type="search"
-									id="default-search-mobile"
-									class="block w-full p-2 pl-10 text-sm rounded-lg bg-white"
-									placeholder="Search for item..."
-									required
-								/>
-							</div>
-						</form>
 					</div>
 				</div>
-				<div class="hidden sm:pl-6 sm:block bg-[#A77619]">
-					<div class="flex space-x-4">
-						<a
-							href="/index.html"
-							class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-							>Home</a
-						>
-
-						<a
-							href="/listings.html"
-							class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-							>Auctions</a
-						>
-
-						<a
-							href="/addProduct.html"
-							class="text-white px-3 py-2 rounded-md text-sm font-medium"
-							aria-current="page"
-							>Add listing</a
-						>
-
-						<a
-							href="/profile.html"
-							class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-							>Profile</a
-						>
+				<!-- Mobile menu, show/hide based on menu state. -->
+				<div class="sm:hidden" id="mobile-menu">
+					<div class="space-y-1 px-2 pt-2 pb-3">
+					
 					</div>
+				</div>
+				<div id="nav-links-desktop" class="hidden sm:pl-6 sm:block bg-[#A77619]">
+					
 				</div>
 			</nav>
 		</header>
-        <main class="py-10 md:pt-40 lg:pt-40 flex justify-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#33333F] to-[#010101] bg-gradient-to-r">
+        <main class="py-14 md:pt-40 lg:pt-40 flex justify-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#33333F] to-[#010101] bg-gradient-to-r">
             <div class="mt-10 md:mt-0">
                 <form id="add-listing">
-                    <div class="shadow  sm:rounded-md">
-                         <div class="py-10 px-7  text-sm rounded-md w-full bg-gray-700">
+                    <div class="rounded-md w-full bg-gray-700">
+                         <div class="py-10 px-7  text-sm md:flex md:gap-5 ">
 							<p id="general-error" class="text-2xl text-red capitalize"></p>
-                            <div id="listing-title" class="">
+                            <div>
+								<div id="listing-title" class="">
                                 <div class="">
                                     <label for="title" class="block text-base font-h2 text-white">Title</label>
                                     <div class="mt-1 flex rounded-md shadow-sm">
-                                        <input id="title" type="text" name="title" class="block w-full font-body flex-1 rounded-md border-gray-300 focus:border-[#F2AE2E] focus:ring-[#F2AE2E] text-sm" placeholder="Title for listing">
+                                        <input id="title-title" type="text" name="title" class="block w-full font-body flex-1 rounded-md border-gray-300 focus:border-[#F2AE2E] focus:ring-[#F2AE2E] text-sm" placeholder="Title for listing">
                                     </div>
                                     <span id="titleError" class="hidden font-body text-sm ml-2 text-red-600">
 										Please enter title
 									</span>
                                 </div>
-                            </div>
-                            <div id="listing-description">
-                                <label for="description" class="block mt-5 text-base font-h2 text-white">Description</label>
-                                <div class="mt-1">
-                                    <textarea id="description" name="description" rows="3" class="mt-1 font-body text-sm block w-full rounded-md border-gray-300 shadow-sm focus:border-[#F2AE2E] focus:ring-[#F2AE2E]" placeholder="Description of your product"></textarea>
-                                </div>
-                                <span id="descriptonError" class="hidden font-body text-sm ml-2 text-red-600">
+								</div>
+								<div id="listing-description">
+									<label for="description" class="block mt-5 text-base font-h2 text-white">Description</label>
+									<div class="mt-1">
+										<textarea id="description" name="description" rows="3" class="mt-1 font-body text-sm block w-full rounded-md border-gray-300 shadow-sm focus:border-[#F2AE2E] focus:ring-[#F2AE2E]" placeholder="Description of your product"></textarea>
+									</div>
+									<span id="descriptonError" class="hidden font-body text-sm ml-2 text-red-600">
 										Please enter your description
-								</span>
-                            </div>
-                            <div id="listing-date" class="relative mt-1">
-                                <div>
-                                    <label  for="deadline" class="block mt-5 text-sm font-h2 text-white">Select deadline for listing</label>
-                                    <input id="deadline" name="deadline" class="mt-1 font-body text-sm block w-full rounded-md border-gray-300 shadow-sm focus:border-[#F2AE2E] focus:ring-[#F2AE2E]" type="date" min="2022-01-30" max="2024-12-31" />
-                                </div>
-                                <span id="deadLineError" class="hidden font-body text-sm ml-2 text-red-600">
+									</span>
+								</div>
+								<div id="listing-date" class="relative mt-1">
+									<div>
+										<label  for="deadline" class="block mt-5 text-sm font-h2 text-white">Select deadline for listing</label>
+										<input id="deadline" name="deadline" class="mt-1 font-body text-sm block w-full rounded-md border-gray-300 shadow-sm focus:border-[#F2AE2E] focus:ring-[#F2AE2E]" type="date" min="2022-01-30" max="2024-12-31" />
+									</div>
+									<span id="deadLineError" class="hidden font-body text-sm ml-2 text-red-600">
 										Please select deadline
-								</span>
-                            </div>
+									</span>
+								</div>
+							</div>
                             <div id="listing-img">
-                                <label class="block text-sm font-medium text-gray-700">Cover photo</label>
-                                <div class="mt-1 flex justify-center rounded-md border-2 border-dashed border-[#F2AE2E] px-6 pt-5 pb-6">
+                                <div class="mt-5 md:mt-0 flex justify-center rounded-md border-2 border-dashed border-[#F2AE2E] px-6 pt-5 pb-6">
                                     <div class="space-y-1 ">
                                         <svg class="mx-auto h-12 w-12 text-white" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
                                             <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -335,15 +164,18 @@
 													name="imageUrl"
 													type="text"
 													placeholder="Enter img url for cover"
-													class="mt-1 font-body text-xs block w-full rounded-md border-gray-300 shadow-sm focus:border-[#F2AE2E] focus:ring-[#F2AE2E]"
+													class="imageInput mt-1 font-body text-xs block w-full rounded-md border-gray-300 shadow-sm focus:border-[#F2AE2E] focus:ring-[#F2AE2E]"
 												/>
 											</div>
+											<span id="imgError" class="hidden font-body text-sm ml-2 text-red-600">
+												Please enter valid image url
+											</span>
                                         </div>
 										<div class="text-sm">
                                             <label
-												for="imageUrl"
+												for="imageUrl2"
 												class="block text-xs p-0 font-medium text-white font-h2"
-												>Image</label
+												>Image </label
 											>
 											<div class="mt-1">
 												<input
@@ -351,13 +183,16 @@
 													name="imageUrl"
 													type="text"
 													placeholder="Enter your img url"
-													class="mt-1 font-body text-xs block w-full rounded-md border-gray-300 shadow-sm focus:border-[#F2AE2E] focus:ring-[#F2AE2E]"
+													class="imageInput mt-1 font-body text-xs block w-full rounded-md border-gray-300 shadow-sm focus:border-[#F2AE2E] focus:ring-[#F2AE2E]"
 												/>
 											</div>
+											<span id="imgError2" class="hidden font-body text-sm ml-2 text-red-600">
+												Please enter valid image url
+											</span>
                                         </div>
 										<div class="text-sm text-gray-600">
                                             <label
-												for="imageUrl"
+												for="imageUrl3"
 												class="block text-xs p-0 font-medium text-white font-h2"
 												>Image</label
 											>
@@ -367,20 +202,21 @@
 													name="imageUrl"
 													type="text"
 													placeholder="Enter your img url"
-													class="mt-1 font-body text-xs block w-full rounded-md border-gray-300 shadow-sm focus:border-[#F2AE2E] focus:ring-[#F2AE2E]"
+													class="imageInput mt-1 font-body text-xs block w-full rounded-md border-gray-300 shadow-sm focus:border-[#F2AE2E] focus:ring-[#F2AE2E]"
 												/>
 											</div>
+											<span id="imgError3" class="hidden font-body text-sm ml-2 text-red-600">
+												Please enter valid image url
+											</span>
                                         </div>
                                     </div>
-                                    <span id="imageError" class="hidden font-body text-sm ml-2 text-red-600">
-										Please enter a valid url
-									</span>
                                 </div>
-                            <div id="submit" class="px-4 py-3 text-right sm:px-6">
-                                <button type="submit" class=" inline-flex justify-center rounded-md border border-transparent bg-[#F2AE2E] py-2 px-5 text-sm font-medium text-black shadow-sm hover:bg-[#ba8727] focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2">Save</button>
-                            </div>
+                            
+                        	</div>
+                    	</div>
+						<div id="submit" class="px-10 py-3 text-center sm:px-6">
+                            <button type="submit" class=" inline-flex justify-center rounded-md border border-transparent bg-[#F2AE2E] mb-10 py-2 px-20 text-sm font-medium text-black shadow-sm hover:bg-[#ba8727] focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2">Save</button>
                         </div>
-                    </div>
 					</div>
                 </form>
             </div>

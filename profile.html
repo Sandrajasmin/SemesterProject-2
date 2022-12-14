@@ -21,25 +21,10 @@
 				<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 					<div class="relative flex h-16 items-center justify-between">
 						<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-							<!-- Mobile menu button-->
-							<button
-								id="mobile-menu-btn"
-								type="button"
-								class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white"
-								aria-controls="mobile-menu"
-								aria-expanded="false"
-							>
+							<button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
 								<span class="sr-only">Open main menu</span>
 								<!-- Icon when menu is closed. Menu open: "hidden", Menu closed: "block" -->
-								<svg
-									class="block h-6 w-6"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									aria-hidden="true"
-								>
+								<svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 									<path
 										stroke-linecap="round"
 										stroke-linejoin="round"
@@ -47,15 +32,7 @@
 									/>
 								</svg>
 								<!-- Icon when menu is open. Menu open: "block", Menu closed: "hidden"-->
-								<svg
-									class="hidden h-6 w-6"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									aria-hidden="true"
-								>
+								<svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 									<path
 										stroke-linecap="round"
 										stroke-linejoin="round"
@@ -64,7 +41,7 @@
 								</svg>
 							</button>
 						</div>
-						<div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
+						<div class="flex flex-1 items-center pl-24 sm:pl-0 justify-between sm:items-stretch sm:justify-between">
 							<div class="flex flex-shrink-0 items-center">
 								<a href="/index.html">
 									<img
@@ -75,55 +52,26 @@
 								</a>
 								<a href="/index.html">
 									<img
-									class="hidden w-auto lg:block"
-									src="/img/logoSmall.png"
-									alt="Your Company"
-								/>
+										class="hidden w-auto lg:block"
+										src="/img/logoSmall.png"
+										alt="Your Company"
+									/>
 								</a>
 							</div>
-							<!-- SEARCH -->
-							<form class="hidden sm:block">
-								<label
-									for="default-search"
-									class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-									>Search</label
-								>
-								<div class="relative">
-									<div
-										class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-									>
-										<svg
-											aria-hidden="true"
-											class="w-5 h-5 text-gray-500 dark:text-gray-400"
-											fill="none"
-											stroke="currentColor"
-											viewBox="0 0 24 24"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
-												d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-											></path>
-										</svg>
+							<div id="user-details" class="relative inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+									<div id="credit" class="flex">
 									</div>
-									<input
-										type="search"
-										id="default-search"
-										class="block w-full p-2 pl-10 text-sm rounded-lg bg-white"
-										placeholder="Search for item..."
-										required
-									/>
-								</div>
-							</form>
-							<div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-									<div id="user-details" class="flex items-center">
-										
+									<!-- Profile dropdown -->
+									<div class="relative ml-3">
+										<div class="flex">
+											<button id="user-menu-btn" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-controls="user-menu-btn" aria-haspopup="true" aria-expanded="false">
+											
+											</button>
+										</div>
 									</div>
 									<!-- Dropdown menu, show/hide based on menu state.-->
 									<div class="absolute bg-white ml-3 rounded-md mt-48 overflow-hidden z-10 py-1 shadow-lg origin-top-right focus:outline-none">
-										<div id="settings-menu" class="hidden right-0 mt-2 px-30 " role="menu" aria-orientation="vertical" aria-labelledby="settings-menu" tabindex="-1">
+										<div id="settings-menu" class="hidden right-0 mt-2 px-40 " role="menu" aria-orientation="vertical" aria-labelledby="settings-menu" tabindex="-1">
 											<a
 												href="/profile.html"
 												class="block px-8 py-2 text-sm text-gray-700"
@@ -132,6 +80,7 @@
 												id="user-menu-item-0"
 												>Profile</a
 											>
+
 											<a
 												href="#"
 												class="block px-8 py-2 text-sm text-gray-700"
@@ -142,17 +91,19 @@
 											>
 										</div>
 									</div>
-								</div>
-							</div>
 							</div>
 						</div>
-					<!-- Mobile menu, show/hide based on menu state. -->
-					<div class="sm:hidden" id="mobile-menu">
-						
 					</div>
-					<div id="nav-links-desktop" class="hidden sm:pl-6 sm:block bg-[#A77619]">
-						
+				</div>
+				<!-- Mobile menu, show/hide based on menu state. -->
+				<div class="sm:hidden" id="mobile-menu">
+					<div class="space-y-1 px-2 pt-2 pb-3">
+					
 					</div>
+				</div>
+				<div id="nav-links-desktop" class="hidden sm:pl-6 sm:block bg-[#A77619]">
+					
+				</div>
 			</nav>
 		</header>
 		<div id="modal-bg" class="relative z-10 hidden" role="dialog" aria-modal="true">

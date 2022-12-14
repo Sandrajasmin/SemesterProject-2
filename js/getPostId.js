@@ -2,15 +2,12 @@ import { getToken, updateLocalStorageInfo } from './utils/storage';
 import { formatDate } from './utils/dateformat';
 import { GET_LISTING_BY_ID, GET_USER_PROFILE_URL } from './settings/api';
 
-
 const paramString = window.location.search;
 const searchParam = new URLSearchParams(paramString);
 const listingId = searchParam.get('id');
 const accessToken = getToken();
 
-const pageTitle = document.getElementById('page-title')
 //Listing
-const singleListing = document.getElementById('main');
 const listingImage = document.getElementById('listing_img');
 const listingTitle = document.getElementById('listing-title');
 const listingDescripton = document.getElementById('description-detail');
@@ -22,7 +19,6 @@ const userAvatar = document.getElementById('user-image');
 //Bid
 const currentBid = document.getElementById('current-bid');
 const biddersDetail = document.getElementById('subtext');
-const allBids = document.getElementById('all-bids');
 
 const SINGLE_LISTING_INFO = `${GET_LISTING_BY_ID}/${listingId}/?_seller=true&_bids=true`
 const getListingById = async () => {
@@ -31,7 +27,7 @@ const getListingById = async () => {
         headers: {
             'Content-Type': 'application/json',
         },
-    }); console.log(response);
+    });
 
     if (response.ok) {
         const data = await response.json();
@@ -50,7 +46,6 @@ const getListingById = async () => {
         //bidders
         const bidName = data.bids.bidderName
         const bid = data.bids;
-        console.log(bid);
         bid.sort((x, y) => y.amount - x.amount)
         
         let highestBid = 0;
@@ -58,13 +53,11 @@ const getListingById = async () => {
             highestBid = bid[0].amount;
         };
         const bidValue = highestBid + 0;
-        console.log(bidValue);
         if (!bidValue) {
             `${0}`;
         };
 
         //description html
-
         let descriptionListing = 
                             `
                                 <p class="text-sm text-gray-600 font-body">${description}</p>
@@ -72,7 +65,7 @@ const getListingById = async () => {
         if (!description){
             descriptionListing = 
                                 `
-                                    <p class="text-sm text-gray-600 font-body">Sorry, there is no description for this listing. Contact seller for more information</p>
+                                    <p class=" text-sm text-gray-600 font-body">Sorry, there is no description for this listing. Contact seller for more information</p>
                                 `
         }
         
@@ -133,9 +126,8 @@ const getListingById = async () => {
                                 `;
 
         //all bids
-
         if (!bid.length) {
-            biddersDetail.innerHTML = `<p class="text-center">No bids made on this listing<p>`;
+            biddersDetail.innerHTML = `<p class="text-center text-sm italic font-body py-10">No bids made on this listing<p>`;
         }
 
         for (let data of bid) {
@@ -213,37 +205,37 @@ const getListingById = async () => {
                                         <a href="#" class="text-sm font-body text-indigo-600 hover:text-indigo-500">117 reviews</a>
                                     </div>        
                                 `;
-        
-    } 
-}
+    };
+};
 
 getListingById();
 
-
-
 //bid on listing
 const BID_ON_LISTING_URL = `${GET_LISTING_BY_ID}/${listingId}/bids`;
-const bidForm = document.getElementById('bid-form');
+const biddingForm = document.getElementById('bid-form');
 const placeBid = document.getElementById('place-bid');
-const errorBidLow = document.getElementById('place-bid-error-toolow')
 const errorBid = document.getElementById('place-bid-error');
 const successBid = document.getElementById('place-bid-success');
-const bidSubmit = document.getElementById('place-bid-submit');
+const userNotLoggedIn = document.getElementById('make-bid-login');
 
-bidForm.addEventListener('submit', (event) => {
+if (!accessToken) {
+    biddingForm.classList.add('hidden');
+    userNotLoggedIn.classList.remove('hidden');
+};
+
+biddingForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const bidValue = getListingById();
-
     if(placeBid.value <= bidValue) {
         errorBid.classList.remove('hidden')
-    }
+    };
 
     const amountBid = {
         amount: parseInt(placeBid.value),
     };
 
-    const addBid = async () => {
+    const makeBid = async () => {
         const response = await fetch(BID_ON_LISTING_URL, {
             method: 'POST',
             headers: {
@@ -254,14 +246,14 @@ bidForm.addEventListener('submit', (event) => {
         });
         if (response.ok) {
             console.log('tjoho');
-            errorBid.innerHTML = ``;
+            errorBid.innerHTML = '';
             successBid.innerHTML = `<p class="text-green-800">Your bid is added</p>`;
-            bidForm.reset();
+            biddingForm.reset();
             setTimeout(function () {
                 location.reload();
                 updateLocalStorageInfo(GET_USER_PROFILE_URL);
-            }, 30000)
-        } 
+            }, 3000)
+        }
         
         else {
             const err = await response.json();
@@ -273,8 +265,8 @@ bidForm.addEventListener('submit', (event) => {
             throw new Error(message);
         }
     };
-    addBid();
-})
+    makeBid();
+});
 
 // const buttonBTN = document.querySelector('#button');
 // const buttonMenu = document.querySelector('#subtext');

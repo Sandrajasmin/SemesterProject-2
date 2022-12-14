@@ -108,6 +108,7 @@ const navBar = () => {
 													>
 									</div>
 								`;
+			activeUserMobile = ''
 			activeAvatar = '';
 			
         if (userName) {

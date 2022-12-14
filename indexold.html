@@ -18,10 +18,10 @@
 				<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 					<div class="relative flex h-16 items-center justify-between">
 						<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-							<!-- Mobile menu button-->
+							<!-- Hamburger menu btn -->
 							<button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
 								<span class="sr-only">Open main menu</span>
-								<!-- Icon when menu is closed. Menu open: "hidden", Menu closed: "block" -->
+								<!-- Hamburger BTN closed -->
 								<svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 									<path
 										stroke-linecap="round"
@@ -29,7 +29,7 @@
 										d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
 									/>
 								</svg>
-								<!-- Icon when menu is open. Menu open: "block", Menu closed: "hidden"-->
+								<!-- Hamburger BTN open -->
 								<svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 									<path
 										stroke-linecap="round"
@@ -39,7 +39,8 @@
 								</svg>
 							</button>
 						</div>
-						<div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
+						<div class="flex flex-1 items-center pl-24 sm:pl-0 justify-between sm:items-stretch sm:justify-between">
+							<!-- LOGO -->
 							<div class="flex flex-shrink-0 items-center">
 								<a href="/index.html">
 									<img
@@ -50,125 +51,38 @@
 								</a>
 								<a href="/index.html">
 									<img
-									class="hidden w-auto lg:block"
-									src="/img/logoSmall.png"
-									alt="Your Company"
-								/>
+										class="hidden w-auto lg:block"
+										src="/img/logoSmall.png"
+										alt="Your Company"
+									/>
 								</a>
 							</div>
 							<div id="user-details" class="relative inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-								 <div id="user-detailsss" class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-									<div id="credits" class="flex">
-										
-									</div>
-									<!-- Profile dropdown -->
-									<div class="relative ml-3">
-										<div class="flex">
-											<button id="user-menu-btn" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-haspopup="true" aria-expanded="false">
-											<!-- Icon when menu is closed. Menu open: "hidden", Menu closed: "block" -->
-												<!-- <span class="sr-only">Open user menu</span>
-													<img
-														id="userAvatar"
-														class="h-8 w-8 rounded-full"
-														src="/img/default-thumbnail.jpeg"
-														alt="Avatar"
-														aria-hidden="true"
-													/> -->
-													<!-- Icon when menu is open. Menu open: "block", Menu closed: "hidden"-->
-													
-											</button>
-										</div>
-									</div>
-									<!-- Dropdown menu, show/hide based on menu state.-->
-									<div class="absolute bg-white ml-3 rounded-md mt-48 overflow-hidden z-10 py-1 shadow-lg origin-top-right focus:outline-none">
-										<div id="settings-menu" class="hidden right-0 mt-2 px-30 " role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-											<a
-												href="/profile.html"
-												class="block px-8 py-2 text-sm text-gray-700"
-												role="menuitem"
-												tabindex="-1"
-												id="user-menu-item-0"
-												>Profile</a
-											>
-											<a
-												href="#"
-												class="block px-8 py-2 text-sm text-gray-700"
-												role="menuitem"
-												tabindex="-1"
-												id="user-menu-item-1"
-												>Settings</a
-											>
-											<a
-												href="#"
-												class="block px-8 py-2 text-sm text-gray-700"
-												role="menuitem"
-												tabindex="-1"
-												id="logout-btn"
-												>Sign out</a
-											>
-										</div>
+								<div id="credit" class="flex">
+								</div>
+								<!-- Avatar -->
+								<button id="user-menu-btn" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-controls="user-menu-btn" aria-haspopup="true" aria-expanded="false">
+											
+								</button>
+								<!-- User Menu dropdown from avatar -->
+								<div class="absolute bg-white ml-3 rounded-md mt-48 overflow-hidden z-10 py-1 shadow-lg origin-top-right focus:outline-none">
+									<div id="settings-menu" class="hidden right-0 mt-2 px-40 " role="menu" aria-orientation="vertical" aria-labelledby="settings-menu" tabindex="-1">
+											
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!-- Mobile menu, show/hide based on menu state. -->
-					<div class="sm:hidden" id="mobile-menu">
-						<div class="space-y-1 px-2 pt-2 pb-3">
-							<!-- <a
-								href="/index.html"
-								class="text-gray-300 font-body hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								aria-current="page"
-								>Home</a
-							>
-
-							<a
-								href="/listings.html"
-								class="text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>Auctions</a
-							>
-
-							<a
-								href="/addProduct.html"
-								class="text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>Add listing</a
-							>
-
-							<a
-								href="/profile.html"
-								class="text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>Profile</a
-							> -->
-						</div>
+				</div>
+				<!-- Navlinks for mobile -->
+				<div class="sm:hidden" id="mobile-menu">
+					<div class="space-y-1 px-2 pt-2 pb-3">
+					
 					</div>
 				</div>
+				<!-- Navlinks for desktop  -->
 				<div id="nav-links-desktop" class="hidden sm:pl-6 sm:block bg-[#A77619]">
-					<!-- <div class="flex space-x-4">
-						<a
-							href="/index.html"
-							class="text-white px-3 py-2 rounded-md text-sm font-medium"
-							aria-current="page"
-							>Home</a
-						>
-
-						<a
-							href="/listings.html"
-							class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-							>Auctions</a
-						>
-
-						<a
-							href="/addProduct.html"
-							class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-							>Add listing</a
-						>
-
-						<a
-							href="/profile.html"
-							class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-							>Profile</a
-						>
-					</div> -->
+					
 				</div>
 			</nav>
 		</header>

@@ -3,7 +3,6 @@ import { getUserAvatar, getUserName } from '../utils/storage';
 
 const getUserInfo = () => {
     const AvatarContainer = document.getElementById('user-menu-btn');
-    
 
     if (AvatarContainer) {
         const avatar = getUserAvatar();
@@ -27,7 +26,6 @@ const getUserInfo = () => {
                                         ${userAvatar}
                                     `;
     }
-}
-;
+};
 
 export { getUserInfo };

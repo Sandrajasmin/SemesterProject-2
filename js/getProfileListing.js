@@ -23,6 +23,7 @@ const accessToken = getToken();
         } else {
             const listOfHtmlPosts = listings
                 .map((data) => {
+                    const {id} = data;
                     const listingTitle = data.title;
                     const listingMedia = data.media[0];
                     const endsAt = formatDate(data.endsAt);
@@ -31,7 +32,7 @@ const accessToken = getToken();
                     return `
                             <div class="flex" group pt-0">
                                 <div id="list-items" class="p-2 mx-auto z-0  md:p-2">	
-                                        <a href="/detail.html" class="p-5 md:p-2 max-h-48">
+                                        <a href="/detail.html?id=${id}" class="p-5 md:p-2 max-h-48">
                                             <div class="max-w-xs rounded-md shadow-lg hover:scale-105 transition duration-500 cursor-pointer">
                                                 <div class="flex justify-center">
                                                     <img

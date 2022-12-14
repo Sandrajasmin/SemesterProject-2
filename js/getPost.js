@@ -23,8 +23,7 @@ async function getAllPosts() {
         const message = `Sorry some error ${err}`;
         throw new Error(message)
     }
-}
-;
+};
 
 const displayListings = (data) => {
     listing.innerHTML = '';
@@ -35,7 +34,6 @@ const displayListings = (data) => {
         .map((data) => {
             const {id} = data;
             const {title} = data;
-            const firstTitle = data.title;
             const endsAt = formatDate(data.endsAt);
             const media = data.media[0];
             const bid = data.bids;
@@ -107,15 +105,15 @@ getAllPosts().then(() => {
     displayListings(data);
 })
 
-const searchBar = document.getElementById('search');
+// const searchBar = document.getElementById('search');
 
-searchBar.addEventListener('keyup', (e) => {
-    e.preventDefault();
-    const searchString = e.target.value.toLowerCase();
-    const filteredPosts = data.filter((listing) => {
-        return(
-            listing.title.toLowerCase().includes(searchString)
-        );
-    });
-    displayListings(filteredPosts);
-});
+// searchBar.addEventListener('keyup', (e) => {
+//     e.preventDefault();
+//     const searchString = e.target.value.toLowerCase();
+//     const filteredPosts = data.filter((listing) => {
+//         return(
+//             listing.title.toLowerCase().includes(searchString)
+//         );
+//     });
+//     displayListings(filteredPosts);
+// });

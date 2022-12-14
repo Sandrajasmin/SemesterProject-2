@@ -25,25 +25,10 @@
 				<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 					<div class="relative flex h-16 items-center justify-between">
 						<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-							<!-- Mobile menu button-->
-							<button
-								id="mobile-menu-btn"
-								type="button"
-								class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white"
-								aria-controls="mobile-menu"
-								aria-expanded="false"
-							>
+							<button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
 								<span class="sr-only">Open main menu</span>
 								<!-- Icon when menu is closed. Menu open: "hidden", Menu closed: "block" -->
-								<svg
-									class="block h-6 w-6"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									aria-hidden="true"
-								>
+								<svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 									<path
 										stroke-linecap="round"
 										stroke-linejoin="round"
@@ -51,15 +36,7 @@
 									/>
 								</svg>
 								<!-- Icon when menu is open. Menu open: "block", Menu closed: "hidden"-->
-								<svg
-									class="hidden h-6 w-6"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									aria-hidden="true"
-								>
+								<svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 									<path
 										stroke-linecap="round"
 										stroke-linejoin="round"
@@ -68,7 +45,7 @@
 								</svg>
 							</button>
 						</div>
-						<div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
+						<div class="flex flex-1 items-center pl-24 sm:pl-0 justify-between sm:items-stretch sm:justify-between">
 							<div class="flex flex-shrink-0 items-center">
 								<a href="/index.html">
 									<img
@@ -79,55 +56,26 @@
 								</a>
 								<a href="/index.html">
 									<img
-									class="hidden w-auto lg:block"
-									src="/img/logoSmall.png"
-									alt="Your Company"
-								/>
+										class="hidden w-auto lg:block"
+										src="/img/logoSmall.png"
+										alt="Your Company"
+									/>
 								</a>
 							</div>
-							<!-- SEARCH -->
-							<form class="hidden sm:block">
-								<label
-									for="default-search"
-									class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-									>Search</label
-								>
-								<div class="relative">
-									<div
-										class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-									>
-										<svg
-											aria-hidden="true"
-											class="w-5 h-5 text-gray-500 dark:text-gray-400"
-											fill="none"
-											stroke="currentColor"
-											viewBox="0 0 24 24"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
-												d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-											></path>
-										</svg>
+							<div id="user-details" class="relative inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+									<div id="credit" class="flex">
 									</div>
-									<input
-										type="search"
-										id="default-search"
-										class="block w-full p-2 pl-10 text-sm rounded-lg bg-white"
-										placeholder="Search for item..."
-										required
-									/>
-								</div>
-							</form>
-							<div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-									<div id="user-details" class="flex items-center">
-										
+									<!-- Profile dropdown -->
+									<div class="relative ml-3">
+										<div class="flex">
+											<button id="user-menu-btn" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-controls="user-menu-btn" aria-haspopup="true" aria-expanded="false">
+											
+											</button>
+										</div>
 									</div>
 									<!-- Dropdown menu, show/hide based on menu state.-->
 									<div class="absolute bg-white ml-3 rounded-md mt-48 overflow-hidden z-10 py-1 shadow-lg origin-top-right focus:outline-none">
-										<div id="settings-menu" class="hidden right-0 mt-2 px-30 " role="menu" aria-orientation="vertical" aria-labelledby="settings-menu" tabindex="-1">
+										<div id="settings-menu" class="hidden right-0 mt-2 px-40 " role="menu" aria-orientation="vertical" aria-labelledby="settings-menu" tabindex="-1">
 											<a
 												href="/profile.html"
 												class="block px-8 py-2 text-sm text-gray-700"
@@ -136,6 +84,7 @@
 												id="user-menu-item-0"
 												>Profile</a
 											>
+
 											<a
 												href="#"
 												class="block px-8 py-2 text-sm text-gray-700"
@@ -146,17 +95,19 @@
 											>
 										</div>
 									</div>
-								</div>
-							</div>
 							</div>
 						</div>
-					<!-- Mobile menu, show/hide based on menu state. -->
-					<div class="sm:hidden" id="mobile-menu">
-						
 					</div>
-					<div id="nav-links-desktop" class="hidden sm:pl-6 sm:block bg-[#A77619]">
-						
+				</div>
+				<!-- Mobile menu, show/hide based on menu state. -->
+				<div class="sm:hidden" id="mobile-menu">
+					<div class="space-y-1 px-2 pt-2 pb-3">
+					
 					</div>
+				</div>
+				<div id="nav-links-desktop" class="hidden sm:pl-6 sm:block bg-[#A77619]">
+					
+				</div>
 			</nav>
 		</header>
 		<main id="main" class="mt-20 md:mt-36 flex-auto ">
@@ -173,9 +124,6 @@
 				<!-- Options -->
 				<div class="mt-4 lg:row-span-3 lg:mt-0 sm:flex md:justify-between">
 					<div class="flexbox md:px-5 sm:basis-1/2">
-
-
-
 						<div id="auction-details" class="sm:flex sm:justify-between md:flex-col md:px-2">
 							<div class="mt-6 flex">
 								<div id="user-image">
@@ -244,23 +192,10 @@
 									<div id="make-bid-subtext" class="overflow-hidden h-0" style="height: auto; transition: height var(--f-expansion-duration, 0.3s); backface-visibility: hidden;">
 										<div class=" group block relative break-words last-child:mb-0 rounded-8 pt-0 sm:mt-10">
 											<div class=" md:my-0 flex justify-evenly">
-												<!-- <div class="box">
-													<button class="bg-[#932f2f] hover:bg-gradient-to-b from-[#F2AE2E] to-[#A77619] p-4 lg:px-10 rounded-lg text-white">
-														<p>-500CR</p>
-													</button>
-												</div>
-												<div class="box p-4 rounded-lg border sm:px-2 md:px-10">
-													<p>500</p>
-												</div>
-												<div class="box">
-													<button class="bg-[#2f9340] hover:bg-gradient-to-b from-[#F2AE2E] to-[#A77619] p-4 lg:px-10 rounded-lg text-white">
-														<p>+500CR</p>
-													</button>
-												</div> -->
-												<form id="bid-form">
+												<form id="bid-form" class="">
 													<div>
 														<label for="place-bid"></label>
-														<input type="text" name="place-bid" id="place-bid" class="font-body" placeholder="Enter wanted bid">
+														<input type="text" name="place-bid" id="place-bid" class="font-body mt-10" placeholder="Enter wanted bid">
 													</div>
 													<div id="place-bid-error-toolow" class="hidden font-body text-xs text-red-800">
 														<span>Your bid is lower than standing bid</span>
@@ -270,15 +205,17 @@
 													</div>
 													<div id="place-bid-success" class="hidden">
 													</div>
-													
 													<button id="place-bid-submit" type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent py-3 px-8 text-base font-body text-white bg-[#F2AE2E] ">
-														
 														Make bid
-													</button>
-													<!--   hover:bg-gradient-to-b from-[#F2AE2E] to-[#A77619] hover:text-white -->
-													
+													</button>	
 												</form>
 											</div>
+										</div>
+										<div id="make-bid-login" class="hidden">
+											<button class="font-h2 font-bold text-mainColor mt-4 text-center">
+												You must be <a href="/signin.html" class="text-[#F2AE2E] hover:text-blue-800">logged in </a> to make a bid!
+												<span class="italic"><a href="/signup.html" class="text-[#F2AE2E] hover:text-blue-800">Sign up</a>  and get 1000CR</span>
+											</button>												
 										</div>
 									</div>
 								</div>

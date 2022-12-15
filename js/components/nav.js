@@ -62,9 +62,6 @@ const navBar = () => {
 
 		if(navDesktop) {
 			let navLinksDesktop;
-			let activeUserCredit;
-			let activeUserMenu;
-			let activeUserAvatar;
 			navLinksDesktop = `
 									<div class="flex space-x-4 mx-auto max-w-7xl">
 												<a
@@ -120,11 +117,8 @@ const navBar = () => {
 			}
 			navMobile.innerHTML = `${navLinksMobile}`
 			navDesktop.innerHTML = `${navLinksDesktop}`
-		}
-		
+		};
+	};
+};
 
-	}
-}
-
-export {navBar}
-
+export {navBar};

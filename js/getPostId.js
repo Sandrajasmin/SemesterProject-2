@@ -60,7 +60,7 @@ const getListingById = async () => {
         //description html
         let descriptionListing = 
                             `
-                                <p class="text-sm text-gray-600 font-body">${description}</p>
+                                <p class="text-sm font-body ml-4"> ${description}</p>
                             `;
         if (!description){
             descriptionListing = 
@@ -71,8 +71,8 @@ const getListingById = async () => {
         
         listingDescripton.innerHTML = 
         `
-        <h2 class="text-sm font-h2 text-gray-900">Details</h2>
-		<div class="mt-4 space-y-6">
+        <h2 class="text-sm mr-4 font-body text-gray-900">Description: </h2>
+		<div>
 		    ${descriptionListing}
  		</div>
         `;
@@ -83,7 +83,7 @@ const getListingById = async () => {
                                 <img 
                                     src = "${listingImg}" 
                                     alt = "product image" 
-                                    class="h-full w-full object-cover object-center"
+                                    class=""
                                 />
                             `;
         if (!listingImg) {
@@ -103,7 +103,7 @@ const getListingById = async () => {
         let avatar =
             `
                     <img
-                        class="h-16 w-16 rounded-full mr-5"
+                        class="h-16 w-16 rounded-full bg-[#F2AE2E] p-0.5 mr-5"
                         src="${sellerAvatar}"
                         alt=""
                     />
@@ -127,7 +127,7 @@ const getListingById = async () => {
 
         //all bids
         if (!bid.length) {
-            biddersDetail.innerHTML = `<p class="text-center text-sm italic font-body py-10">No bids made on this listing<p>`;
+            biddersDetail.innerHTML = `<p class="text-black text-center text-sm italic font-body py-10">No bids made on this listing<p>`;
         }
 
         for (let data of bid) {
@@ -137,62 +137,64 @@ const getListingById = async () => {
             console.log(seller);
 
             let listing = `
-               <div class=" group block relative break-words last-child:mb-0 rounded-8 pt-0">
-                                            <div class=" md:my-0">
-                                                <ul>
-                                                    <li class="text-14 text-gray-700 my-4 flex items-center space-x-12 ">
-                                                        <div id="user-image">
-                                                            <h3 class="sr-only">Seller</h3>
-                                                                ${avatar}
-                                                        </div>
-                                                        <div id="user-details">
-                                                            <a href="#" class=" text-sm font-body text-indigo-600 hover:text-indigo-500">${seller}</a>
-                                                            <div class="flex items-center">
-                                                                <h3 class="sr-only">Bid</h3>
-                                                                <h3 class="font-body text-green-700">${amount}</h3>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                            <div class="">
+                                <ul class="">
+                                    <li class="text-14 text-gray-700 my-4 flex items-center ">
+                                        <div id="user-image">
+                                            <h3 class="sr-only">Seller</h3>
+                                            <img
+                                                class="h-16 w-16 rounded-full mr-5"
+                                                src="/img/default-avatar.png"
+                                                alt=""
+                                            />
                                         </div>
-            `;
+                                        <div id="user-details">
+                                            <a href="#" class=" text-sm font-body text-indigo-600 hover:text-indigo-500">${seller}</a>
+                                                <div class="flex items-center">
+                                                    <h3 class="sr-only">Bid</h3>
+                                                    <h3 class="font-body text-green-700">$ ${amount}</h3>
+                                                </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>`;
+
             biddersDetail.innerHTML += listing;
         }                        
         document.title = `${title}`;
         listingTitle.innerHTML = 
                                 `
-                                    <h1 class="text-2xl font-h1 tracking-tight text-gray-900 sm:text-3xl md:px-5">Title: <span class="font-bold">${title}</span></h1>
+                                    <h1 class="text-4xl font-bold text-gray-900 sm:text-3xl">${title}</h1>
                                 `;
         currentBid.innerHTML =
                                 `
-                                    <div class="flex text-sm">
-                                        <h2 class="font-body mr-10">Current bid:</h2>
+                                    <div class="flex text-sm mt-4">
+                                        <h2 class="font-body mr-4">Current bid:</h2>
                                         <p class="font-body tracking-tight text-green-700">${bidValue}</p>
                                     </div>
-                                    <div class="flex text-sm mt-2">
-                                        <h2 class="font-body mr-10">Ends at:</h2>
+                                    <div class="flex text-sm mt-4">
+                                        <h2 class="font-body mr-9">Ends at:</h2>
                                         <p class="font-body tracking-tight text-red-700">${endsAt}</p>
                                     </div>
                                 `;
         userDetail.innerHTML +=
                                 `
-                                    <a id="" href="#" class=" text-sm font-body text-indigo-600 hover:text-indigo-500">${sellerName}</a>
+                                    <a id="" href="#" class=" text-sm font-body text-white hover:text-indigo-500"> ${sellerName}</a>
                                         <div class="flex items-center">
                                             <h3 class="sr-only">Reviews</h3>
-                                            <svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <svg class="text-[#F2AE2E] h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                                 <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
                                             </svg>
                                             <!-- Heroicon name: mini/star -->
-                                            <svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <svg class="text-[#F2AE2E] h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                                 <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
                                             </svg>
                                             <!-- Heroicon name: mini/star -->
-                                            <svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <svg class="text-[#F2AE2E] h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                                 <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
                                             </svg>
                                             <!-- Heroicon name: mini/star -->
-                                            <svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <svg class="text-[#F2AE2E] h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                                 <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
                                             </svg>
                                             <!-- Heroicon name: mini/star -->
@@ -285,16 +287,3 @@ biddingForm.addEventListener('submit', (event) => {
 // buttonBTN2.addEventListener('click', () => {
 //      buttonMenu2.classList.toggle('hidden');
 // });
-
-// placeBid.value = bidValue;
-// placeBid.addEventListener('click', () => {
-//     if (!placeBid.value <= highestBid) {
-//         bidSubmit.classList.add('bg-red-800');
-//         errorBidLow.classList.remove('hidden');
-//         bidSubmit.disable = true;
-//     } else {
-//         bidSubmit.disable = false;
-//         bidSubmit.classList.add('bg-green-800');
-//         errorBidLow.classList.add('hidden');
-//     }
-// })

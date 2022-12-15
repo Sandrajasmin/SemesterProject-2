@@ -57,8 +57,6 @@ const getUserInfo = () => {
 
     if (AvatarContainer) {
         const avatar = getUserAvatar();
-
-
         let userAvatar =
                         `
                         <img
@@ -69,9 +67,7 @@ const getUserInfo = () => {
         if (!avatar) {
             userAvatar = '';
         }
-        AvatarContainer.innerHTML =`
-                                        ${userAvatar}
-                                    `;
+        AvatarContainer.innerHTML =`${userAvatar}`;
     }
 };
 

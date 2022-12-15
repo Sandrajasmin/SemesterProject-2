@@ -25,10 +25,9 @@
 				<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 					<div class="relative flex h-16 items-center justify-between">
 						<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-							<!-- Hamburger menu btn -->
 							<button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
 								<span class="sr-only">Open main menu</span>
-								<!-- Hamburger BTN closed -->
+								<!-- Icon when menu is closed. Menu open: "hidden", Menu closed: "block" -->
 								<svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 									<path
 										stroke-linecap="round"
@@ -36,7 +35,7 @@
 										d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
 									/>
 								</svg>
-								<!-- Hamburger BTN open -->
+								<!-- Icon when menu is open. Menu open: "block", Menu closed: "hidden"-->
 								<svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 									<path
 										stroke-linecap="round"
@@ -47,49 +46,65 @@
 							</button>
 						</div>
 						<div class="flex flex-1 items-center pl-24 sm:pl-0 justify-between sm:items-stretch sm:justify-between">
-							<!-- LOGO -->
 							<div class="flex flex-shrink-0 items-center">
 								<a href="/index.html">
 									<img
 									class="block w-auto lg:hidden"
-									src="/img/logoSmall.png"
+									src="/img/logoMedium.png"
 									alt="Your Company"
 								/>
 								</a>
 								<a href="/index.html">
 									<img
 										class="hidden w-auto lg:block"
-										src="/img/logoSmall.png"
+										src="/img/logomedium.png"
 										alt="Your Company"
 									/>
 								</a>
 							</div>
 							<div id="user-details" class="relative inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-								<div id="credit" class="flex">
-								</div>
-								<!-- Avatar -->
-								<div class="">
-									<button id="user-menu-btn" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-controls="user-menu-btn" aria-haspopup="true" aria-expanded="false">
-											
-									</button>
-								</div>
-								<!-- User Menu dropdown from avatar -->
-								<div class="absolute bg-white ml-3 rounded-md mt-48 overflow-hidden z-10 py-1 shadow-lg origin-top-right focus:outline-none">
-									<div id="settings-menu" class="hidden right-0 mt-2 px-40 " role="menu" aria-orientation="vertical" aria-labelledby="settings-menu" tabindex="-1">
-											
+									<div id="credit" class="flex">
 									</div>
-								</div>
+									<!-- Profile dropdown -->
+									<div class="relative ml-3">
+										<div class="flex">
+											<button id="user-menu-btn" type="button" class="max-h-8 max-w-8 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-controls="user-menu-btn" aria-haspopup="true" aria-expanded="false">
+											
+											</button>
+										</div>
+									</div>
+									<!-- Dropdown menu, show/hide based on menu state.-->
+									<div class="absolute bg-white ml-3 rounded-md mt-48 overflow-hidden z-10 py-1 shadow-lg origin-top-right focus:outline-none">
+										<div id="settings-menu" class="hidden right-0 mt-2 px-40 " role="menu" aria-orientation="vertical" aria-labelledby="settings-menu" tabindex="-1">
+											<a
+												href="/profile.html"
+												class="block px-8 py-2 text-sm text-gray-700"
+												role="menuitem"
+												tabindex="-1"
+												id="user-menu-item-0"
+												>Profile</a
+											>
+
+											<a
+												href="#"
+												class="block px-8 py-2 text-sm text-gray-700"
+												role="menuitem"
+												tabindex="-1"
+												id="logout-btn"
+												>Sign out</a
+											>
+										</div>
+									</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- Navlinks for mobile -->
+				<!-- Mobile menu, show/hide based on menu state. -->
 				<div class="sm:hidden" id="mobile-menu">
 					<div class="space-y-1 px-2 pt-2 pb-3">
 					
 					</div>
 				</div>
-				<!-- Navlinks for desktop  -->
 				<div id="nav-links-desktop" class="hidden sm:pl-6 sm:block bg-[#A77619]">
 					
 				</div>
@@ -174,6 +189,14 @@
 								<div id="make-bid-subtext" class="overflow-hidden h-0 " style="height: auto; transition: height var(--f-expansion-duration, 0.3s); backface-visibility: hidden;">
 									<div class=" group block relative break-words last-child:mb-0 rounded-8 pt-0 sm:mt-10">
 										<div class="flex justify-evenly my-10">
+											
+											<div id="make-bid-login" class="hidden">
+												<button class="font-h2 font-bold text-mainColor mt-4 text-center">
+													You must be <a href="/signin.html" class="text-[#F2AE2E] hover:text-blue-800">logged in </a> to make a bid!
+													<span class="italic"><a href="/signup.html" class="text-[#F2AE2E] hover:text-blue-800">Sign up</a>  and get 1000CR</span>
+												</button>												
+											</div>
+
 											<form id="bid-form" class="">
 												<div>
 													<label for="place-bid"></label>
@@ -185,20 +208,16 @@
 												<div id="place-bid-error" class="hidden">
 													
 												</div>
-												<div id="place-bid-success" class="hidden">
+												<div id="place-bid-success" class="hidden text-green-800">
 												</div>
 												<button id="place-bid-submit" type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent py-3 px-8 text-base font-body text-white bg-[#F2AE2E] ">
 													Make bid
 												</button>	
 											</form>
+
 										</div>
 									</div>
-									<div id="make-bid-login" class="hidden">
-										<button class="font-h2 font-bold text-mainColor mt-4 text-center">
-											You must be <a href="/signin.html" class="text-[#F2AE2E] hover:text-blue-800">logged in </a> to make a bid!
-											<span class="italic"><a href="/signup.html" class="text-[#F2AE2E] hover:text-blue-800">Sign up</a>  and get 1000CR</span>
-										</button>												
-									</div>
+									
 								</div>
 							</div>
 						</div>	

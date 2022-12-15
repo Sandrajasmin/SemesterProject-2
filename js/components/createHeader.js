@@ -106,7 +106,7 @@ const navBar = () => {
 			let activeUser;
 			navLinksDesktop =
 				`
-									<div class="flex space-x-4 mx-auto max-w-7xl">
+									<div class="flex  mx-auto max-w-7xl">
 													<a
 														href="/index.html"
 														class="${pathname === '/index.html' ? 'text-black font-medium' : ''}text-white px-3 py-2 rounded-md text-sm font-medium"

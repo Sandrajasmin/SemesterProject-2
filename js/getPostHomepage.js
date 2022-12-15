@@ -1,12 +1,11 @@
 import { GET_ALL_LISTINGS_URL } from './settings/api';
-import {formatDate} from './utils/dateformat'
+import { formatDate } from './utils/dateformat'
 
 const listing = document.querySelector('#list-items');
-const postsNotificationMessage = document.querySelector('#post_Message')
+
 let data = [];
 
-
-async function getAllPosts() {
+async function getAllListings() {
     const response = await fetch(GET_ALL_LISTINGS_URL, {
         method: "GET",
         headers: {
@@ -16,7 +15,7 @@ async function getAllPosts() {
 
     if (response.ok) {
         data = await response.json();
-        displayListings(data) 
+        displayListings(data)
     } else {
         const err = await response.json();
         const message = `Sorry some error ${err}`;
@@ -26,50 +25,50 @@ async function getAllPosts() {
 
 const displayListings = (data) => {
     listing.innerHTML = '';
-    if (!data.length) {
-        postsNotificationMessage.innerHTML = "No results found. Sorry!";
+    if(!data.length) {
+        listing.innerHTML = 'Sorry, no listings today';
     } else {
         const listOfHtmlPosts = data
-        .map((data) => {
-            const {id} = data;
-            const {title} = data;
-            const endsAt = formatDate(data.endsAt);
-            const media = data.media[0];
-            const bid = data.bids;
-            bid.sort((x, y) => y.amount - x.amount)
+            .map((data) => {
+                const { id } = data;
+                const { title } = data;
+                const endsAt = formatDate(data.endsAt);
+                const media = data.media[0];
+                const bid = data.bids;
+                bid.sort((x, y) => y.amount - x.amount)
 
-            let highestBid = 0;
-            if (bid[0]) {
-                highestBid = bid[0].amount;
-            }
-            const bidValue = highestBid + 0;
-            if (!bidValue) {
-                `${0}`
-            }
+                let highestBid = 0;
+                if (bid[0]) {
+                    highestBid = bid[0].amount;
+                }
+                const bidValue = highestBid + 0;
+                if (!bidValue) {
+                    `${0}`
+                }
 
-            let listingImg =
-                `
+                let listingImg =
+                    `
                 <img
 					src="${media}"
 					alt="listing image"
                     class="object-cover max-h-40"
 				/>
                 `
-            if (!media) {
-                listingImg =
-                    `
+                if (!media) {
+                    listingImg =
+                        `
                     <img
 						src="./img/default-thumbnail.jpeg"
 						alt=""
                         class="object-cover max-h-40"
 					/>
                     `
-            }
+                }
 
             return `
                         <a href="/detail.html?id=${id}" aria-label="Check out listing" class="">
-							<div id="listing-detail" class=" max-w-xs rounded-md shadow-lg hover:scale-105 transition duration-500 cursor-pointer z-0">
-								<div class="flex justify-center">
+							<div id="listing-detail" class="bg-white max-w-xsshadow-lg hover:scale-105 transition duration-500 cursor-pointer z-0">
+								<div class="flex justify-center pt-4">
 									${listingImg}
 								</div>
 								<div class="py-4 px-4 bg-white">
@@ -100,19 +99,6 @@ const displayListings = (data) => {
     }
 }
 
-getAllPosts().then(() => {
+getAllListings().then(() => {
     displayListings(data);
-})
-
-const searchBar = document.getElementById('search');
-
-searchBar.addEventListener('keyup', (e) => {
-    e.preventDefault();
-    const searchString = e.target.value.toLowerCase();
-    const filteredPosts = data.filter((listing) => {
-        return(
-            listing.title.toLowerCase().includes(searchString)
-        );
-    });
-    displayListings(filteredPosts);
 });

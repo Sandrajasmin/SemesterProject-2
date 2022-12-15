@@ -19,22 +19,22 @@ const navBar = () => {
 							<div class="space-y-1 px-2 pt-2 pb-3">
 								<a
 									href="/index.html"
-									class="${pathname === '/index.html' ? 'text-black font-medium' : ''} text-gray-300 font-body hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+									class="${pathname === '/index.html' ? 'text-[#F2AE2E]' : ''} text-gray-300 font-body hover:text-medium hover:text-white block px-3 py-2 text-xs font-medium"
 									>Home</a
 								>
 								<a
 									href="/listings.html"
-									class="${pathname === '/listings.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+									class="${pathname === '/listings.html' ? 'text-[#F2AE2E]' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 text-xs font-medium"
 									>Auctions</a
 								>
 								<a
 									href="/addProduct.html"
-									class="${pathname === '/addProduct.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+									class="${pathname === '/addProduct.html' ? 'text-[#F2AE2E]' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 text-xs font-medium"
 									>Add listing</a
 								>
 								<a
 									href="/profile.html"
-									class="${pathname === '/profile.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+									class="${pathname === '/profile.html' ? 'text-[#F2AE2E]' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 text-xs font-medium"
 									>Profile</a
 								>
 							</div>`;
@@ -43,17 +43,17 @@ const navBar = () => {
 								<div class="space-y-1 px-2 pt-2 pb-3">
 									<a
 										href="/index.html"
-										class="${pathname === '/index.html' ? 'text-black font-medium' : ''} text-gray-300 font-body hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+										class="${pathname === '/index.html' ? 'text-[#F2AE2E]' : ''} text-gray-300 font-body hover:text-medium hover:text-white block px-3 py-2 text-xs font-medium"
 										>Home</a
 									>
 									<a
 										href="/listings.html"
-										class="${pathname === '/listings.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+										class="${pathname === '/listings.html' ? 'text-[#F2AE2E]' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 text-xs font-medium"
 										>Auctions</a
 									>
 									<a
 										href="/signin.html"
-										class="${pathname === '/signin.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+										class="${pathname === '/signin.html' ? 'text-[#F2AE2E]' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 text-xs font-medium"
 										>Log in</a
 										>
 								</div>	
@@ -66,26 +66,26 @@ const navBar = () => {
 									<div class="flex space-x-4 mx-auto max-w-7xl">
 												<a
 													href="/index.html"
-													class="${pathname === '/index.html' ? 'text-black font-medium' : ''}text-gray-300 px-3 py-2 rounded-md text-sm font-medium"
+													class="${pathname === '/index.html' ? 'text-black font-medium' : ''}text-gray-300 px-3 py-2 text-xs font-medium"
 													aria-current="page"
 													>Home</a
 												>
 
 												<a
 													href="/listings.html"
-													class="${pathname === '/listings.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+													class="${pathname === '/listings.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-white px-3 py-2 text-xs font-medium"
 													>Auctions</a
 												>
 
 												<a
 													href="/addProduct.html"
-													class="${pathname === '/addProduct.html' ? 'text-black font-medium' : ''} text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+													class="${pathname === '/addProduct.html' ? 'text-black font-medium' : ''} text-gray-300 hover:text-white px-3 py-2 text-xs font-medium"
 													>Add listing</a
 												>
 
 												<a
 													href="/profile.html"
-													class="${pathname === '/profile.html' ? 'text-black font-medium' : ''} text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+													class="${pathname === '/profile.html' ? 'text-black font-medium' : ''} text-gray-300 hover:text-white px-3 py-2 text-xs font-medium"
 													>Profile</a
 												>
 									</div>	
@@ -94,22 +94,22 @@ const navBar = () => {
 			if (!userName) {
 				navLinksDesktop = `
 			
-								<div class="flex space-x-4 mx-auto max-w-7xl">
+								<div class="flex text-base">
 													<a
 														href="/index.html"
-														class="${pathname === '/index.html' ? 'text-black font-medium' : ''}text-white px-3 py-2 rounded-md text-sm font-medium"
+														class="${pathname === '/index.html' ? 'text-black font-medium' : ''}text-white px-3 py-2 text-xs font-medium"
 														aria-current="page"
 														>Home</a
 													>
 
 													<a
 														href="/listings.html"
-														class="${pathname === '/listings.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+														class="${pathname === '/listings.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-white px-3 py-2 text-xs font-medium"
 														>Auctions</a
 													>
 													<a
 														href="/signin.html"
-														class="${pathname === '/sign.html' ? 'text-black font-medium' : ''} text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+														class="${pathname === '/sign.html' ? 'text-black font-medium' : ''} text-gray-300 hover:text-white px-3 py-2 text-xs font-medium"
 														>Sign in</a
 													>
 									</div>

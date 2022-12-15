@@ -249,7 +249,7 @@ biddingForm.addEventListener('submit', (event) => {
         if (response.ok) {
             console.log('tjoho');
             errorBid.innerHTML = '';
-            successBid.innerHTML = `<p class="text-green-800">Your bid is added</p>`;
+            successBid.innerHTML = 'Your bid is added';
             biddingForm.reset();
             setTimeout(function () {
                 location.reload();

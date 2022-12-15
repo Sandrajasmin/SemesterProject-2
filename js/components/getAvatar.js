@@ -60,7 +60,7 @@ const getUserInfo = () => {
         let userAvatar =
                         `
                         <img
-                            class="h-8 w-8 rounded-full"
+                            class="max-h-8 max-w-8 rounded-full"
                             src="${avatar}"
                             alt="Avatar"
                         />`;

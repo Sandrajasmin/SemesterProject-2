@@ -24,19 +24,19 @@ const navBar = () => {
 							<div class="space-y-1 px-2 pt-2 pb-3">
 								<a
 									href="/index.html"
-									class="${pathname === '/index.html' ? 'text-black font-medium' : ''} text-gray-300 font-body hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+									class="${pathname === '/index.html' ? 'text-[#F2AE2E] font-medium' : ''} text-gray-300 font-body hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
 									>Home</a
 								>
 
 								<a
 									href="/listings.html"
-									class="${pathname === '/listings.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+									class="${pathname === '/listings.html' ? 'text-[#F2AE2E] font-medium' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
 									>Auctions</a
 								>
 
 								<a
 									href="/signin.html"
-									class="${pathname === '/signin.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+									class="${pathname === '/signin.html' ? 'text-[#F2AE2E] font-medium' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
 									>Log in</a
 									>
 							</div>
@@ -65,25 +65,25 @@ const navBar = () => {
 									<div class="space-y-1 px-2 pt-2 pb-3">
 										<a
 											href="/index.html"
-											class="${pathname === '/index.html' ? 'text-black font-medium' : ''} text-gray-300 font-body hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+											class="${pathname === '/index.html' ? 'text-[#F2AE2E] font-medium' : ''} text-gray-300 font-body hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
 											>Home</a
 										>
 
 										<a
 											href="/listings.html"
-											class="${pathname === '/listings.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+											class="${pathname === '/listings.html' ? 'text-[#F2AE2E] font-medium' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
 											>Auctions</a
 										>
 
 										<a
 											href="/addProduct.html"
-											class="${pathname === '/addProduct.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+											class="${pathname === '/addProduct.html' ? 'text-[#F2AE2E] font-medium' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
 											>Add listing</a
 										>
 
 										<a
 											href="/profile.html"
-											class="${pathname === '/profile.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+											class="${pathname === '/profile.html' ? 'text-[#F2AE2E] font-medium' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 rounded-md text-base font-medium"
 											>Profile</a
 										>
 									</div>

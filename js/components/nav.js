@@ -94,7 +94,7 @@ const navBar = () => {
 			if (!userName) {
 				navLinksDesktop = `
 			
-								<div class="flex text-base">
+								<div class="flex text-base mx-auto max-w-7xl">
 													<a
 														href="/index.html"
 														class="${pathname === '/index.html' ? 'text-black font-medium' : ''}text-white px-3 py-2 text-xs font-medium"

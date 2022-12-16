@@ -10,6 +10,7 @@ const SIGN_UP_URL = BASE_URL + 'api/v1/auction/auth/register';
 //Listings
 const GET_LISTINGS_URL = BASE_URL + 'api/v1/auction/listings';
 const GET_LISTING_BY_ID = BASE_URL + 'api/v1/auction/listings';
+const GET_SORTED_LISTINGS_URL = BASE_URL + 'api/v1/auction/listings?&sort=created&sortOrder=desc&_bids=true&limit=4';
 const GET_ALL_LISTINGS_URL = BASE_URL + 'api/v1/auction/listings?&sort=created&sortOrder=desc&_bids=true';
 const SORT_ASC_URL = BASE_URL + 'api/v1/acution/listing?&sort=created&sortOrder=asc';
 
@@ -37,5 +38,6 @@ export {
     GET_PROFILE_URL, 
     GET_PROFILE_LISTINGS,
     UPDATE_AVATAR_URL,
-    GET_USER_PROFILE_URL
+    GET_USER_PROFILE_URL,
+    GET_SORTED_LISTINGS_URL,
 };

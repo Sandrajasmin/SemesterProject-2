@@ -1,4 +1,4 @@
-import { GET_ALL_LISTINGS_URL } from './settings/api';
+import { GET_SORTED_LISTINGS_URL } from './settings/api';
 import { formatDate } from './utils/dateformat'
 
 const listing = document.querySelector('#list-items');
@@ -6,7 +6,7 @@ const listing = document.querySelector('#list-items');
 let data = [];
 
 async function getAllListings() {
-    const response = await fetch(GET_ALL_LISTINGS_URL, {
+    const response = await fetch(GET_SORTED_LISTINGS_URL, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
@@ -66,13 +66,13 @@ const displayListings = (data) => {
                 }
 
             return `
-                        <a href="/detail.html?id=${id}" aria-label="Check out listing" class="">
-							<div id="listing-detail" class="bg-white max-w-xsshadow-lg hover:scale-105 transition duration-500 cursor-pointer z-0">
+                        <a href="/detail.html?id=${id}" aria-label="Check out listing" class="max-w-xs shadow-lg hover:scale-105 transition duration-500 cursor-pointer z-0">
+							<div id="listing-detail" class="bg-white">
 								<div class="flex justify-center pt-4">
 									${listingImg}
 								</div>
 								<div class="py-4 px-4 bg-white">
-									<h2 class="text-lg h-14 align-baseline font-semibold text-gray-600">
+									<h2 class="text-lg h-14 align-baseline overflow-hidden font-semibold text-gray-600">
 										${title}
 									</h2>
 									<div class="flex">

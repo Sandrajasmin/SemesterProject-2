@@ -50,14 +50,14 @@
 								<a href="/index.html">
 									<img
 									class="block w-auto lg:hidden"
-									src="/img/logoMedium.png"
+									src="/img/logoSmall.png"
 									alt="Your Company"
 								/>
 								</a>
 								<a href="/index.html">
 									<img
 										class="hidden w-auto lg:block"
-										src="/img/logomedium.png"
+										src="/img/logoSmall.png"
 										alt="Your Company"
 									/>
 								</a>
@@ -143,26 +143,20 @@
 			<div class=" mx-auto max-w-7xl">
 				<!-- Options -->
 				<div class="mt-4 sm:flex sm:flex-col sm:justify-between">
-					
 					<div id="bid-info" class="sm:mx-6 sm:flex ">
 						<div id="highest-bid" class="w-full items-center ">
 							<div class="w-full py-0 px-0 relative p-16 rounded-8 ">
-								<button id="button" type="button" aria-expanded="true" class="bg-gradient-to-b from-[#33333F] to-[#010101] m-0 w-full relative p-10">
-									<div class="flex justify-between align-center">
-										<div class="flex space-x-8 text-16 items-center">
-											<i class="fa fa-dollar stroke-1" style="font-size:18px; color:#F2AE2E"></i>
-											<p class="m-0 text-[#F2AE2E] font-h2" style="font-weight: 300;">RECENT BIDS</p>
-										</div>
-										<div class="self-center transform transition-transform  box-chevron">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-												<path stroke="#F2AE2E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.5 5.5L8 11l5.5-5.5"></path>
-											</svg>
-										</div>
+								<div id="button" class="flex justify-between align-center bg-gradient-to-b from-[#33333F] to-[#010101] m-0 w-full relative p-10">
+									<div class="flex space-x-8 text-16 items-center">
+										<i class="fa fa-dollar stroke-1" style="font-size:18px; color:#F2AE2E"></i>
+										<p class="m-0 text-[#F2AE2E] font-h2" style="font-weight: 300;">RECENT BIDS</p>
 									</div>
-									<!-- <div class="hover-shine absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine">
-
-									</div> -->
-								</button>
+									<div class="self-center transform transition-transform  box-chevron">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+											<path stroke="#F2AE2E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.5 5.5L8 11l5.5-5.5"></path>
+										</svg>
+									</div>
+								</div>
 								<div id="subtext" class="px-10 md:py-5 max-h-56 overflow-auto " style="height: auto; transition: height var(--f-expansion-duration, 0.3s); backface-visibility: hidden;">
 									
 								</div>
@@ -170,37 +164,24 @@
 						</div>
 						<div id="make-bid" class="w-full items-center">
 							<div class="w-full py-0 px-0 relative p-16 rounded-8 ">
-								<button id="make-bid-btn" type="button" aria-expanded="true" class="bg-gradient-to-b from-[#33333F] to-[#010101] m-0 w-full relative p-10">
-									<div class="flex justify-between align-center">
-										<div class="flex space-x-8 text-16 items-center">
-											<i class="fa fa-credit-card stroke-1" style="font-size:18px; color:#F2AE2E"></i>
-											<p class="m-0 text-[#F2AE2E] font-h2" style="font-weight: 300;">MAKE BID</p>
-										</div>
-										<div class="self-center transform transition-transform box-chevron">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-												<path stroke="#F2AE2E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.5 5.5L8 11l5.5-5.5"></path>
-											</svg>
-										</div>
+								<div id="make-bid-btn" class="flex justify-between align-center bg-gradient-to-b from-[#33333F] to-[#010101] m-0 w-full relative p-10">
+									<div class="flex space-x-8 text-16 items-center">
+										<i class="fa fa-credit-card stroke-1" style="font-size:18px; color:#F2AE2E"></i>
+										<p class="m-0 text-[#F2AE2E] font-h2" style="font-weight: 300;">MAKE BID</p>
 									</div>
-									<!-- <div class="hover-shine absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine">
-
-									</div> -->
-								</button>
+									<div class="self-center transform transition-transform box-chevron">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+											<path stroke="#F2AE2E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.5 5.5L8 11l5.5-5.5"></path>
+										</svg>
+									</div>
+								</div>
 								<div id="make-bid-subtext" class="overflow-hidden h-0 " style="height: auto; transition: height var(--f-expansion-duration, 0.3s); backface-visibility: hidden;">
 									<div class=" group block relative break-words last-child:mb-0 rounded-8 pt-0 sm:mt-10">
 										<div class="flex justify-evenly my-10">
-											
-											<div id="make-bid-login" class="hidden">
-												<button class="font-h2 font-bold text-mainColor mt-4 text-center">
-													You must be <a href="/signin.html" class="text-[#F2AE2E] hover:text-blue-800">logged in </a> to make a bid!
-													<span class="italic"><a href="/signup.html" class="text-[#F2AE2E] hover:text-blue-800">Sign up</a>  and get 1000CR</span>
-												</button>												
-											</div>
-
 											<form id="bid-form" class="">
 												<div>
 													<label for="place-bid"></label>
-													<input type="text" name="place-bid" id="place-bid" class="font-body" placeholder="Enter wanted bid">
+													<input type="text" name="place-bid" id="place-bid" class="font-body rounded-md border-[#F2AE2E] " placeholder="Enter wanted bid">
 												</div>
 												<div id="place-bid-error-toolow" class="hidden font-body text-xs text-red-800">
 													<span>Your bid is lower than standing bid</span>
@@ -210,14 +191,17 @@
 												</div>
 												<div id="place-bid-success" class="hidden text-green-800">
 												</div>
-												<button id="place-bid-submit" type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent py-3 px-8 text-base font-body text-white bg-[#F2AE2E] ">
+												<button id="place-bid-submit" type="submit" class="mt-10 flex w-full items-center justify-center rounded-md py-3 px-8 text-base font-body text-white hover:bg-[#F2AE2E] bg-gradient-to-b from-[#33333F] to-[#010101] ">
 													Make bid
 												</button>	
 											</form>
-
+											
+										</div>
+										<div id="make-bid-login" class="font-h2 font-bold text-mainColor mt-4 text-center">
+											<p>You must be <a href="/signin.html" class="text-[#F2AE2E] hover:text-blue-800">logged in </a> to make a bid!</p>
+											<p><span class="italic"><a href="/signup.html" class="text-[#F2AE2E] hover:text-blue-800">Sign up</a>  and get 1000CR</span></p>									
 										</div>
 									</div>
-									
 								</div>
 							</div>
 						</div>	

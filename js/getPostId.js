@@ -164,7 +164,7 @@ const getListingById = async () => {
         document.title = `${title}`;
         listingTitle.innerHTML = 
                                 `
-                                    <h1 class="text-4xl font-bold text-gray-900 sm:text-3xl">${title}</h1>
+                                    <h1 class="text-4xl mt-2 md:mt-0 font-bold text-gray-900 sm:text-3xl">${title}</h1>
                                 `;
         currentBid.innerHTML =
                                 `
@@ -220,10 +220,6 @@ const errorBid = document.getElementById('place-bid-error');
 const successBid = document.getElementById('place-bid-success');
 const userNotLoggedIn = document.getElementById('make-bid-login');
 
-if (!accessToken) {
-    biddingForm.classList.add('hidden');
-    userNotLoggedIn.classList.remove('hidden');
-};
 
 biddingForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -270,20 +266,3 @@ biddingForm.addEventListener('submit', (event) => {
     makeBid();
 });
 
-// const buttonBTN = document.querySelector('#button');
-// const buttonMenu = document.querySelector('#subtext');
-
-// buttonMenu.classList = 'hidden';
-
-// buttonBTN.addEventListener('click', () => {
-//      buttonMenu.classList.toggle('hidden');
-// });
-
-// const buttonBTN2 = document.querySelector('#make-bid-btn');
-// const buttonMenu2 = document.querySelector('#make-bid-subtext');
-
-// buttonMenu2.classList = 'hidden';
-
-// buttonBTN2.addEventListener('click', () => {
-//      buttonMenu2.classList.toggle('hidden');
-// });

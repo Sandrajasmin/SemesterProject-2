@@ -64,7 +64,7 @@
 									<!-- Profile dropdown -->
 									<div class="relative ml-3">
 										<div class="flex">
-											<button id="user-menu-btn" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-controls="user-menu-btn" aria-haspopup="true" aria-expanded="false">
+											<button id="user-menu-btn" type="button" class="max-h-8 max-w-8 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-controls="user-menu-btn" aria-haspopup="true" aria-expanded="false">
 											
 											</button>
 										</div>
@@ -160,9 +160,9 @@
                 </div>
             </div>
         </div>
-		<main class="py-[4rem] md:pt-[8rem]  mx-auto max-w-lg lg:max-w-7xl lg:px-10">
-			<div class=" flex flex-wrap items-center justify-center lg:flex-nowrap lg:items-start gap-5">
-				<div class="container max-w-lg rounded bg-gray-800 shadow-lg transform duration-200 easy-in-out">
+		<main class="py-[4rem] md:pt-[8rem] mx-auto max-w-2xl lg:max-w-7xl lg:px-10">
+			<div class="">
+				<div class="container max-w-lg md:max-w-7xl rounded bg-gray-800 shadow-lg transform duration-200 easy-in-out">
 					<div class="h-2/4 sm:h-64 overflow-hidden">
 						<img class="w-full rounded-t"
 							src="https://res.cloudinary.com/dudlnfi8a/image/upload/v1670265420/samples/landscapes/architecture-signs.jpg"
@@ -192,8 +192,10 @@
 							</div>
 						</div>
 					</div>
-					<div id="active-listings" class="overflow-hidden lg:flex lg:flex-wrap h-0" style="height: auto; justify-content: center; transition: height var(--f-expansion-duration, 0.3s); backface-visibility: hidden;">
-						
+					<div id="active-listings">
+						<div id="list-items" class="flex flex-wrap justify-center gap-5 pt-10 mx-auto z-0">
+
+						</div>
 					</div>
 					<div id="genreral-error"></div>
 				</div>

@@ -3,7 +3,7 @@ import { validImg } from "./utils/validation";
 import { GET_PROFILE_LISTINGS, UPDATE_AVATAR_URL } from "./settings/api";
 import { formatDate } from './utils/dateformat'
 
-const activeListings = document.getElementById('active-listings');
+const activeListings = document.getElementById('list-items');
 const generalError = document.getElementById('genreral-error');
 const accessToken = getToken();
 
@@ -48,11 +48,10 @@ const accessToken = getToken();
                     }
 
                     return `
-                            <div class="flex min-w-xs">
-                                <div id="list-items" class=" z-0">	
-                                        <a href="/detail.html?id=${id}" class=" md:p-2 max-h-48">
+                            
+                                        <a href="/detail.html?id=${id}" class="max-w-xs shadow-lg hover:scale-105 transition duration-500 cursor-pointer z-0">
                                             <div class="w-xs bg-white py-4 hover:scale-105 transition duration-500 cursor-pointer">
-                                                <div class="flex justify-center ">
+                                                <div class="flex justify-center">
                                                     ${listingImg}
                                                 </div>
                                                 <div class="py-4 px-4 bg-white">
@@ -66,8 +65,7 @@ const accessToken = getToken();
                                                 </div>
                                             </div>
                                         </a>
-                                </div>
-                            </div>
+                                
                             `;
                 })
                 .join('');

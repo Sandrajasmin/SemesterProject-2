@@ -27,7 +27,7 @@ async function getProfile () {
     console.log(avatar);
     profileDetails.innerHTML =
                                 `
-                                <div class="px-7 mb-8">
+                                <div class="px-7 py-8 mb-8">
                                     <h2 class="text-3xl font-h1 dark:text-gray-300">
                                         ${name}
                                     </h2>
@@ -37,7 +37,7 @@ async function getProfile () {
                                         Asperiores molestiae vitae odio non commodi itaque quisquam
                                         incidunt doloribus fugit nesciunt.
                                     </p>
-                                    <div class="justify-center px-4 py-2 cursor-pointer max-w-min mx-auto mt-8 rounded-lg text-gray-300 bg-gray-700 ">
+                                    <div class="justify-center px-4 py-2 cursor-pointer max-w-min mx-auto my-8 rounded-lg text-gray-300 bg-gray-700 ">
                                         ${email}
                                     </div>
                                 </div>

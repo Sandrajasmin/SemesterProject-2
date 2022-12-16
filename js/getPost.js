@@ -68,12 +68,12 @@ const displayListings = (data) => {
 
             return `
                         <a href="/detail.html?id=${id}" aria-label="Check out listing" class="">
-							<div id="listing-detail" class=" max-w-xs rounded-md shadow-lg hover:scale-105 transition duration-500 cursor-pointer z-0">
+							<div id="listing-detail" class="bg-white max-w-xs shadow-lg hover:scale-105 transition duration-500 cursor-pointer z-0">
 								<div class="flex justify-center">
 									${listingImg}
 								</div>
 								<div class="py-4 px-4 bg-white">
-									<h2 class="text-lg h-14 align-baseline font-semibold text-gray-600">
+									<h2 class="text-lg h-14 align-baseline overflow-hidden font-semibold text-gray-600">
 										${title}
 									</h2>
 									<div class="flex">

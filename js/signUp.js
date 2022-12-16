@@ -144,6 +144,7 @@ form.addEventListener('submit', (event) => {
             }
         })().catch((err) => {
             generalError.innerHTML = `${err}`;
+            console.log('some error');
         });
     } else {
         generalError.innerHTML= 'Validation failed';

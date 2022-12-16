@@ -8,12 +8,12 @@ const createListingForm = document.getElementById('add-listing');
 const listingTitle = document.getElementById('title-title');
 const titleError = document.getElementById('titleError');
 
+// Listing description
 const listingDescription = document.getElementById('listing-description')
 
 // deadline
 const listingDeadline = document.getElementById('deadline');
 const listingDeadlineError = document.getElementById('deadLineError');
-
 
 //img
 const listingImg = document.getElementById('imageUrl');
@@ -25,14 +25,11 @@ const listingImgError3 = document.getElementById('imgError3');
 const listingImgInput = document.querySelectorAll('.imageInput');
 
 const generalError = document.getElementById('general-error');
-console.log(generalError);
 
 const accessToken = getToken();
 if(!accessToken){
     location.href = '/signin.html'
 }
-
-
 
 // Create listing with validation
 createListingForm.addEventListener('submit', function (event) {

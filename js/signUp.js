@@ -1,10 +1,8 @@
 import '/style.css';
-
 import { SIGN_UP_URL } from './settings/api';
 import { passwordValidator, validEmail, validImg } from './utils/validation';
 
 const form = document.querySelector('#signup-form');
-
 
 //First Name Error
 const firstName = document.querySelector('#name');
@@ -23,18 +21,10 @@ const avatarError = document.getElementById('avatarError');
 const password = document.querySelector('#password');
 const passwordError = document.querySelector('#passwordError');
 
-
 //confirm password
 const confirmPassword = document.querySelector('#confirm-password');
 const passwordError1 = document.querySelector('#confirmPasswordError');
 const passwordDontMatch = document.querySelector('#passwordDontNotMatch');
-
-console.log(firstName);
-console.log(email);
-console.log(avatar);
-console.log(confirmPassword);
-console.log(passwordError1);
-console.log(passwordDontMatch);
 
 // General error
 const generalError = document.querySelector('#general-error');
@@ -49,7 +39,7 @@ form.addEventListener('submit', (event) => {
         isFirstName = true;
     } else {
         firstNameError.classList.remove('hidden');
-    }
+    };
 
     // Email validation
     let isEmail = false;
@@ -58,7 +48,7 @@ form.addEventListener('submit', (event) => {
         isEmail = true;
     } else {
         emailError.classList.remove('hidden');
-    }
+    };
 
     let isValidEmail = false;
     if (email.value.trim().length && validEmail(email.value) === true) {
@@ -69,7 +59,7 @@ form.addEventListener('submit', (event) => {
         validEmail(email.value) !== true
     ) {
         emailNotValid.classList.remove('hidden');
-    }
+    };
 
     let isAvatarValid = false;
     isAvatarValid = validImg(avatar.value) || avatar.value === '';
@@ -77,7 +67,7 @@ form.addEventListener('submit', (event) => {
         avatarError.classList.add('hidden');
     } else {
         avatarError.classList.remove('hidden');
-    }
+    };
 
     // Password validation
     let isPassword = false;
@@ -86,7 +76,7 @@ form.addEventListener('submit', (event) => {
         isPassword = true;
     } else {
         passwordError.classList.remove('hidden');
-    }
+    };
 
     // Confirm password  Validation
     let isConfirmPassword = false;
@@ -95,20 +85,21 @@ form.addEventListener('submit', (event) => {
         isConfirmPassword = true;
     } else {
         passwordError1.classList.remove('hidden');
-    }
+    };
 
     // Password match validation
     let isValidPasswordMatch = false;
     isValidPasswordMatch = passwordValidator(
         password.value,
         confirmPassword.value,
-    ); // true // false
+    );
+
     if (isValidPasswordMatch) {
         passwordDontMatch.classList.add('hidden');
         isValidPasswordMatch = true;
     } else {
         passwordDontMatch.classList.add('hidden');
-    }
+    };
 
     let isFormValid =
         isFirstName &&
@@ -141,12 +132,12 @@ form.addEventListener('submit', (event) => {
                 const err = await response.json();
                 const message = `${err.errors[0].message}`
                 throw new Error(message)
-            }
+            };
         })().catch((err) => {
             generalError.innerHTML = `${err}`;
             console.log('some error');
         });
     } else {
         generalError.innerHTML= 'Validation failed';
-    }  
+    };  
 });

@@ -14,17 +14,33 @@
 	</head>
 	<body class="bg-[#f5f5f7]">
 		<script type="module" src="/main.js"></script>
-		<script type="module" src='/js/getProfile.js'></script>
-		<script type="module" src='/js/getProfileListing.js'></script>
+		<script type="module" src="/js/getProfile.js"></script>
+		<script type="module" src="/js/getProfileListing.js"></script>
 		<header id="header">
-			<nav class="bg-gradient-to-b from-[#33333F] to-[#010101] fixed top-0 left-0 right-0 z-10">
+			<nav
+				class="bg-gradient-to-b from-[#33333F] to-[#010101] fixed top-0 left-0 right-0 z-10"
+			>
 				<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 					<div class="relative flex h-16 items-center justify-between">
 						<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-							<button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
+							<button
+								id="mobile-menu-btn"
+								type="button"
+								class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white"
+								aria-controls="mobile-menu"
+								aria-expanded="false"
+							>
 								<span class="sr-only">Open main menu</span>
 								<!-- Icon when menu is closed. Menu open: "hidden", Menu closed: "block" -->
-								<svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+								<svg
+									class="block h-6 w-6"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									aria-hidden="true"
+								>
 									<path
 										stroke-linecap="round"
 										stroke-linejoin="round"
@@ -32,7 +48,15 @@
 									/>
 								</svg>
 								<!-- Icon when menu is open. Menu open: "block", Menu closed: "hidden"-->
-								<svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+								<svg
+									class="hidden h-6 w-6"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									aria-hidden="true"
+								>
 									<path
 										stroke-linecap="round"
 										stroke-linejoin="round"
@@ -41,14 +65,16 @@
 								</svg>
 							</button>
 						</div>
-						<div class="flex flex-1 items-center pl-24 sm:pl-0 justify-between sm:items-stretch sm:justify-between">
+						<div
+							class="flex flex-1 items-center pl-24 sm:pl-0 justify-between sm:items-stretch sm:justify-between"
+						>
 							<div class="flex flex-shrink-0 items-center">
 								<a href="/index.html">
 									<img
-									class="block w-auto lg:hidden"
-									src="/img/logoSmall.png"
-									alt="Your Company"
-								/>
+										class="block w-auto lg:hidden"
+										src="/img/logoSmall.png"
+										alt="Your Company"
+									/>
 								</a>
 								<a href="/index.html">
 									<img
@@ -58,147 +84,202 @@
 									/>
 								</a>
 							</div>
-							<div id="user-details" class="relative inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-									<div id="credit" class="flex">
+							<div
+								id="user-details"
+								class="relative inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+							>
+								<div id="credit" class="flex"></div>
+								<!-- Profile dropdown -->
+								<div class="relative ml-3">
+									<div class="flex">
+										<button
+											id="user-menu-btn"
+											type="button"
+											class="max-h-8 max-w-8 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white"
+											aria-controls="user-menu-btn"
+											aria-haspopup="true"
+											aria-expanded="false"
+										></button>
 									</div>
-									<!-- Profile dropdown -->
-									<div class="relative ml-3">
-										<div class="flex">
-											<button id="user-menu-btn" type="button" class="max-h-8 max-w-8 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white" aria-controls="user-menu-btn" aria-haspopup="true" aria-expanded="false">
-											
-											</button>
-										</div>
-									</div>
-									<!-- Dropdown menu, show/hide based on menu state.-->
-									<div class="absolute bg-white ml-3 rounded-md mt-48 overflow-hidden z-10 py-1 shadow-lg origin-top-right focus:outline-none">
-										<div id="settings-menu" class="hidden right-0 mt-2 px-40 " role="menu" aria-orientation="vertical" aria-labelledby="settings-menu" tabindex="-1">
-											<a
-												href="/profile.html"
-												class="block px-8 py-2 text-sm text-gray-700"
-												role="menuitem"
-												tabindex="-1"
-												id="user-menu-item-0"
-												>Profile</a
-											>
+								</div>
+								<!-- Dropdown menu, show/hide based on menu state.-->
+								<div
+									class="absolute bg-white ml-3 rounded-md mt-48 overflow-hidden z-10 py-1 shadow-lg origin-top-right focus:outline-none"
+								>
+									<div
+										id="settings-menu"
+										class="hidden right-0 mt-2 px-40"
+										role="menu"
+										aria-orientation="vertical"
+										aria-labelledby="settings-menu"
+										tabindex="-1"
+									>
+										<a
+											href="/profile.html"
+											class="block px-8 py-2 text-sm text-gray-700"
+											role="menuitem"
+											tabindex="-1"
+											id="user-menu-item-0"
+											>Profile</a
+										>
 
-											<a
-												href="#"
-												class="block px-8 py-2 text-sm text-gray-700"
-												role="menuitem"
-												tabindex="-1"
-												id="logout-btn"
-												>Sign out</a
-											>
-										</div>
+										<a
+											href="#"
+											class="block px-8 py-2 text-sm text-gray-700"
+											role="menuitem"
+											tabindex="-1"
+											id="logout-btn"
+											>Sign out</a
+										>
 									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- Mobile menu, show/hide based on menu state. -->
-				<div class="sm:hidden" id="mobile-menu">
-					
-				</div>
-				<div id="nav-links-desktop" class="hidden sm:pl-6 sm:block bg-[#A77619]">
-					
-				</div>
+				<div class="sm:hidden" id="mobile-menu"></div>
+				<div
+					id="nav-links-desktop"
+					class="hidden sm:pl-6 sm:block bg-[#A77619]"
+				></div>
 			</nav>
 		</header>
-		<div id="modal-bg" class="relative z-10 hidden" role="dialog" aria-modal="true">
-            <div class="fixed inset-0 bg-black bg-opacity-75 transition-opacity"></div>
-            <div id="modal" class="fixed inset-0 z-10 overflow-y-auto">
-                <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                    <div class="relative bg-gray-800 transform overflow-hidden bg-lightGray rounded-lg px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
-                        <div>
-                            <form
-                                id="updateAvatarForm"
-                                action="#"
-                                method="POST"
-                                class="space-y-3"
-                            >
-                            <div class="font-h1 flex justify-end hover:cursor-pointer text-darkGray m-1 cursor-default" id="exit-modal">X</div>
-                            <h1 class="font-h2 text-center text-[#F2AE2E]">Add a new Url to update your Avatar</h1>
-                                <div class="space-y-1">
-                                    <label
-                                        for="avatar-img-url"
-                                        class="block text-sm font-body text-white "
-                                        >Image url</label
-                                    >
-                                    <div class="mt-1">
-                                        <input
-                                            id="avatar-img-url"
-                                            name="avatar-img-url"
-                                            class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                                        />
-                                    </div>
-                                    <span
-                                        id="imageError"
-                                        class="hidden text-sm text-errorRed font-body"
-                                        >Sorry. This url is not valid.
-                                    </span>
-                                    <span
-                                        id="imageError2"
-                                        class="hidden text-sm text-errorRed font-body"
-                                        > If you want to update this fild it can not be empty
-                                    </span>
-                                    
-                                </div>
-                                <div class="flex flex-row">
-                                    <button
-                                        id="updateBtnForm"
-                                        type="submit"
-                                        class="flex w-full justify-center font-h2 rounded-md bg-darkGray py-2 m-1 px-4 text-sm font-medium text-white shadow-sm hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                                    >
-                                        Update
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-		<main class="py-[4rem] md:pt-[8rem] mx-auto max-w-2xl lg:max-w-7xl lg:px-10">
-			<div class="">
-				<div class="container max-w-lg md:max-w-7xl rounded bg-gray-800 shadow-lg transform duration-200 easy-in-out">
-					<div class="h-2/4 sm:h-64 overflow-hidden">
-						<img class="w-full rounded-t"
-							src="https://res.cloudinary.com/dudlnfi8a/image/upload/v1670265420/samples/landscapes/architecture-signs.jpg"
-							alt="Photo by aldi sigun on Unsplash" />
-    				</div>
-					<div class="flex justify-start px-5 -mt-12 mb-5">
-						<div id="userAvatar" class="block relative h-32 w-32">
-							
-							
+		<div
+			id="modal-bg"
+			class="relative z-10 hidden"
+			role="dialog"
+			aria-modal="true"
+		>
+			<div
+				class="fixed inset-0 bg-black bg-opacity-75 transition-opacity"
+			></div>
+			<div id="modal" class="fixed inset-0 z-10 overflow-y-auto">
+				<div
+					class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
+				>
+					<div
+						class="relative bg-gray-800 transform overflow-hidden bg-lightGray rounded-lg px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6"
+					>
+						<div>
+							<form
+								id="updateAvatarForm"
+								action="#"
+								method="POST"
+								class="space-y-3"
+							>
+								<div
+									class="font-h1 flex justify-end hover:cursor-pointer text-darkGray m-1 cursor-default"
+									id="exit-modal"
+								>
+									X
+								</div>
+								<h1 class="font-h2 text-center text-[#F2AE2E]">
+									Add a new Url to update your Avatar
+								</h1>
+								<div class="space-y-1">
+									<label
+										for="avatar-img-url"
+										class="block text-sm font-body text-white"
+										>Image url</label
+									>
+									<div class="mt-1">
+										<input
+											id="avatar-img-url"
+											name="avatar-img-url"
+											class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+										/>
+									</div>
+									<span
+										id="imageError"
+										class="hidden text-sm text-errorRed font-body"
+										>Sorry. This url is not valid.
+									</span>
+									<span
+										id="imageError2"
+										class="hidden text-sm text-errorRed font-body"
+									>
+										If you want to update this fild it can not be empty
+									</span>
+								</div>
+								<div class="flex flex-row">
+									<button
+										id="updateBtnForm"
+										type="submit"
+										class="flex w-full justify-center font-h2 rounded-md bg-darkGray py-2 m-1 px-4 text-sm font-medium text-white shadow-sm hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+									>
+										Update
+									</button>
+								</div>
+							</form>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<main
+			class="py-[4rem] md:pt-[8rem] mx-auto max-w-2xl lg:max-w-7xl lg:px-10"
+		>
+			<div class="">
+				<div
+					class="container max-w-lg md:max-w-7xl rounded bg-gray-800 shadow-lg transform duration-200 easy-in-out"
+				>
+					<div class="h-2/4 sm:h-64 overflow-hidden">
+						<img
+							class="w-full rounded-t"
+							src="https://res.cloudinary.com/dudlnfi8a/image/upload/v1670265420/samples/landscapes/architecture-signs.jpg"
+							alt="Photo by aldi sigun on Unsplash"
+						/>
+					</div>
+					<div class="flex justify-start px-5 -mt-12 mb-5">
+						<div id="userAvatar" class="block relative h-32 w-32"></div>
 						<button id="updateAvatar" class="relative px-0 left-2 -top-4">
-								<span class="bg-[#F2AE2E] rounded-md shadow-lg font-body text-xs text-black p-3">Edit Avatar</span>
+							<span
+								class="bg-[#F2AE2E] rounded-md shadow-lg font-body text-xs text-black p-3"
+								>Edit Avatar</span
+							>
 						</button>
 					</div>
-					<div id="profile-details">
-						
-					</div>
+					<div id="profile-details"></div>
 				</div>
 				<div class="w-full mt-5 lg:mt-0">
 					<div>
-						<div class="flex bg-gradient-to-b from-gray-800 to-[#010101] cursor-pointer text-left relative p-10">	
-							<p class="text-[#F2AE2E] font-h2" style="font-weight: 300;">ACTIVE LISTINGS</p>
-							<div class="self-center transform transition-transform -rotate-180  box-chevron">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-									<path stroke="#F2AE2E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.5 5.5L8 11l5.5-5.5"></path>
+						<div
+							class="flex bg-gradient-to-b from-gray-800 to-[#010101] cursor-pointer text-left relative p-10"
+						>
+							<p class="text-[#F2AE2E] font-h2" style="font-weight: 300">
+								ACTIVE LISTINGS
+							</p>
+							<div
+								class="self-center transform transition-transform -rotate-180 box-chevron"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="none"
+									viewBox="0 0 16 16"
+								>
+									<path
+										stroke="#F2AE2E"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="1.5"
+										d="M2.5 5.5L8 11l5.5-5.5"
+									></path>
 								</svg>
 							</div>
 						</div>
 					</div>
 					<div id="active-listings">
-						<div id="list-items" class="flex flex-wrap justify-center gap-5 pt-10 mx-auto z-0">
-
-						</div>
+						<div
+							id="list-items"
+							class="flex flex-wrap justify-center gap-5 pt-10 mx-auto z-0"
+						></div>
 					</div>
 					<div id="genreral-error"></div>
 				</div>
-				
-			</div>	
+			</div>
 		</main>
 		<footer class="p-4 sm:p-6" style="background-image: url(/img/footer.png)">
 			<div class="md:flex md:justify-between mx-auto max-w-7xl">

@@ -11,7 +11,7 @@ async function getAllListings() {
         headers: {
             "Content-Type": "application/json",
         }
-    })
+    });
 
     if (response.ok) {
         data = await response.json();
@@ -20,7 +20,7 @@ async function getAllListings() {
         const err = await response.json();
         const message = `Sorry some error ${err}`;
         throw new Error(message)
-    }
+    };
 };
 
 const displayListings = (data) => {
@@ -40,30 +40,29 @@ const displayListings = (data) => {
                 let highestBid = 0;
                 if (bid[0]) {
                     highestBid = bid[0].amount;
-                }
+                };
+
                 const bidValue = highestBid + 0;
                 if (!bidValue) {
                     `${0}`
-                }
+                };
 
-                let listingImg =
-                    `
-                <img
-					src="${media}"
-					alt="listing image"
-                    class="object-cover max-h-40"
-				/>
-                `
+                let listingImg = `
+                                    <img
+                                        src="${media}"
+                                        alt="listing image"
+                                        class="object-cover max-h-40"
+                                    />
+                                `;
                 if (!media) {
-                    listingImg =
-                        `
-                    <img
-						src="./img/default-thumbnail.jpeg"
-						alt=""
-                        class="object-cover max-h-40"
-					/>
-                    `
-                }
+                    listingImg =`
+                                    <img
+                                        src="./img/default-thumbnail.jpeg"
+                                        alt=""
+                                        class="object-cover max-h-40"
+                                    />
+                                `;
+                };
 
             return `
                         <a href="/detail.html?id=${id}" aria-label="Check out listing" class="max-w-xs shadow-lg hover:scale-105 transition duration-500 cursor-pointer z-0">
@@ -91,13 +90,13 @@ const displayListings = (data) => {
 								</div>
 							</div>
 						</a>                
-                `
+                `;
         })
         .join('');
         // Add Posts to the page
         listing.insertAdjacentHTML('beforeend', listOfHtmlPosts);
-    }
-}
+    };
+};
 
 getAllListings().then(() => {
     displayListings(data);

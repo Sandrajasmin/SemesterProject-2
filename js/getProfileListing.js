@@ -28,8 +28,7 @@ const accessToken = getToken();
                     const endsAt = formatDate(data.endsAt);
                     const media = data.media[0];
                     
-                    let listingImg =
-                                    `
+                    let listingImg =`
                                      <img
                                         src="${media}"
                                         alt="listing media"
@@ -37,53 +36,47 @@ const accessToken = getToken();
                                     />
                                     `
                     if (!media) {
-                        listingImg =
-                            `
-                                <img
-                                    src="./img/default-thumbnail.jpeg"
-                                    alt="listing media"
-                                    class=" max-h-52 max-w-52 lg:max-h-24"
-                                />
-                                `
-                    }
+                        listingImg =`
+                                    <img
+                                        src="./img/default-thumbnail.jpeg"
+                                        alt="listing media"
+                                        class=" max-h-52 max-w-52 lg:max-h-24"
+                                    />
+                                    `
+                    };
 
-                    return `
-                            
-                                        <a href="/detail.html?id=${id}" class="max-w-xs shadow-lg hover:scale-105 transition duration-500 cursor-pointer z-0">
-                                            <div class="w-xs bg-white py-4 hover:scale-105 transition duration-500 cursor-pointer">
-                                                <div class="flex justify-center">
-                                                    ${listingImg}
-                                                </div>
-                                                <div class="py-4 px-4 bg-white">
-                                                    <h2 class="text-sm overflow-hidden md:w-40 font-semibold text-gray-600">
-                                                        ${listingTitle}
-                                                    </h2>
-                                                    <div class="flex sm:flex-col">
-                                                        <p class="mt-4 mr-3 text-xs font-thin">Time Ending</p>
-                                                        <p class="mt-4 text-xs text-red-700">${endsAt}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                
+                    return ` 
+                             <a href="/detail.html?id=${id}" class="max-w-xs shadow-lg hover:scale-105 transition duration-500 cursor-pointer z-0">
+                                <div class="w-xs bg-white py-4 hover:scale-105 transition duration-500 cursor-pointer">
+                                    <div class="flex justify-center">
+                                        ${listingImg}
+                                    </div>
+                                    <div class="py-4 px-4 bg-white">
+                                        <h2 class="text-sm overflow-hidden md:w-40 font-semibold text-gray-600">
+                                            ${listingTitle}
+                                        </h2>
+                                        <div class="flex sm:flex-col">
+                                            <p class="mt-4 mr-3 text-xs font-thin">Time Ending</p>
+                                            <p class="mt-4 text-xs text-red-700">${endsAt}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>   
                             `;
                 })
                 .join('');
-            activeListings.insertAdjacentHTML('beforeend', listOfHtmlPosts);
-        }
+                activeListings.insertAdjacentHTML('beforeend', listOfHtmlPosts);
+            }
     } else {
         const err = await response.json();
         const message = `Sorry error occured ${err}`;
         throw new Error(message);
     }
 })().catch((err) => {
-    console.log('Get listing failed ! ');
-    console.log(err);
     generalError.innerHTML = err;
 });
 
 // modal and avatar 
-
 const updateBtn = document.getElementById('updateAvatar');
 const form = document.getElementById('updateAvatarForm');
 const modalBg = document.getElementById('modal-bg');
@@ -109,7 +102,7 @@ form.addEventListener('submit', (event) => {
         avatarError.classList.add('hidden');
     } else {
         avatarError.classList.remove('hidden');
-    }
+    };
 
     let isNotEmpty = false;
     if (updateAvatar.value !== '') {
@@ -117,7 +110,7 @@ form.addEventListener('submit', (event) => {
         isNotEmpty = true;
     } else {
         avatarError2.classList.remove('hidden');
-    }
+    };
 
     let avatarFormIsValid = isAvatarValid && isNotEmpty;
 
@@ -126,7 +119,6 @@ form.addEventListener('submit', (event) => {
             avatar: updateAvatar.value,
         };
 
-        console.log(avatarData);
         (async function updateAvatar() {
             const response = await fetch(UPDATE_AVATAR_URL, {
                 method: 'PUT',
@@ -142,7 +134,7 @@ form.addEventListener('submit', (event) => {
             } else {
                 const error = await response.json();
                 console.log(error);
-            }
+            };
         })();
     };
 });

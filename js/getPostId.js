@@ -7,10 +7,6 @@ const searchParam = new URLSearchParams(paramString);
 const listingId = searchParam.get('id');
 const accessToken = getToken();
 
-// if(!accessToken) {
-//     biddingForm.classList.add('hidden');
-// }
-
 //Listing
 const listingImage = document.getElementById('listing_img');
 const listingTitle = document.getElementById('listing-title');
@@ -62,24 +58,21 @@ const getListingById = async () => {
         };
 
         //description html
-        let descriptionListing = 
-                            `
-                                <p class="text-sm font-body ml-4"> ${description}</p>
-                            `;
+        let descriptionListing = `
+                                    <p class="text-sm font-body ml-4"> ${description}</p>
+                                `;
         if (!description){
-            descriptionListing = 
-                                `
+            descriptionListing = `
                                     <p class=" text-sm text-gray-600 font-body">Sorry, there is no description for this listing. Contact seller for more information</p>
-                                `
-        }
+                                `;
+        };
         
-        listingDescripton.innerHTML = 
-        `
-        <h2 class="text-sm mr-4 font-body text-gray-900">Description: </h2>
-		<div>
-		    ${descriptionListing}
- 		</div>
-        `;
+        listingDescripton.innerHTML =`
+                                        <h2 class="text-sm mr-4 font-body text-gray-900">Description: </h2>
+                                        <div>
+                                            ${descriptionListing}
+                                        </div>
+                                    `;
 
         // Listing media html 
         let listingMedia =
@@ -104,27 +97,24 @@ const getListingById = async () => {
                                 `
                                     ${listingMedia}
                                 `
-        let avatar =
-            `
-                    <img
-                        class="h-16 w-16 rounded-full bg-[#F2AE2E] p-0.5 mr-5"
-                        src="${sellerAvatar}"
-                        alt=""
-                    />
-                `
+        let avatar =`
+                        <img
+                            class="h-16 w-16 rounded-full bg-[#F2AE2E] p-0.5 mr-5"
+                            src="${sellerAvatar}"
+                            alt=""
+                        />
+                    `;
 
         if (!sellerAvatar) {
-            avatar =
-                    `
+            avatar =`
                         <img
                             class="h-16 w-16 rounded-full mr-5"
                             src="/img/default-avatar.png"
                             alt=""
                         />
-                    `
-        }
-        userAvatar.innerHTML =
-                                `
+                    `;
+        };
+        userAvatar.innerHTML =`
                                     <h3 class="sr-only">Seller</h3>
                                     ${avatar}
                                 `;
@@ -132,13 +122,11 @@ const getListingById = async () => {
         //all bids
         if (!bid.length) {
             biddersDetail.innerHTML = `<p class="text-black text-center text-sm italic font-body py-10">No bids made on this listing<p>`;
-        }
+        };
 
         for (let data of bid) {
-            console.log(data);
             const seller = data.bidderName;
             const amount = data.amount;
-            console.log(seller);
 
             let listing = `
                             <div class="">
@@ -164,7 +152,7 @@ const getListingById = async () => {
                             </div>`;
 
             biddersDetail.innerHTML += listing;
-        }                        
+        };                        
         document.title = `${title}`;
         listingTitle.innerHTML = 
                                 `
@@ -216,17 +204,12 @@ const getListingById = async () => {
 
 getListingById();
 
-
-
 //bid on listing
 const BID_ON_LISTING_URL = `${GET_LISTING_BY_ID}/${listingId}/bids`;
 const biddingForm = document.getElementById('bid-form');
 const placeBid = document.getElementById('place-bid');
 const errorBid = document.getElementById('place-bid-error');
 const successBid = document.getElementById('place-bid-success');
-const userNotLoggedIn = document.getElementById('make-bid-login');
-
-
 
 biddingForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -250,7 +233,6 @@ biddingForm.addEventListener('submit', (event) => {
             body: JSON.stringify(amountBid),
         });
         if (response.ok) {
-            console.log('tjoho');
             errorBid.innerHTML = '';
             successBid.innerHTML = 'Your bid is added';
             biddingForm.reset();
@@ -264,11 +246,8 @@ biddingForm.addEventListener('submit', (event) => {
             const err = await response.json();
             const message = `${err.errors[0].message}` 
             errorBid.innerHTML = `<p class="font-body text-red-800">${message}</p>`
-            console.log(err);
-            console.log('failed');
             throw new Error(message);
         }
     };
     makeBid();
 });
-

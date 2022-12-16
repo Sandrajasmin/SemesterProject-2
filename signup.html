@@ -5,27 +5,30 @@
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Hind+Guntur&family=Prompt&display=swap"
-			rel="stylesheet" />
-		<meta name="description" content="Buy and sell items. Get 1000,- in credit when registering" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Hind+Guntur&family=Prompt&display=swap"
+			rel="stylesheet"
+		/>
+		<meta
+			name="description"
+			content="Buy and sell items. Get 1000,- in credit when registering"
+		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Biddify | Sing up </title>
+		<title>Biddify | Sing up</title>
 	</head>
 	<body class="dark:bg-[#050506]">
 		<script type="module" src="./js/signUp.js"></script>
 		<header>
-			<nav
-				class="bg-gradient-to-b from-[#33333F] to-[#010101]"
-			>
+			<nav class="bg-gradient-to-b from-[#33333F] to-[#010101]">
 				<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 					<div class="relative flex h-16 items-center justify-between">
 						<div class="flex flex-shrink-0 items-center">
 							<a href="/index.html">
 								<img
-								class="block w-auto lg:hidden"
-								src="/img/logoSmall.png"
-								alt="Your Company"
-							/>
+									class="block w-auto lg:hidden"
+									src="/img/logoSmall.png"
+									alt="Your Company"
+								/>
 							</a>
 							<a href="/index.html">
 								<img
@@ -41,20 +44,37 @@
 		</header>
 		<main>
 			<section id="sign-up" class="pt-20 sm:pt-10 pb-5 sm:pb-0">
-				<div class="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0">
-					<div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+				<div
+					class="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0"
+				>
+					<div
+						class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700"
+					>
 						<div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-							<h1 class="text-xl font-h1 leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+							<h1
+								class="text-xl font-h1 leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"
+							>
 								Create an account
 							</h1>
 							<p id="general-error" class="text-xl text-red-800 capitalize"></p>
 							<form id="signup-form" class="space-y-4 md:space-y-6">
 								<div class="input-name">
-									<label for="name" class="block mb-2 text-sm font-h2 text-gray-900 dark:text-white">Your name</label>
-									<input type="text" name="name" id="name"
+									<label
+										for="name"
+										class="block mb-2 text-sm font-h2 text-gray-900 dark:text-white"
+										>Your name</label
+									>
+									<input
+										type="text"
+										name="name"
+										id="name"
 										class="bg-gray-50 font-body border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-										placeholder="John" />
-									<span id="firstNameError" class="hidden font-body text-sm ml-2 text-red-700">
+										placeholder="John"
+									/>
+									<span
+										id="firstNameError"
+										class="hidden font-body text-sm ml-2 text-red-700"
+									>
 										Enter your first name
 									</span>
 								</div>
@@ -71,10 +91,16 @@
 										class="bg-gray-50 font-body border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 										placeholder="name@company.com"
 									/>
-									<span id="emailError" class="hidden font-body text-sm ml-2 text-red-700">
+									<span
+										id="emailError"
+										class="hidden font-body text-sm ml-2 text-red-700"
+									>
 										Please enter your email
 									</span>
-									<span id="emailError2" class="hidden font-body text-sm ml-2 text-red-700">
+									<span
+										id="emailError2"
+										class="hidden font-body text-sm ml-2 text-red-700"
+									>
 										Please use stud.noroff.no or noroff.no email address
 									</span>
 								</div>
@@ -90,10 +116,16 @@
 										class="bg-gray-50 font-body border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 										placeholder="Enter your url for"
 									/>
-									<span id="avatarError" class="hidden font-body text-sm ml-2 text-red-700">
+									<span
+										id="avatarError"
+										class="hidden font-body text-sm ml-2 text-red-700"
+									>
 										Please select an avatar
 									</span>
-									<span id="avatarError2" class="hidden font-body text-sm ml-2 text-red-700">
+									<span
+										id="avatarError2"
+										class="hidden font-body text-sm ml-2 text-red-700"
+									>
 										Invalid url
 									</span>
 								</div>
@@ -110,7 +142,10 @@
 										placeholder="••••••••"
 										class="bg-gray-50 font-body border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 									/>
-									<span id="passwordError" class="hidden font-body text-sm ml-2 text-red-700">
+									<span
+										id="passwordError"
+										class="hidden font-body text-sm ml-2 text-red-700"
+									>
 										Password must be over 3 characters
 									</span>
 								</div>
@@ -127,10 +162,16 @@
 										placeholder="••••••••"
 										class="bg-gray-50 font-body border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 									/>
-									<span id="confirmPasswordError" class="hidden font-body text-sm ml-2 text-red-700">
+									<span
+										id="confirmPasswordError"
+										class="hidden font-body text-sm ml-2 text-red-700"
+									>
 										Please enter password
 									</span>
-									<span id="passwordDontNotMatch" class="hidden font-body text-sm ml-2 text-red-700">
+									<span
+										id="passwordDontNotMatch"
+										class="hidden font-body text-sm ml-2 text-red-700"
+									>
 										Password doesn't match
 									</span>
 								</div>
@@ -164,7 +205,9 @@
 								</button>
 								<p class="text-sm font-body text-gray-500 dark:text-gray-400">
 									Already have an account?
-									<a href="/signin.html" class="font-h2 text-[#F2AE2E] hover:underline"
+									<a
+										href="/signin.html"
+										class="font-h2 text-[#F2AE2E] hover:underline"
 										>Login here</a
 									>
 								</p>

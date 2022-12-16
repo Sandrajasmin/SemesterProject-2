@@ -5,7 +5,6 @@ const listing = document.querySelector('#list-items');
 const postsNotificationMessage = document.querySelector('#post_Message')
 let data = [];
 
-
 async function getAllPosts() {
     const response = await fetch(GET_ALL_LISTINGS_URL, {
         method: "GET",
@@ -47,23 +46,21 @@ const displayListings = (data) => {
                 `${0}`
             }
 
-            let listingImg =
-                `
-                <img
-					src="${media}"
-					alt="listing image"
-                    class="object-cover max-h-40"
-				/>
-                `
+            let listingImg =`
+                                <img
+                                    src="${media}"
+                                    alt="listing image"
+                                    class="object-cover max-h-40"
+                                />
+                            `;
             if (!media) {
-                listingImg =
-                    `
-                    <img
-						src="./img/default-thumbnail.jpeg"
-						alt=""
-                        class="object-cover max-h-40"
-					/>
-                    `
+                listingImg =`
+                                <img
+                                    src="./img/default-thumbnail.jpeg"
+                                    alt=""
+                                    class="object-cover max-h-40"
+                                />
+                            `;
             }
 
             return `
@@ -92,17 +89,16 @@ const displayListings = (data) => {
 								</div>
 							</div>
 						</a>                
-                `
+                `;
         })
         .join('');
-        // Add Posts to the page
         listing.insertAdjacentHTML('beforeend', listOfHtmlPosts);
-    }
-}
+    };
+};
 
 getAllPosts().then(() => {
     displayListings(data);
-})
+});
 
 const searchBar = document.getElementById('search');
 

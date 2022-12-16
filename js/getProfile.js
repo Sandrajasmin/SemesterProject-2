@@ -1,10 +1,8 @@
 import { getToken } from "./utils/storage";
-import { GET_PROFILE_URL, LOG_IN_URL } from "./settings/api";
+import { GET_PROFILE_URL} from "./settings/api";
 
 const profileDetails = document.getElementById('profile-details');
 const userAvatar = document.getElementById('userAvatar')
-
-console.log(profileDetails);
 
 const accessToken = getToken();
 
@@ -16,17 +14,13 @@ async function getProfile () {
             Authorization: `Bearer ${accessToken}`,
         },
     })
-    console.log('Get profile response', response);
     const profile = await response.json();
     const name = profile.name;
     const email = profile.email;
     const avatar = profile.avatar;
     const credits = profile.credits;
-    console.log(name);
-    console.log(credits);
-    console.log(avatar);
-    profileDetails.innerHTML =
-                                `
+
+    profileDetails.innerHTML =`
                                 <div class="px-7 py-8 mb-8">
                                     <h2 class="text-3xl font-h1 dark:text-gray-300">
                                         ${name}
@@ -41,15 +35,14 @@ async function getProfile () {
                                         ${email}
                                     </div>
                                 </div>
-                                `
-    userAvatar.innerHTML = 
-    `
-    <img
-		alt="Avatar"
-		src="${avatar}"
-		class="mx-auto object-cover rounded-full h-24 w-24 bg-[#F2AE2E] p-1"
-	/>
-    `
-}
+                                `;
+    userAvatar.innerHTML = `
+                            <img
+                                alt="Avatar"
+                                src="${avatar}"
+                                class="mx-auto object-cover rounded-full h-24 w-24 bg-[#F2AE2E] p-1"
+                            />
+                            `;
+};
 
 getProfile();

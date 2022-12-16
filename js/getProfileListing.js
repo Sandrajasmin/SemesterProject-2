@@ -1,6 +1,6 @@
-import { getToken } from "./utils/storage";
+import { getToken, updateLocalStorageInfo } from "./utils/storage";
 import { validImg } from "./utils/validation";
-import { GET_PROFILE_LISTINGS, UPDATE_AVATAR_URL } from "./settings/api";
+import { GET_PROFILE_LISTINGS, GET_PROFILE_URL, UPDATE_AVATAR_URL } from "./settings/api";
 import { formatDate } from './utils/dateformat'
 
 const activeListings = document.getElementById('list-items');
@@ -138,7 +138,7 @@ form.addEventListener('submit', (event) => {
             });
 
             if (response.ok) {
-                location.reload();
+                updateLocalStorageInfo(GET_PROFILE_URL)
             } else {
                 const error = await response.json();
                 console.log(error);

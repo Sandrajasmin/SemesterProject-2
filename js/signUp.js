@@ -120,8 +120,6 @@ form.addEventListener('submit', (event) => {
         isValidPasswordMatch;
 
     if (isFormValid) {
-        console.log('Validation SUCCEEDED!!  🥳');
-
         const userData = {
             name: firstName.value,
             email: email.value,
@@ -129,32 +127,25 @@ form.addEventListener('submit', (event) => {
             avatar: avatar.value,
         };
 
-
-        const REGISTER_USER_URL_ENDPOINT = SIGN_UP_URL;
-
         (async function signUp() {
-            try {
-                const response = await fetch(REGISTER_USER_URL_ENDPOINT, {
-                    method: 'POST',
+            const response = await fetch(`${SIGN_UP_URL}`, {
+                method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(userData),
-                });
-
-                const data = await response.json();
-
-                if (response.ok) {
-                    console.log('POST REQUEST SUCCEEDED!!  🥳 🤗🤗');
-                    location.replace('/signin.html');
-                } else {
-                    generalError.innerHTML = `An erro ${data.message}`;
-                }
-            } catch (e) {
-                console.log(e);
+                   'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(userData),
+            });
+            if(response.ok) {
+                location.href = '../signin.html'
+            } else {
+                const err = await response.json();
+                const message = `${err.errors[0].message}`
+                throw new Error(message)
             }
-        })();
+        })().catch((err) => {
+            generalError.innerHTML = `${err}`;
+        });
     } else {
-        console.log('Validation FAILED!! 💩');
-    }
+        generalError.innerHTML= 'Validation failed';
+    }  
 });

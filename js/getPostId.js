@@ -7,6 +7,10 @@ const searchParam = new URLSearchParams(paramString);
 const listingId = searchParam.get('id');
 const accessToken = getToken();
 
+// if(!accessToken) {
+//     biddingForm.classList.add('hidden');
+// }
+
 //Listing
 const listingImage = document.getElementById('listing_img');
 const listingTitle = document.getElementById('listing-title');
@@ -212,6 +216,8 @@ const getListingById = async () => {
 
 getListingById();
 
+
+
 //bid on listing
 const BID_ON_LISTING_URL = `${GET_LISTING_BY_ID}/${listingId}/bids`;
 const biddingForm = document.getElementById('bid-form');
@@ -219,6 +225,7 @@ const placeBid = document.getElementById('place-bid');
 const errorBid = document.getElementById('place-bid-error');
 const successBid = document.getElementById('place-bid-success');
 const userNotLoggedIn = document.getElementById('make-bid-login');
+
 
 
 biddingForm.addEventListener('submit', (event) => {
@@ -255,11 +262,10 @@ biddingForm.addEventListener('submit', (event) => {
         
         else {
             const err = await response.json();
-            const message = `${err.errors[0].message}`
+            const message = `${err.errors[0].message}` 
             errorBid.innerHTML = `<p class="font-body text-red-800">${message}</p>`
             console.log(err);
             console.log('failed');
-
             throw new Error(message);
         }
     };

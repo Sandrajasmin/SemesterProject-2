@@ -80,11 +80,11 @@ if (signInForm) {
                     location.href = '/index.html';
                 } else {
                     const errorError = await response.json();
-                    const message = `Error: ${errorError.message}`;
+                    const message = `${errorError.errors[0].message}`;
                     throw new Error(message);
                 }
             })().catch((errorError) => {
-                generalError.innerHTML = `Sorry we have an error!${errorError.message}`;
+                generalError.innerHTML = `Sorry we have an error!${errorError}`;
             });
         } else {
             console.log('This did absoloutely not work');

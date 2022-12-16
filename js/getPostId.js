@@ -170,7 +170,7 @@ const getListingById = async () => {
                                 `
                                     <div class="flex text-sm mt-4">
                                         <h2 class="font-body mr-4">Current bid:</h2>
-                                        <p class="font-body tracking-tight text-green-700">${bidValue}</p>
+                                        <p class="font-body tracking-tight text-green-700">$ ${bidValue}</p>
                                     </div>
                                     <div class="flex text-sm mt-4">
                                         <h2 class="font-body mr-9">Ends at:</h2>

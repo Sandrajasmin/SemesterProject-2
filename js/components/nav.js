@@ -1,4 +1,4 @@
-import { getUserCredit, getUserAvatar, getUserName } from "../utils/storage";
+import { getUserName } from "../utils/storage";
 
 
 const navBar = () => {
@@ -34,7 +34,7 @@ const navBar = () => {
 								>
 								<a
 									href="/profile.html"
-									class="${pathname === '/profile.html' ? 'text-[#F2AE2E]' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 text-xs font-medium"
+									class="${pathname === '/profile.html' ? 'text-white' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 text-xs font-medium"
 									>Profile</a
 								>
 							</div>`;
@@ -48,12 +48,12 @@ const navBar = () => {
 									>
 									<a
 										href="/listings.html"
-										class="${pathname === '/listings.html' ? 'text-[#F2AE2E]' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 text-xs font-medium"
+										class="${pathname === '/listings.html' ? 'text-amber-400' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 text-xs font-medium"
 										>Auctions</a
 									>
 									<a
 										href="/signin.html"
-										class="${pathname === '/signin.html' ? 'text-[#F2AE2E]' : ''}text-gray-300 hover:text-medium hover:text-white block px-3 py-2 text-xs font-medium"
+										class="${pathname === '/signin.html' ? 'text-[#F2AE2E]' : ''}text-white hover:text-medium hover:text-white block px-3 py-2 text-xs font-medium"
 										>Log in</a
 										>
 								</div>	
@@ -66,8 +66,7 @@ const navBar = () => {
 									<div class="flex space-x-4 mx-auto max-w-7xl">
 												<a
 													href="/index.html"
-													class="${pathname === '/index.html' ? 'text-black font-medium' : ''}text-gray-300 px-3 py-2 text-xs font-medium"
-													aria-current="page"
+													class="${pathname === '/index.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-white px-3 py-2 text-xs font-medium"
 													>Home</a
 												>
 
@@ -97,19 +96,18 @@ const navBar = () => {
 								<div class="flex text-base mx-auto max-w-7xl">
 													<a
 														href="/index.html"
-														class="${pathname === '/index.html' ? 'text-black font-medium' : ''}text-white px-3 py-2 text-xs font-medium"
-														aria-current="page"
+														class="${pathname === '/index.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-white px-3 py-2 text-xs "
 														>Home</a
 													>
 
 													<a
 														href="/listings.html"
-														class="${pathname === '/listings.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-white px-3 py-2 text-xs font-medium"
+														class="${pathname === '/listings.html' ? 'text-black font-medium' : ''}text-gray-300 hover:text-white px-3 py-2 text-xs "
 														>Auctions</a
 													>
 													<a
 														href="/signin.html"
-														class="${pathname === '/sign.html' ? 'text-black font-medium' : ''} text-gray-300 hover:text-white px-3 py-2 text-xs font-medium"
+														class="${pathname === '/sign.html' ? 'text-black font-medium' : ''} text-gray-300 hover:text-white px-3 py-2 text-xs "
 														>Sign in</a
 													>
 									</div>

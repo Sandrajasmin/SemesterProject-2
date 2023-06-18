@@ -11,9 +11,8 @@ Biddify was developed to cater to the following user stories:
 - 🌐 Users can view a list of available products for auction.
 - 🔍 Users can search for specific products to bid on.
 - 🏷️ Users can view the details of a specific product by its ID.
-- 💰 Users can earn credits by participating in auctions or completing certain actions.
+- 💰 Users can earn credits by participating in auctions.
 - 💸 Users can use their earned credits to place bids on products.
-- 📅 Users can view the auction calendar to see upcoming and ongoing auctions.
 - 📧 Users can register an account with their email to participate in auctions.
 - ✍️ Registered users can add new products for auction.
 - 🔄 Registered users can update the details of their listed products.
